@@ -8,10 +8,7 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<string | null>(null);
 
-  const toggleNav = (name: string | null) => {
-    setIsOpen(!isOpen);
-    setActiveIndex(name === activeIndex ? null : name);
-  };
+  console.log("isFixed", isFixed, "isOpen", isOpen, "activeIndex", activeIndex);
 
   useEffect(() => {
     function handleScroll() {
@@ -30,6 +27,24 @@ function NavBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleNav = (name: string | null) => {
+    setIsOpen(!isOpen);
+    setActiveIndex(name === activeIndex ? null : name);
+  };
+
+  const scrollToAnchor = (anchor: string) => {
+    const element = document.getElementById(anchor);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleNavClick = (name: string) => {
+    console.log("name", name);
+    toggleNav(name);
+    scrollToAnchor(name);
+  };
 
   return (
     <header
@@ -51,7 +66,6 @@ function NavBar() {
           className="container-dark group-hover:text-[#62dc42] uppercase "
           text="Personal trainer"
         />
-        {/* <p className="group-hover:text-[#62dc42] uppercase">Personal trainer</p> */}
       </button>
 
       <div
@@ -61,15 +75,17 @@ function NavBar() {
       >
         {nav.map((elem) => (
           <a
-            onClick={() => toggleNav(elem.name)}
+            onClick={() => handleNavClick(elem.name)}
             key={elem.id}
-            className={`uppercase group flex items-center justify-center w-full md:p-6 h-full transition-all duration-500 px-10 hover:bg-[#181818] ${
-              elem.name === activeIndex ? "text-[#62dc42]" : ""
-            } border_dark `}
-            href={elem.path}
+            className={`uppercase group flex items-center justify-center w-full md:p-6 h-full transition-all duration-500 px-10 hover:bg-[#181818] md:border sm:border-[#2a2a2a] md:border-solid ${
+              elem.name === activeIndex ? "bg-[#181818]" : ""
+            }  `}
+            href={`#${elem.path}`}
           >
             <Text
-              className="container-dark text-xs font-bold group-hover:text-[#62dc42] uppercase "
+              className={` text-xs font-bold  group-hover:text-[#62dc42] uppercase ${
+                elem.name === activeIndex ? "text-[#62dc42]" : "text-[#ffffff]"
+              }   `}
               text={elem.name}
             />
           </a>

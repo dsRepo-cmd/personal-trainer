@@ -1,14 +1,13 @@
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
-import ScaleIcon from "../../assets/scale-outline.svg";
-import StretchingIcon from "../../assets/stretching.svg";
-import ToolsKitchenIcon from "../../assets/tools-kitchen-2.svg";
-import BedIcon from "../../assets/bed.svg";
-import { Icon } from "../../components/icon/Icon";
+import { FaBed } from "react-icons/fa";
+import { TbToolsKitchen2 } from "react-icons/tb";
+import { IoScaleSharp } from "react-icons/io5";
+import { CgGym } from "react-icons/cg";
 
 function Intro() {
   return (
-    <Section backgroundColor="white">
+    <Section doubleLine backgroundColor="white">
       <div className="flex flex-col w-[1200px] gap-6 items-center justify-center ">
         <Text
           title={"If it’s not personal, It’s not possible!"}
@@ -20,24 +19,24 @@ function Intro() {
           }
         />
 
-        <div className="flex items-center justify-center gap-4 xl:grid grid-cols-2 sm:grid-cols-1  ">
+        <div className="flex items-center justify-center gap-4 xl:grid grid-cols-2 sm:grid-cols-1 mt-10 ">
           <div className=" flex flex-col justify-center items-center gap-4 w-[300px]">
-            <Icon width={50} height={50} Svg={ToolsKitchenIcon} />
+            <TbToolsKitchen2 size={50} />
             <Text text="EAT BETTER" className="text-[#62dc42]" />
             <Text text="Homero nominati democritum sit adongue consectetuer no sed. Unum habemus ex alterum impedit." />
           </div>
           <div className=" flex flex-col gap-4 justify-center items-center w-[300px]">
-            <Icon width={50} height={50} Svg={BedIcon} />
+            <FaBed size={50} />
             <Text text="SLEEP TIGHT" className="text-[#62dc42]" />
             <Text text="No stet imperdiet expetendis vix, postulant constituam dissentiunt vis ad ex mel exerci delicata.." />
           </div>
           <div className=" flex flex-col gap-4 justify-center items-center w-[300px]">
-            <Icon width={50} height={50} Svg={StretchingIcon} />
+            <CgGym size={50} />
             <Text text="EXERCISE" className="text-[#62dc42]" />
             <Text text="Eu erat nonumy petentium ha fierent eleifend expetenda sea antiopam voluptatum apeirian scribentur." />
           </div>
           <div className=" flex flex-col gap-4 justify-center items-center w-[300px]">
-            <Icon width={50} height={50} Svg={ScaleIcon} />
+            <IoScaleSharp size={50} />
             <Text text="LOSE WEIGHT" className="text-[#62dc42]" />
             <Text text="Est ad soleat omnesque vulputate. Vivendo nostrum urbanitas vis et, verear aperiam in sea, euismod corrumpit." />
           </div>

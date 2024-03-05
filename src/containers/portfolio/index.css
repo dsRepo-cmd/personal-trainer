@@ -1,0 +1,28 @@
+/* ============================================ */
+.pt_item {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  border: 2px double #adadad;
+  padding: 3px;
+}
+.pt_item_button {
+  opacity: 0;
+}
+
+.pt_item_title {
+  opacity: 0;
+}
+
+.pt_item:hover .pt_item_button {
+  margin-top: 60px;
+  opacity: 1;
+}
+
+.pt_item:hover .pt_item_title {
+  margin-bottom: 60px;
+  opacity: 1;
+}
+
+.pt_item:hover .pt_item_image {
+  filter: blur(2px);
+}

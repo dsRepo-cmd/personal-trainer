@@ -17,9 +17,11 @@ const Text: React.FC<TextProps> = ({
 }: TextProps) => {
   return (
     <div className={` flex ${align}  `}>
-      {title && <h2 className={` text-3xl ${className} `}>{title}</h2>}
+      {title && (
+        <h2 className={` text-[2.1rem] font-bold	 ${className} `}>{title}</h2>
+      )}
 
-      {text && <p className={` ${className} `}>{text}</p>}
+      {text && <p className={` text-sm ${className} `}>{text}</p>}
     </div>
   );
 };

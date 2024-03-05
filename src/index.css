@@ -12,6 +12,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans";
 
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -34,7 +35,7 @@ html {
 }
 
 .container-dark {
-  @apply bg-[#0c0c0c] text-white;
+  @apply bg-[#161616] text-white;
 }
 
 .container-white {
@@ -43,16 +44,4 @@ html {
 
 .container-red {
   @apply bg-red-500 text-white;
-}
-
-.title {
-  @apply font-bold;
-}
-
-.text {
-  @apply text-base;
-}
-
-.border_dark {
-  @apply border border-solid border-[#2a2a2a];
 }
