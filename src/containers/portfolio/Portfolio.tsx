@@ -1,13 +1,13 @@
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
-import "./index.css";
+import "./Portfolio.css";
 import { portfolioFilters, portfolioItems } from "../../data/portfolio";
 import { MdPlayCircle } from "react-icons/md";
 
 function Portfolio() {
   return (
-    <Section id="portfolio">
-      <div className="flex flex-col  gap-6 items-center justify-center">
+    <Section doubleLine id="portfolio">
+      <div className="flex w-full flex-col  gap-6 items-center justify-center">
         <Text
           title={"my Portfolio"}
           className="title container-dark uppercase"

@@ -6,32 +6,32 @@ export interface NawSchema {
 
 export const nav: NawSchema[] = [
   {
-    name: "Welcome",
+    name: "welcome",
     path: "welcome",
     id: 1,
   },
   {
-    name: "Portfolio",
+    name: "portfolio",
     path: "portfolio",
     id: 2,
   },
   {
-    name: "Classes",
+    name: "classes",
     path: "classes",
     id: 3,
   },
   {
-    name: "Pricing",
+    name: "pricing",
     path: "pricing",
     id: 4,
   },
   {
-    name: "Blog",
+    name: "blog",
     path: "blog",
     id: 5,
   },
   {
-    name: "Contact",
+    name: "contact",
     path: "contact",
     id: 6,
   },

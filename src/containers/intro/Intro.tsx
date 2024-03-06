@@ -7,7 +7,7 @@ import { CgGym } from "react-icons/cg";
 
 function Intro() {
   return (
-    <Section doubleLine backgroundColor="white">
+    <Section backgroundColor="white">
       <div className="flex flex-col w-[1200px] gap-6 items-center justify-center ">
         <Text
           title={"If it’s not personal, It’s not possible!"}

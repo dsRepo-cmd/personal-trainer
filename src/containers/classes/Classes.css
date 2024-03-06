@@ -1,0 +1,43 @@
+.classes_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.skin {
+  padding: 1.5px;
+  border: 2px solid #f4f4f4;
+}
+
+.skin1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.skin2 {
+  grid-area: 1 / 3 / 6 / 4;
+}
+
+.skin3 {
+  grid-area: 1 / 4 / 5 / 5;
+}
+
+.skin4 {
+  grid-area: 5 / 1 / 9 / 2;
+}
+
+.skin5 {
+  grid-area: 5 / 2 / 9 / 3;
+}
+
+.skin6 {
+  grid-area: 6 / 3 / 9 / 4;
+}
+
+.skin7 {
+  grid-area: 5 / 4 / 9 / 5;
+}
