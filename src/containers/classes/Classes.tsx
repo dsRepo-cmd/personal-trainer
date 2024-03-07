@@ -1,25 +1,38 @@
+import { FC } from "react";
 import Section from "../../components/section/Section";
 import SkinItem from "../../components/skin/Skin";
-
 import Text from "../../components/text/Text";
 import { classes } from "../../data/classes";
 import "./Classes.css";
+import { Variant } from "../../lib/types";
 
 const { skins } = classes;
 
-function Classes() {
+interface ClassesProps {
+  className?: string;
+  variant?: Variant;
+}
+
+const Classes: FC<ClassesProps> = ({ variant = "dark" }) => {
   return (
-    <Section id="classes" backgroundColor="white">
-      <div className="flex flex-col gap-10 items-center justify-center">
-        <Text className=" uppercase" title={classes.title} />
+    <Section id="classes" backgroundColor={variant}>
+      <div className="flex flex-col w-full gap-10 items-center justify-center">
+        <Text
+          variant={variant}
+          className=" uppercase"
+          title={classes.title}
+          size="xl"
+          bold
+        />
 
         <div className="flex flex-col gap-2 items-center ">
           {classes.paragraphs.map((paragraph) => (
             <div key={paragraph.id}>
-              <Text text={paragraph.text} />
+              <Text size="m" variant={variant} text={paragraph.text} />
             </div>
           ))}
         </div>
+
         <div className="classes_grid">
           <SkinItem skin={skins.skin1} className={skins.skin1.className} />
           <SkinItem
@@ -44,6 +57,6 @@ function Classes() {
       </div>
     </Section>
   );
-}
+};
 
 export default Classes;

@@ -22,9 +22,9 @@ const Home: React.FC<HomeProps> = () => {
     <>
       <Welcome />
       <NavBar />
-      <Intro />
+      <Intro variant="white" />
       <Portfolio />
-      <Classes />
+      <Classes variant="white" />
       <Pricing />
       <TrainingSchedule />
       <Blog />

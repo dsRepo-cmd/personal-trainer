@@ -1,22 +1,22 @@
 import { FC, ReactNode } from "react";
-
-export type BackgroundColor = "white" | "black" | "red";
+import "./Section.css";
+import { Variant } from "../../lib/types";
 
 interface SectionProps {
   children: ReactNode;
   id?: string;
-  backgroundColor?: BackgroundColor;
+  backgroundColor?: Variant;
   doubleLine?: boolean;
 }
 
 const Section: FC<SectionProps> = ({
   children,
   id,
-  backgroundColor = "black",
+  backgroundColor = "dark",
   doubleLine,
 }) => {
-  const classMap: { [key in BackgroundColor]: string } = {
-    black: "container-dark",
+  const classMap: { [key in Variant]: string } = {
+    dark: "container-dark",
     white: "container-white ",
     red: "container-red  ",
   };
@@ -26,7 +26,7 @@ const Section: FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`flex flex-col  items-center justify-center  w-[100%] ${mod}`}
+      className={`sel flex flex-col  items-center justify-center  w-[100%] ${mod}`}
     >
       {doubleLine && (
         <div className=" relative w-full h-1 bg-[#ff4739]">

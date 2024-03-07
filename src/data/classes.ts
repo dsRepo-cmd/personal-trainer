@@ -1,4 +1,4 @@
-export interface Paragraph {
+interface ClassesParagraph {
   id: number;
   text: string;
 }
@@ -13,7 +13,7 @@ export interface Skin {
 
 export interface Classes {
   title: string;
-  paragraphs: Paragraph[];
+  paragraphs: ClassesParagraph[];
   skins: {
     skin1: Skin;
     skin2: Skin;

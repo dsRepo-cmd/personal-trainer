@@ -1,0 +1,48 @@
+.title {
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+.text {
+  font-size: 0.8rem;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.title::selection,
+.text::selection {
+  color: #ffffff;
+  background: #ff4739;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.s {
+  font-size: 0.8rem;
+}
+
+.m {
+  font-size: 1rem;
+  line-height: 28px;
+}
+
+.l {
+  font-size: 1.2rem;
+}
+
+.xl {
+  font-size: 2.1rem;
+}
+
+.dark {
+  color: #ffffff;
+}
+
+.white {
+  color: #1a1a1a;
+}

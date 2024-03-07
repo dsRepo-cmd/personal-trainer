@@ -3,15 +3,25 @@ import Text from "../../components/text/Text";
 import "./Portfolio.css";
 import { portfolioFilters, portfolioItems } from "../../data/portfolio";
 import { MdPlayCircle } from "react-icons/md";
+import { FC } from "react";
+import { Variant } from "../../lib/types";
+interface IntroProps {
+  className?: string;
+  variant?: Variant;
+}
 
-function Portfolio() {
+const Portfolio: FC<IntroProps> = ({ variant = "dark" }) => {
   return (
     <Section doubleLine id="portfolio">
-      <div className="flex w-full flex-col  gap-6 items-center justify-center">
+      <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Text
-          title={"my Portfolio"}
-          className="title container-dark uppercase"
+          variant={variant}
+          className=" uppercase"
+          title={"My Portfolio"}
+          size="xl"
+          bold
         />
+
         <div className="flex  w-[600px] gap-[2px] items-center justify-center  md:flex-wrap">
           {portfolioFilters.map((item) => (
             <button
@@ -26,19 +36,19 @@ function Portfolio() {
           ))}
         </div>
 
-        <div className=" grid grid-cols-3 w-full items-center gap-6 xl:grid-cols-2 md:flex md:flex-col  ">
+        <div className=" grid grid-cols-3 w-full items-center justify-center  gap-6 xl:grid-cols-2 md:flex md:flex-col  ">
           {portfolioItems.map((item) => (
             <div
-              className="pt_item  relative w-[342px] h-[242px] overflow-hidden"
+              className="pt_item w-full  relative h-full overflow-hidden"
               key={item.id}
             >
               <img
                 src={item.link}
                 alt={item.name}
-                className="pt_item_image w-full delay-200 h-full object-cover"
+                className="pt_item_image w-full  h-full object-cover"
               />
               <button
-                className={`pt_item_button absolute top-0 left-1/2 -translate-x-1/2 `}
+                className={`pt_item_button absolute  top-0 left-1/2 -translate-x-1/2 `}
               >
                 <MdPlayCircle size={50} />
               </button>
@@ -53,6 +63,6 @@ function Portfolio() {
       </div>
     </Section>
   );
-}
+};
 
 export default Portfolio;
