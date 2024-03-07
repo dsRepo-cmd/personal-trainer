@@ -2,6 +2,7 @@ import { FaBed } from "react-icons/fa";
 import { TbToolsKitchen2 } from "react-icons/tb";
 import { IoScaleSharp } from "react-icons/io5";
 import { CgGym } from "react-icons/cg";
+import { HeadingI } from "../lib/types";
 
 interface IntroBlock {
   id: number;
@@ -10,25 +11,21 @@ interface IntroBlock {
   icon: React.ReactNode;
 }
 
-interface IntroParagraph {
-  id: number;
-  text: string;
-}
-
 interface Intro {
-  title: string;
-  paragraphs: IntroParagraph[];
+  heading: HeadingI;
   blocks: IntroBlock[];
 }
 
 export const intro: Intro = {
-  title: "If it’s not personal, It’s not possible!",
-  paragraphs: [
-    {
-      id: 1,
-      text: "Welcome dear visitor! Short story, my name is Jessica Smith and I’m a Personal Trainer (PT) licensed by the National School of Coaches, ISSA certified specialist in sports, nutrition and fitness school teacher . You can have a look at my portfolio.",
-    },
-  ],
+  heading: {
+    title: "If it’s not personal, It’s not possible!",
+    paragraphs: [
+      {
+        id: 1,
+        text: "Welcome dear visitor! Short story, my name is Jessica Smith and I’m a Personal Trainer (PT) licensed by the National School of Coaches, ISSA certified specialist in sports, nutrition and fitness school teacher . You can have a look at my portfolio.",
+      },
+    ],
+  },
   blocks: [
     {
       id: 1,

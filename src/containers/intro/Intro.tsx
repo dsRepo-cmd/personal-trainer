@@ -3,6 +3,7 @@ import Text from "../../components/text/Text";
 import { FC } from "react";
 import { Variant } from "../../lib/types";
 import { intro } from "../../data/intro";
+import Heading from "../../components/heading/Heading";
 
 interface IntroProps {
   className?: string;
@@ -13,21 +14,7 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
   return (
     <Section backgroundColor={variant}>
       <div className="flex flex-col w-full gap-10 items-center justify-center">
-        <Text
-          variant={variant}
-          className=" uppercase"
-          title={intro.title}
-          size="xl"
-          bold
-        />
-
-        <div className="flex flex-col gap-2 items-center ">
-          {intro.paragraphs.map((paragraph) => (
-            <div key={paragraph.id}>
-              <Text size="m" variant={variant} text={paragraph.text} />
-            </div>
-          ))}
-        </div>
+        <Heading variant={variant} heading={intro.heading} />
 
         <div className="flex items-center justify-center gap-4 xl:grid grid-cols-2 sm:grid-cols-1 mt-10 ">
           {intro.blocks.map((block) => (

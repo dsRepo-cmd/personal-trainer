@@ -27,7 +27,7 @@ const Home: React.FC<HomeProps> = () => {
       <Classes variant="white" />
       <Pricing />
       <TrainingSchedule />
-      <Blog />
+      <Blog variant="white" />
       <Testimonials />
       <Contact />
       <GoogleMaps />

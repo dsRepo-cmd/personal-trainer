@@ -1,3 +1,4 @@
+import { FaAngleDoubleDown } from "react-icons/fa";
 import HexagoneIcon from "../../assets/hexagone.svg";
 
 function Welcome() {
@@ -48,11 +49,15 @@ function Welcome() {
           </div>
         </div>
       </div>
-      <a
-        className="absolute w-20 h-20 left-1/2 bottom-[10%]  transition duration-500  transform  translate-x-[-50%] border-[4px] border-solid border-red-500 rounded-full hover:opacity-70"
-        onClick={() => handleNavClick("navbar-top")}
-        href="#navbar-top"
-      ></a>
+      <div className=" flex items-center">
+        <a
+          className="absolute flex items-center justify-center w-20 h-20 left-1/2 bottom-[10%]  transition duration-500  transform  translate-x-[-50%] border-[4px] border-solid  border-[#ff4739] rounded-full hover:opacity-70"
+          onClick={() => handleNavClick("navbar-top")}
+          href="#navbar-top"
+        >
+          <FaAngleDoubleDown color="#ff4739" size={42} />
+        </a>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,48 @@
+.blog_item {
+  position: relative;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.blog_item_image {
+  object-fit: cover;
+}
+
+.blog_item_button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 18px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.blog-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #62dc42;
+  opacity: 0;
+  z-index: 10;
+}
+
+.blog_item:hover .blog_item_button {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.blog_item:hover .blog_item_image {
+  filter: brightness(0.4);
+}
+
+.blog_item:hover .blog_item_button ~ .blog-overlay {
+  opacity: 0.8;
+}

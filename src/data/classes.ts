@@ -1,7 +1,4 @@
-interface ClassesParagraph {
-  id: number;
-  text: string;
-}
+import { HeadingI } from "../lib/types";
 
 export interface Skin {
   img: string;
@@ -12,8 +9,7 @@ export interface Skin {
 }
 
 export interface Classes {
-  title: string;
-  paragraphs: ClassesParagraph[];
+  heading: HeadingI;
   skins: {
     skin1: Skin;
     skin2: Skin;
@@ -26,17 +22,19 @@ export interface Classes {
 }
 
 export const classes: Classes = {
-  title: "Course classes",
-  paragraphs: [
-    {
-      id: 1,
-      text: "I can give advice & offer you a personalised nutrition plan.",
-    },
-    {
-      id: 2,
-      text: "My nutrition plans will not leave you famished and it will achieve results in no time!",
-    },
-  ],
+  heading: {
+    title: "Course classes",
+    paragraphs: [
+      {
+        id: 1,
+        text: "I can give advice & offer you a personalised nutrition plan.",
+      },
+      {
+        id: 2,
+        text: "My nutrition plans will not leave you famished and it will achieve results in no time!",
+      },
+    ],
+  },
   skins: {
     skin1: {
       className: "skin1",

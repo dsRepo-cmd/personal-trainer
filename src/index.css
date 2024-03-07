@@ -45,3 +45,8 @@ html {
 .container-red {
   @apply bg-red-500 text-white;
 }
+
+.skin-border {
+  padding: 1.5px;
+  border: 2px solid #f4f4f4;
+}

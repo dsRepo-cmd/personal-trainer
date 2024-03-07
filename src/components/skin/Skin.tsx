@@ -16,14 +16,19 @@ const SkinItem: React.FC<SkinItemProps> = ({
   variant = "bg-[#62dc42]",
 }) => {
   return (
-    <div className={`${className}  relative skin`}>
-      <div className=" title-wrapper">
+    <div className={`${className}  relative skin-border`}>
+      <div className=" items-start title-wrapper">
         <Text
-          className={` font-bold uppercase text-white p-3 bg-[#1a1a1a] `}
+          align="text-start"
+          fontFamily="Montserrat"
+          size="m"
+          uppercase
+          className={` font-bold uppercase text-white py-2 px-3 bg-[#1a1a1a] `}
           text={skin.title}
         />
 
         <Text
+          align="text-start"
           className={`text-[0.8rem]  text-white p-3 ${variant}`}
           text={skin.subtitle}
         />
@@ -36,7 +41,7 @@ const SkinItem: React.FC<SkinItemProps> = ({
         {skin.paragraphs.map((paragraph, index) => (
           <div key={index}>
             <Text
-              align="text-left"
+              align="text-start"
               className=" text-[0.8rem] text-white "
               text={paragraph}
             />

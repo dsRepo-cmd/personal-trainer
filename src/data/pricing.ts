@@ -1,9 +1,6 @@
-export interface PricingParagraph {
-  id: number;
-  text: string;
-}
+import { HeadingI } from "../lib/types";
 
-export interface PricingPlan {
+interface PricingPlan {
   id: number;
   price: string;
   priceInfo: string;
@@ -13,23 +10,25 @@ export interface PricingPlan {
 }
 
 export interface Pricing {
-  title: string;
-  paragraphs: PricingParagraph[];
+  heading: HeadingI;
   plans: PricingPlan[];
 }
 
 export const pricing: Pricing = {
-  title: "Pricing plans",
-  paragraphs: [
-    {
-      id: 1,
-      text: "Are you tired of so many things on so many different directions? Why can’t they be in the same place?",
-    },
-    {
-      id: 2,
-      text: "Well they can, please check out our pricing plans.",
-    },
-  ],
+  heading: {
+    title: "Pricing plans",
+    paragraphs: [
+      {
+        id: 1,
+        text: "Are you tired of so many things on so many different directions? Why can’t they be in the same place?",
+      },
+      {
+        id: 2,
+        text: "Well they can, please check out our pricing plans.",
+      },
+    ],
+  },
+
   plans: [
     {
       id: 1,

@@ -1,20 +1,20 @@
+import { FC } from "react";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import { pricing } from "../../data/pricing";
+import { Variant } from "../../lib/types";
+import Heading from "../../components/heading/Heading";
 
-function Pricing() {
+interface PricingProps {
+  className?: string;
+  variant?: Variant;
+}
+
+const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
   return (
     <Section id="pricing">
       <div className="flex flex-col w-full gap-10 items-center justify-center">
-        <Text className=" uppercase" title={pricing.title} size="xl" bold />
-
-        <div className="flex flex-col gap-2 items-center ">
-          {pricing.paragraphs.map((paragraph) => (
-            <div key={paragraph.id}>
-              <Text text={paragraph.text} />
-            </div>
-          ))}
-        </div>
+        <Heading variant={variant} heading={pricing.heading} />
 
         <div className=" flex items-center gap-9  w-full">
           {pricing.plans.map((plan) => (
@@ -23,11 +23,17 @@ function Pricing() {
               key={plan.id}
             >
               <Text
+                align="text-start"
                 className=" uppercase font-bold text-[#62dc42]"
                 title={plan.price}
               />
-              <Text className=" uppercase font-bold" text={plan.priceInfo} />
               <Text
+                align="text-start"
+                className=" uppercase font-bold"
+                text={plan.priceInfo}
+              />
+              <Text
+                align="text-start"
                 className=" uppercase font-bold text-[#ff4739] text-xl my-2"
                 text={plan.type}
               />
@@ -35,6 +41,7 @@ function Pricing() {
               {plan.info.map((item, index) => (
                 <div className=" border-b border-[#424242]" key={index}>
                   <Text
+                    align="text-start"
                     className=" text-[#e4e4e4] text-[0.8rem] mb-3"
                     text={item}
                   />
@@ -50,6 +57,6 @@ function Pricing() {
       </div>
     </Section>
   );
-}
+};
 
 export default Pricing;

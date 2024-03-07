@@ -72,7 +72,9 @@ function NavBar() {
           />
 
           <Text
-            className="container-dark group-hover:text-[#62dc42] uppercase"
+            uppercase
+            fontFamily="Montserrat"
+            className="container-dark group-hover:text-[#62dc42] text-[18px] "
             text="Personal trainer"
           />
         </button>
@@ -92,11 +94,12 @@ function NavBar() {
               href={`#${elem.path}`}
             >
               <Text
-                className={`text-xs font-bold group-hover:text-[#62dc42] uppercase ${
+                uppercase
+                className={` text-[15px] font-bold group-hover:text-[#62dc42] ${
                   elem.name === activeIndex
                     ? "text-[#62dc42]"
                     : "text-[#ffffff]"
-                }`}
+                } xl:text-[12px] `}
                 text={elem.name}
               />
             </a>

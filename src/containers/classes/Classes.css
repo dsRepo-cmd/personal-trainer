@@ -9,11 +9,6 @@
   height: 100%;
 }
 
-.skin {
-  padding: 1.5px;
-  border: 2px solid #f4f4f4;
-}
-
 .skin1 {
   grid-area: 1 / 1 / 5 / 3;
 }

@@ -8,6 +8,11 @@
   font-weight: 400;
 }
 
+.span {
+  font-size: 0.8rem;
+  line-height: 23px;
+}
+
 .title::selection,
 .text::selection {
   color: #ffffff;
@@ -45,4 +50,19 @@
 
 .white {
   color: #1a1a1a;
+}
+
+.primary {
+  color: #62dc42;
+}
+
+.secondary {
+  color: #ff4739;
+}
+
+.Montserrat {
+  font-family: "Montserrat";
+}
+.OpenSans {
+  font-family: "Open Sans";
 }
