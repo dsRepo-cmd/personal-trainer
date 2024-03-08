@@ -15,8 +15,8 @@
 
 .title::selection,
 .text::selection {
-  color: #ffffff;
-  background: #ff4739;
+  color: var(--white);
+  background: var(--secondary);
 }
 
 .bold {
@@ -45,19 +45,19 @@
 }
 
 .dark {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .white {
-  color: #1a1a1a;
+  color: var(--dark);
 }
 
 .primary {
-  color: #62dc42;
+  color: var(--primary);
 }
 
 .secondary {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .Montserrat {
@@ -65,4 +65,19 @@
 }
 .OpenSans {
   font-family: "Open Sans";
+}
+
+.color_primary {
+  color: var(--primary);
+}
+.color_secondary {
+  color: var(--secondary);
+}
+
+.color_dark {
+  color: var(--dark);
+}
+
+.color_white {
+  color: var(--white);
 }

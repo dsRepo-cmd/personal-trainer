@@ -1,4 +1,38 @@
 .sel::selection {
-  color: #ffffff;
-  background: #ff4739;
+  color: var(--white);
+  background: var(--secondary);
+}
+
+.double_line_start {
+  position: relative;
+  width: 100%;
+  background-color: var(--secondary);
+  height: 4px;
+}
+
+.double_line_end {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.container-primary {
+  background-color: var(--primary);
+}
+
+.container-secondary {
+  background-color: var(--secondary);
+}
+
+.container-white {
+  background-color: var(--white);
+}
+
+.container-dark {
+  background-color: var(--dark);
+}
+
+.container-secondary::selection {
+  color: var(--primary);
 }

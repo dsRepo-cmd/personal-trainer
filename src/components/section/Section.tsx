@@ -19,8 +19,8 @@ const Section: FC<SectionProps> = ({
 }) => {
   const classMap: { [key in Variant]: string } = {
     dark: "container-dark",
-    white: "container-white ",
-    primary: "container-primary  ",
+    white: "container-white",
+    primary: "container-primary ",
     secondary: "container-secondary ",
   };
 
@@ -32,8 +32,8 @@ const Section: FC<SectionProps> = ({
       className={`sel flex flex-col  items-center justify-center  w-[100%]  ${mod}`}
     >
       {doubleLine && (
-        <div className=" relative w-full h-1 bg-[#ff4739]">
-          <span className=" absolute w-1/2 h-full bg-[#62dc42] "></span>
+        <div className=" double_line_start">
+          <span className="double_line_end "></span>
         </div>
       )}
       <div

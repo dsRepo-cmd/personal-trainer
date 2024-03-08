@@ -1,0 +1,57 @@
+.wellcome_down_icon {
+  fill: var(--secondary);
+}
+.wellcome_down_icon:hover {
+  fill: var(--primary);
+}
+
+.wellcome_down_button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  transition: all 0.3s;
+
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+}
+
+.wellcome_down_button:hover {
+  border: 2px solid var(--primary);
+}
+
+.wellcome_down_button:hover .wellcome_down_icon {
+  fill: var(--primary);
+}
+
+.hexagone_icon_left {
+  fill: var(--primary);
+  color: var(--primary);
+  overflow: hidden;
+}
+
+.hexagone_icon_right {
+  fill: var(--secondary);
+  color: var(--secondary);
+  overflow: hidden;
+}
+
+.hexagon-overlay {
+  opacity: 0;
+}
+.hexagon-overlay:hover {
+  opacity: 0.7;
+  fill: var(--primary);
+}
+
+.hexagon-image {
+  opacity: 1;
+}

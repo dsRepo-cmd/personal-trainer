@@ -47,7 +47,7 @@ const Portfolio: FC<IntroProps> = ({ variant = "dark" }) => {
                   "pt_item_button absolute  top-0 left-1/2 -translate-x-1/2"
                 }
               >
-                <MdPlayCircle size={50} />
+                <MdPlayCircle color="#fff" size={50} />
               </button>
               <div
                 className={`pt_item_title absolute bottom-0 left-1/2 -translate-x-1/2 `}

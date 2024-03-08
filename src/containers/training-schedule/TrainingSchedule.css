@@ -1,0 +1,11 @@
+.ts_time_shot {
+  color: var(--secondary);
+}
+
+.ts_day {
+  color: var(--primary);
+}
+
+.ts_time {
+  color: var(--primary);
+}

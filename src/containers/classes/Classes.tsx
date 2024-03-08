@@ -20,19 +20,19 @@ const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
         <div className="classes_grid">
           <SkinItem skin={skins.skin1} className={skins.skin1.className} />
           <SkinItem
-            variant="bg-[#ff4739]"
+            variant="skin_secondary"
             skin={skins.skin2}
             className={skins.skin2.className}
           />
           <SkinItem skin={skins.skin3} className={skins.skin3.className} />
           <SkinItem skin={skins.skin4} className={skins.skin4.className} />
           <SkinItem
-            variant="bg-[#ff4739]"
+            variant="skin_secondary"
             skin={skins.skin5}
             className={skins.skin5.className}
           />
           <SkinItem
-            variant="bg-[#ff4739]"
+            variant="skin_secondary"
             skin={skins.skin6}
             className={skins.skin6.className}
           />

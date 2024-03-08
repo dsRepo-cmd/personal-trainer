@@ -5,6 +5,7 @@ import { blog } from "../../data/blog";
 import Text from "../../components/text/Text";
 import { TfiAngleDoubleRight } from "react-icons/tfi";
 import "./Blog.css";
+import Button from "../../components/button/Button";
 
 interface BlogProps {
   className?: string;
@@ -57,14 +58,14 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                     text={post.text}
                   />
 
-                  <button className=" self-start text-xs delay-50 rounded-sm uppercase mt-5 py-2 px-3 bg-[#62dc42] hover:bg-[#ff4739]">
+                  <Button vaiant="primary" className=" mt-5 py-2 px-3 ">
                     <Text
                       className=" text-[0.7rem]"
                       align="text-start"
                       size="s"
                       text={"Read more"}
                     />
-                  </button>
+                  </Button>
                 </div>
               </article>
             ))}

@@ -6,6 +6,11 @@ import "./Text.css";
 export type TextAlign = "text-start" | "text-end" | "text-center";
 export type TextSize = "s" | "m" | "l" | "xl";
 export type FontFamily = "Montserrat" | "OpenSans";
+export type TextColor =
+  | "color_primary"
+  | "color_secondary"
+  | "color_dark"
+  | "color_white";
 
 interface TextProps {
   text?: string;
@@ -19,6 +24,7 @@ interface TextProps {
   uppercase?: boolean;
   children?: ReactNode;
   fontFamily?: FontFamily;
+  color?: TextColor;
 }
 
 const Text: React.FC<TextProps> = ({
@@ -29,13 +35,14 @@ const Text: React.FC<TextProps> = ({
   className = "",
   align = "text-center",
   variant = "dark",
+  color,
   size,
   bold,
   uppercase,
   fontFamily,
 }) => {
   const mods = { ["uppercase"]: uppercase, ["bold"]: bold };
-  const addClasses = [variant, size, align, className, fontFamily];
+  const addClasses = [variant, size, align, className, fontFamily, color];
 
   return (
     <>

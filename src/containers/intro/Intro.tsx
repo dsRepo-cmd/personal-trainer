@@ -29,7 +29,7 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
                 bold
                 uppercase
                 text={block.title}
-                className="text-[#62dc42]"
+                color="color_primary"
               />
               <Text variant={variant} text={block.text} />
             </div>

@@ -6,6 +6,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark_theme {
+  --bg: #1a2327;
+  --secondary: #ff4739;
+  --primary: #62dc42;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+}
+
+.app {
+  overflow: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +32,7 @@
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
 }
+
 html {
   overflow-x: hidden !important;
   scroll-behavior: smooth;
@@ -32,28 +45,4 @@ html {
 ::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
-}
-
-.container-dark {
-  @apply bg-[#161616] text-white;
-}
-
-.container-white {
-  @apply bg-white text-black;
-}
-
-.container-secondary {
-  @apply bg-[#ff4739] text-white;
-}
-.container-secondary::selection {
-  color: #62dc42;
-}
-
-.container-primary {
-  @apply bg-red-500 text-white;
-}
-
-.skin-border {
-  padding: 1.5px;
-  border: 2px solid #f4f4f4;
 }

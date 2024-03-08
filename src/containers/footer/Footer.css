@@ -7,8 +7,8 @@
 }
 
 .footer_icon {
-  fill: #62dc42;
+  fill: var(--primary);
 }
 .footer_link:hover .footer_icon {
-  fill: #ff4739;
+  fill: var(--secondary);
 }

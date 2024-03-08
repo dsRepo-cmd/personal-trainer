@@ -1,5 +1,6 @@
 import { FaAngleDoubleDown } from "react-icons/fa";
 import HexagoneIcon from "../../assets/hexagone.svg";
+import "./Welcome.css";
 
 function Welcome() {
   const scrollToAnchor = (anchor: string) => {
@@ -26,36 +27,42 @@ function Welcome() {
       <div className="absolute overflow-hidden w-full h-[620px] top-1/2 -mt-300 transform -translate-y-1/2 z-1">
         <div className="absolute w-[600px] h-[600px] left-1/2 ml-[-693px]  ">
           <div className=" absolute right-0 hover:opacity-50">
-            <HexagoneIcon />
+            <HexagoneIcon className="hexagone_icon_left " />
           </div>
           <div className=" absolute left-0 top-1/2 translate-y-[-50%] hover:opacity-50">
-            <HexagoneIcon />
+            <HexagoneIcon className="hexagone_icon_left " />
           </div>
-          <div className=" absolute right-0 bottom-0 hover:opacity-50">
-            <HexagoneIcon />
+          <div className="absolute  right-0 bottom-0 hover:opacity-50">
+            <HexagoneIcon className="hexagone_icon_left " />
           </div>
         </div>
 
-        <div className="absolute w-[600px] h-[600px] right-1/2 transform translate-x-1/2 mr-[-400px] z-1 ">
+        <div className="absolute  w-[600px] h-[600px] right-1/2 transform translate-x-1/2 mr-[-400px] z-1 ">
           <div className=" absolute left-0 top-0 hover:opacity-50">
-            <HexagoneIcon />
+            <HexagoneIcon className="hexagone_icon_right" />
           </div>
 
-          <div className=" absolute right-0 translate-y-[50%] hover:opacity-50">
-            <HexagoneIcon />
+          <div className="1 absolute right-0 translate-y-[50%] hover:opacity-50">
+            <HexagoneIcon className="hexagone_icon_right">
+              <img
+                className="1234 w-full h-full"
+                src="https://picsum.photos/650/400?random=1"
+                alt=""
+              />
+            </HexagoneIcon>
           </div>
           <div className=" absolute left-0 bottom-0 hover:opacity-50">
-            <HexagoneIcon />
+            <HexagoneIcon className="hexagone_icon_right" />
           </div>
         </div>
       </div>
       <div className=" flex items-center">
         <a
-          className="absolute flex items-center justify-center w-20 h-20 left-1/2 bottom-[10%]  transition duration-500  transform  translate-x-[-50%] border-[4px] border-solid  border-[#ff4739] rounded-full hover:opacity-70"
+          className="wellcome_down_button"
           onClick={() => handleNavClick("navbar-top")}
           href="#navbar-top"
         >
-          <FaAngleDoubleDown color="#ff4739" size={42} />
+          <FaAngleDoubleDown className="wellcome_down_icon" size={24} />
         </a>
       </div>
     </div>

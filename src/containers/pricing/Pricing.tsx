@@ -4,6 +4,8 @@ import Text from "../../components/text/Text";
 import { pricing } from "../../data/pricing";
 import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
+import "./Pricing.css";
+import Button from "../../components/button/Button";
 
 interface PricingProps {
   className?: string;
@@ -24,17 +26,18 @@ const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
             >
               <Text
                 align="text-start"
-                className=" uppercase font-bold text-[#62dc42]"
+                color="color_primary"
+                uppercase
+                bold
                 title={plan.price}
               />
+              <Text align="text-start" uppercase bold text={plan.priceInfo} />
               <Text
                 align="text-start"
-                className=" uppercase font-bold"
-                text={plan.priceInfo}
-              />
-              <Text
-                align="text-start"
-                className=" uppercase font-bold text-[#ff4739] text-xl my-2"
+                color="color_secondary"
+                uppercase
+                bold
+                className="text-xl my-2"
                 text={plan.type}
               />
 
@@ -48,9 +51,13 @@ const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
                 </div>
               ))}
 
-              <button className=" self-start text-xs delay-50 rounded-sm uppercase mt-5 p-3 bg-[#ff4739] hover:bg-[#62dc42]">
-                {plan.buttonText}
-              </button>
+              <Button vaiant="secondary" className="mt-5 p-2 px-4  ">
+                <Text
+                  className=" text-[0.7rem]"
+                  uppercase
+                  text={plan.buttonText}
+                />
+              </Button>
             </div>
           ))}
         </div>

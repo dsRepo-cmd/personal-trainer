@@ -2,7 +2,7 @@ import { Skin } from "../../data/classes";
 import Text from "../text/Text";
 import "./Skin.css";
 
-type SkinVariant = "bg-[#ff4739]" | "bg-[#62dc42]";
+type SkinVariant = "skin_secondary" | "skin_primary";
 
 interface SkinItemProps {
   skin: Skin;
@@ -13,17 +13,18 @@ interface SkinItemProps {
 const SkinItem: React.FC<SkinItemProps> = ({
   skin,
   className,
-  variant = "bg-[#62dc42]",
+  variant = "skin_primary",
 }) => {
   return (
     <div className={`${className}  relative skin-border`}>
-      <div className=" items-start title-wrapper">
+      <div className="skin_title_wrapper">
         <Text
           align="text-start"
           fontFamily="Montserrat"
           size="m"
           uppercase
-          className={` font-bold uppercase text-white py-2 px-3 bg-[#1a1a1a] `}
+          bold
+          className="skin_title"
           text={skin.title}
         />
 
@@ -33,11 +34,9 @@ const SkinItem: React.FC<SkinItemProps> = ({
           text={skin.subtitle}
         />
       </div>
-      <img className="img" src={skin.img} alt={skin.title} />
+      <img className="skin_img" src={skin.img} alt={skin.title} />
 
-      <div
-        className={`paragraph-wrapper duration-400 flex flex-col gap-3  ${variant}`}
-      >
+      <div className={`skin_paragraph_wrapper ${variant}`}>
         {skin.paragraphs.map((paragraph, index) => (
           <div key={index}>
             <Text

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { nav } from "../../data/navigation";
 import { HiMenu } from "react-icons/hi";
 import Text from "../../components/text/Text";
+import "./NavBar.css";
 
 function NavBar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -10,8 +11,26 @@ function NavBar() {
 
   useEffect(() => {
     function handleScroll() {
-      const scrollPos = window.scrollY;
+      const scrollPos = window.scrollY + 1;
       const windowHeight = window.innerHeight;
+      const navbarHeight = isFixed ? 82 : 0;
+
+      nav.forEach((elem) => {
+        const element = document.getElementById(elem.path);
+
+        if (element) {
+          const elementTop =
+            element.getBoundingClientRect().top + window.scrollY;
+          const elementBottom = elementTop + element.offsetHeight;
+
+          if (
+            elementTop - navbarHeight <= scrollPos &&
+            elementBottom - navbarHeight > scrollPos
+          ) {
+            setActiveIndex(elem.name);
+          }
+        }
+      });
 
       if (scrollPos >= windowHeight) {
         setIsFixed(true);
@@ -56,7 +75,7 @@ function NavBar() {
 
   return (
     <>
-      <header
+      <nav
         id="navbar-top"
         className={`flex items-center flex-col justify-center h-[82px] w-[100%] bg-[#0c0c0c] ${
           isFixed ? "fixed top-0 z-50" : "relative"
@@ -64,17 +83,14 @@ function NavBar() {
       >
         <button
           onClick={() => toggleNav(null)}
-          className="border_dark cursor-pointer group transition-all duration-500 hidden md:flex gap-5 items-center p-3 hover:bg-[#181818] w-full"
+          className="navbar_button group hidden md:flex gap-5 items-center p-3 hover:bg-[#181818] w-full"
         >
-          <HiMenu
-            className="container-dark group-hover:text-[#62dc42] uppercase mb-1"
-            size={25}
-          />
+          <HiMenu className="navbar_button_text  uppercase mb-1" size={25} />
 
           <Text
             uppercase
             fontFamily="Montserrat"
-            className="container-dark group-hover:text-[#62dc42] text-[18px] "
+            className="navbar_button_text text-[18px] "
             text="Personal trainer"
           />
         </button>
@@ -88,24 +104,23 @@ function NavBar() {
             <a
               onClick={() => handleNavClick(elem.name)}
               key={elem.id}
-              className={`uppercase group flex items-center justify-center w-full md:p-6 h-full transition-all duration-500 px-10 hover:bg-[#181818] md:border sm:border-[#2a2a2a] md:border-solid ${
-                elem.name === activeIndex ? "bg-[#181818]" : ""
+              className={` navbar_link group  md:p-6 px-10 hover:bg-[#181818] md:border sm:border-[#2a2a2a] md:border-solid ${
+                elem.name === activeIndex && "bg-[#181818]"
               }`}
               href={`#${elem.path}`}
             >
               <Text
                 uppercase
-                className={` text-[15px] font-bold group-hover:text-[#62dc42] ${
-                  elem.name === activeIndex
-                    ? "text-[#62dc42]"
-                    : "text-[#ffffff]"
-                } xl:text-[12px] `}
+                bold
+                className={` navbar_link_text text-[15px]  group-hover:text-[#62dc42]  xl:text-[12px] ${
+                  elem.name === activeIndex && "navbar_link_text-active "
+                } `}
                 text={elem.name}
               />
             </a>
           ))}
         </div>
-      </header>
+      </nav>
       {isFixed && <div className=" mb-[82px] "> </div>}
     </>
   );

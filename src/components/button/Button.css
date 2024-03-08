@@ -1,0 +1,19 @@
+.button {
+  align-self: self-start;
+  border-radius: 2px;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+.primary:hover {
+  background-color: var(--secondary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.secondary:hover {
+  background-color: var(--primary);
+}

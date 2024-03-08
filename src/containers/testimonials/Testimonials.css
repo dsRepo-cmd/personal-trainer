@@ -6,13 +6,13 @@
 
 .slick-dots {
   position: static;
-  color: #fff;
+  color: var(--white);
 }
 
 .slick-dots li.slick-active button:before {
-  color: #fff;
+  color: var(--white);
 }
 
 .slick-dots li button:before {
-  color: #fff;
+  color: var(--white);
 }

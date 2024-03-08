@@ -4,6 +4,8 @@ import { Variant } from "../../lib/types";
 import Text from "../../components/text/Text";
 import { trainingSchedule } from "../../data/trainingSchedule";
 import Heading from "../../components/heading/Heading";
+import "./TrainingSchedule.css";
+
 interface TrainingScheduleProps {
   className?: string;
   variant?: Variant;
@@ -16,26 +18,26 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
         <Heading heading={trainingSchedule.heading} />
 
         <div className=" flex flex-col w-[70%] gap-4   justify-center ">
-          <table className=" ">
+          <table>
             {trainingSchedule.schedule.map((line) => (
-              <tr className=" " key={line.id}>
+              <tr key={line.id}>
                 <th className=" p-5">
                   <Text
+                    className="ts_day"
                     uppercase
                     align="text-start"
-                    variant="primary"
                     text={line.day}
                   />
                 </th>
                 {line.timeSlots.map((timeShot) => (
                   <td className="p-5" key={timeShot.id}>
-                    <div className=" flex">
-                      <Text variant="primary" text={timeShot.time} />
+                    <div className="flex">
+                      <Text className="ts_time" text={timeShot.time} />
                       {timeShot.oddWeek && (
-                        <Text variant="secondary" text="**" />
+                        <Text className="ts_time_shot" text="**" />
                       )}
                       {timeShot.evenWeek && (
-                        <Text variant="secondary" text="*" />
+                        <Text className="ts_time_shot" text="*" />
                       )}
                     </div>
                   </td>
@@ -48,7 +50,7 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
             {trainingSchedule.info?.map((item) => (
               <Text
                 align="text-start"
-                variant="secondary"
+                className="ts_time_shot"
                 text={item.asterisks}
                 children={<Text variant={variant} span={item.text} />}
               />
