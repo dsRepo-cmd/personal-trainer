@@ -1,5 +1,3 @@
-//blog.ts
-
 import { HeadingI } from "../lib/types";
 
 export interface Post {

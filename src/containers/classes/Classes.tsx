@@ -1,4 +1,3 @@
-import { FC } from "react";
 import Section from "../../components/section/Section";
 import SkinItem from "../../components/skin/Skin";
 import { classes } from "../../data/classes";
@@ -12,7 +11,7 @@ interface ClassesProps {
   variant?: Variant;
 }
 
-const Classes: FC<ClassesProps> = ({ variant = "dark" }) => {
+const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
   return (
     <Section id="classes" backgroundColor={variant}>
       <div className="flex flex-col w-full gap-10 items-center justify-center">

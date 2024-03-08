@@ -1,0 +1,18 @@
+.image-slider-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slick-dots {
+  position: static;
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}

@@ -1,14 +1,20 @@
+import Heading from "../../components/heading/Heading";
 import Section from "../../components/section/Section";
+import { contact } from "../../data/contact";
+import { Variant } from "../../lib/types";
+interface ContactProps {
+  className?: string;
+  variant?: Variant;
+}
 
-function Contact() {
+const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
   return (
-    <Section backgroundColor="white" id="contact">
+    <Section id="contact" backgroundColor={variant}>
       <div className="flex flex-col w-full gap-10 items-center justify-center">
-        <h1 className="text-4xl font-bold ">Contact</h1>
-        <p className="">Here are some of the projects I have worked on.</p>
+        <Heading variant={variant} heading={contact.heading} />
       </div>
     </Section>
   );
-}
+};
 
 export default Contact;

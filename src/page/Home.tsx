@@ -28,11 +28,11 @@ const Home: React.FC<HomeProps> = () => {
       <Pricing />
       <TrainingSchedule />
       <Blog variant="white" />
-      <Testimonials />
-      <Contact />
+      <Testimonials variant="secondary" />
+      <Contact variant="white" />
       <GoogleMaps />
       <FastContact />
-      <Footer />
+      <Footer variant="white" />
     </>
   );
 };

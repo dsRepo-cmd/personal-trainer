@@ -42,7 +42,14 @@ html {
   @apply bg-white text-black;
 }
 
-.container-red {
+.container-secondary {
+  @apply bg-[#ff4739] text-white;
+}
+.container-secondary::selection {
+  color: #62dc42;
+}
+
+.container-primary {
   @apply bg-red-500 text-white;
 }
 

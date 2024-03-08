@@ -1,0 +1,14 @@
+.footer_link {
+  cursor: pointer;
+  display: flex;
+  border-radius: 50%;
+  padding: 18px;
+  background-color: #f4f4f4;
+}
+
+.footer_icon {
+  fill: #62dc42;
+}
+.footer_link:hover .footer_icon {
+  fill: #ff4739;
+}

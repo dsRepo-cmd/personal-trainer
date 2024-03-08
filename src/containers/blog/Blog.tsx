@@ -1,4 +1,3 @@
-import { FC } from "react";
 import Section from "../../components/section/Section";
 import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
@@ -12,21 +11,21 @@ interface BlogProps {
   variant?: Variant;
 }
 
-const Blog: FC<BlogProps> = ({ variant = "dark" }) => {
+const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
   return (
     <Section backgroundColor={variant} id="blog">
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={blog.heading} />
         <div className="">
-          <div className=" grid grid-cols-2 gap-8">
+          <div className=" grid grid-cols-2 gap-8 lg:grid-cols-1">
             {blog.posts.map((post) => (
               <article
                 key={post.id}
-                className="grid grid-cols-2 gap-10 justify-center "
+                className="grid grid-cols-2 gap-10 justify-center md:grid-cols-1 "
               >
                 <div className="blog_item ">
                   <img
-                    className="blog_item_image skin-border   w-[244px] h-[324px] "
+                    className="blog_item_image skin-border   w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:w-[647px] md:h-[267px]  "
                     src={post.img}
                     alt={post.title}
                   />
