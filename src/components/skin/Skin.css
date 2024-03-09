@@ -1,7 +1,13 @@
+.skin {
+  position: relative;
+  padding: 2px;
+  border: 1px solid #e4e4e4;
+}
+
 .skin_img {
   object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .skin_title_wrapper {
@@ -17,12 +23,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
+  height: 100%;
 
   position: absolute;
   top: 0;
   opacity: 0;
-  width: 100%;
-  height: 100%;
+
   padding: 24px;
 
   transition: all 0.5s;

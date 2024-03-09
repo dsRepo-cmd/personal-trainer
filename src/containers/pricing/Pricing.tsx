@@ -18,7 +18,7 @@ const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={pricing.heading} />
 
-        <div className=" flex items-center gap-9  w-full">
+        <div className=" grid grid-cols-3 gap-9  w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
           {pricing.plans.map((plan) => (
             <div
               className="flex flex-col gap-2 h-full w-full p-10 bg-[#222222]"

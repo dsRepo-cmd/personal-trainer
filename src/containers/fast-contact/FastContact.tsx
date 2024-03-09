@@ -16,8 +16,8 @@ interface FastContactProps {
 
 const FastContact: FC<FastContactProps> = ({ variant = "dark" }) => {
   return (
-    <Section backgroundColor={variant} className=" my-[20px] ">
-      <div className="flex  w-full justify-between ">
+    <Section variant={variant} thin>
+      <div className="flex  w-full justify-between md:flex-col md:gap-3 md:items-start ">
         <div className=" flex items-center justify-center gap-4">
           <MdLocalPhone className="fc_icon" size={30} />
           <Text text={fastContact.phone} />

@@ -17,16 +17,13 @@ const Portfolio: FC<IntroProps> = ({ variant = "dark" }) => {
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={portfolio.heading} />
 
-        <div className="flex  w-[600px] gap-[2px] items-center justify-center  md:flex-wrap">
+        <div className="flex  w-[600px] gap-[2px] items-center justify-center  md:flex-wrap sm:w-[370px]">
           {portfolio.portfolioFilters.map((item) => (
             <button
-              className="w-full  bg-[#373737] hover:opacity-70"
+              className=" w-[150px]  py-5 px-8 bg-[#373737] hover:opacity-70 md:w-[120px]"
               key={item.id}
             >
-              <Text
-                text={item.name}
-                className=" py-5 text-nowrap  px-8 w-full"
-              />
+              <Text text={item.name} className=" text-nowrap  " />
             </button>
           ))}
         </div>

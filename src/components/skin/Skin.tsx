@@ -16,7 +16,7 @@ const SkinItem: React.FC<SkinItemProps> = ({
   variant = "skin_primary",
 }) => {
   return (
-    <div className={`${className}  relative skin-border`}>
+    <div className={`${className}  skin`}>
       <div className="skin_title_wrapper">
         <Text
           align="text-start"

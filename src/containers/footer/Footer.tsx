@@ -12,7 +12,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
   return (
-    <Section id="footer" backgroundColor={variant}>
+    <Section id="footer" variant={variant}>
       <footer className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={footer.heading} />
         <ul className=" flex gap-4">

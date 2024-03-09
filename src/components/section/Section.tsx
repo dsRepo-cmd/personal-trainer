@@ -5,17 +5,19 @@ import { Variant } from "../../lib/types";
 interface SectionProps {
   children: ReactNode;
   id?: string;
-  backgroundColor?: Variant;
+  variant?: Variant;
   doubleLine?: boolean;
   className?: string;
+  thin?: boolean;
 }
 
 const Section: FC<SectionProps> = ({
   children,
   id,
-  backgroundColor = "dark",
+  variant = "dark",
   doubleLine,
   className,
+  thin,
 }) => {
   const classMap: { [key in Variant]: string } = {
     dark: "container-dark",
@@ -24,7 +26,7 @@ const Section: FC<SectionProps> = ({
     secondary: "container-secondary ",
   };
 
-  const mod = classMap[backgroundColor];
+  const mod = classMap[variant];
 
   return (
     <section
@@ -37,7 +39,9 @@ const Section: FC<SectionProps> = ({
         </div>
       )}
       <div
-        className={`container flex items-center justify-center my-[86px] mx-20 md:my[36px] ${className}`}
+        className={`container flex items-center justify-center ${
+          thin ? "my-[20px]" : "my-[86px]"
+        } mx-20 md:my[36px] ${className}`}
       >
         {children}
       </div>

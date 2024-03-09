@@ -14,7 +14,7 @@ interface BlogProps {
 
 const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
   return (
-    <Section backgroundColor={variant} id="blog">
+    <Section variant={variant} id="blog">
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={blog.heading} />
         <div className="">

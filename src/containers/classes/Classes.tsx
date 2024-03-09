@@ -13,8 +13,8 @@ interface ClassesProps {
 
 const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
   return (
-    <Section id="classes" backgroundColor={variant}>
-      <div className="flex flex-col w-full gap-10 items-center justify-center">
+    <Section id="classes" variant={variant}>
+      <div className="flex flex-col w-full gap-10 items-center justify-center sm:p-1 ">
         <Heading variant={variant} heading={classes.heading} />
 
         <div className="classes_grid">

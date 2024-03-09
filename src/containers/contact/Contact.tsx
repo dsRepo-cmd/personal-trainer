@@ -9,7 +9,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
   return (
-    <Section id="contact" backgroundColor={variant}>
+    <Section id="contact" variant={variant}>
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={contact.heading} />
       </div>

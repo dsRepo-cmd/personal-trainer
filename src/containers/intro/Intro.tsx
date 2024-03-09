@@ -12,7 +12,7 @@ interface IntroProps {
 
 const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
   return (
-    <Section backgroundColor={variant}>
+    <Section variant={variant}>
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading variant={variant} heading={intro.heading} />
 

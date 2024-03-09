@@ -15,7 +15,7 @@ interface TestimonialsProps {
 
 const Testimonials: FC<TestimonialsProps> = ({ variant }) => {
   return (
-    <Section backgroundColor={variant} id="testimonials">
+    <Section variant={variant} id="testimonials">
       <div className="flex flex-col w-full gap-8 items-center justify-center overflow-hidden">
         <Heading variant={variant} heading={testimonials.heading} />
         <div className="image-slider-container">

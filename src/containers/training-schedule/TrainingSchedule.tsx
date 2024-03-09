@@ -17,11 +17,11 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
       <div className="flex flex-col w-full gap-10 items-center justify-center">
         <Heading heading={trainingSchedule.heading} />
 
-        <div className=" flex flex-col w-[70%] gap-4   justify-center ">
+        <div className=" flex flex-col w-[70%] gap-4   justify-center lg:w-full">
           <table>
             {trainingSchedule.schedule.map((line) => (
               <tr key={line.id}>
-                <th className=" p-5">
+                <th className="p-5 lg:p-3 sm:p-1">
                   <Text
                     className="ts_day"
                     uppercase
@@ -30,7 +30,7 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
                   />
                 </th>
                 {line.timeSlots.map((timeShot) => (
-                  <td className="p-5" key={timeShot.id}>
+                  <td className="p-5 lg:p-3 sm:p-1" key={timeShot.id}>
                     <div className="flex">
                       <Text className="ts_time" text={timeShot.time} />
                       {timeShot.oddWeek && (
