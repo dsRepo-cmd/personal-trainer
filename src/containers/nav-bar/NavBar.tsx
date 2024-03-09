@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { nav } from "../../data/navigation";
 import { HiMenu } from "react-icons/hi";
+import { nav } from "../../data/navigation";
 import Text from "../../components/text/Text";
 import "./NavBar.css";
 
@@ -54,7 +54,7 @@ function NavBar() {
     const element = document.getElementById(anchor);
 
     if (element) {
-      const navbarHeight = isFixed ? 82 : 0;
+      const navbarHeight = 82;
 
       const elementTop = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -85,12 +85,12 @@ function NavBar() {
           onClick={() => toggleNav(null)}
           className="navbar_button group hidden md:flex gap-5 items-center p-3 hover:bg-[#181818] w-full"
         >
-          <HiMenu className="navbar_button_text  uppercase mb-1" size={25} />
+          <HiMenu className="navbar_title  uppercase mb-[2px]" size={25} />
 
           <Text
             uppercase
             fontFamily="Montserrat"
-            className="navbar_button_text text-[18px] "
+            className="navbar_title text-[18px] "
             text="Personal trainer"
           />
         </button>
@@ -104,7 +104,7 @@ function NavBar() {
             <a
               onClick={() => handleNavClick(elem.name)}
               key={elem.id}
-              className={` navbar_link group  md:p-6 px-10 hover:bg-[#181818] md:border sm:border-[#2a2a2a] md:border-solid ${
+              className={` navbar_link group  md:p-6 px-10 hover:bg-[#181818] md:border md:border-[#2a2a2a] md:border-solid ${
                 elem.name === activeIndex && "bg-[#181818]"
               }`}
               href={`#${elem.path}`}

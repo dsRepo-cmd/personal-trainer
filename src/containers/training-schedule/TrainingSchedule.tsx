@@ -1,9 +1,9 @@
-import { FC } from "react";
 import Section from "../../components/section/Section";
-import { Variant } from "../../lib/types";
+import Container from "../../components/container/Container";
 import Text from "../../components/text/Text";
-import { trainingSchedule } from "../../data/trainingSchedule";
 import Heading from "../../components/heading/Heading";
+import { Variant } from "../../lib/types";
+import { trainingSchedule } from "../../data/trainingSchedule";
 import "./TrainingSchedule.css";
 
 interface TrainingScheduleProps {
@@ -11,17 +11,19 @@ interface TrainingScheduleProps {
   variant?: Variant;
 }
 
-const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
+const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
+  variant = "dark",
+}) => {
   return (
-    <Section id="pricing">
-      <div className="flex flex-col w-full gap-10 items-center justify-center">
+    <Section id="training-schedule">
+      <Container>
         <Heading heading={trainingSchedule.heading} />
 
         <div className=" flex flex-col w-[70%] gap-4   justify-center lg:w-full">
           <table>
             {trainingSchedule.schedule.map((line) => (
               <tr key={line.id}>
-                <th className="p-5 lg:p-3 sm:p-1">
+                <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
                   <Text
                     className="ts_day"
                     uppercase
@@ -32,12 +34,21 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
                 {line.timeSlots.map((timeShot) => (
                   <td className="p-5 lg:p-3 sm:p-1" key={timeShot.id}>
                     <div className="flex">
-                      <Text className="ts_time" text={timeShot.time} />
+                      <Text
+                        className="ts_time sm:text-[0.7rem]"
+                        text={timeShot.time}
+                      />
                       {timeShot.oddWeek && (
-                        <Text className="ts_time_shot" text="**" />
+                        <Text
+                          className="ts_time_shot sm:text-[0.7rem]"
+                          text="**"
+                        />
                       )}
                       {timeShot.evenWeek && (
-                        <Text className="ts_time_shot" text="*" />
+                        <Text
+                          className="ts_time_shot sm:text-[0.7rem]"
+                          text="*"
+                        />
                       )}
                     </div>
                   </td>
@@ -57,7 +68,7 @@ const TrainingSchedule: FC<TrainingScheduleProps> = ({ variant = "dark" }) => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </Section>
   );
 };

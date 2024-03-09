@@ -6,6 +6,7 @@ import Text from "../../components/text/Text";
 import { TfiAngleDoubleRight } from "react-icons/tfi";
 import "./Blog.css";
 import Button from "../../components/button/Button";
+import Container from "../../components/container/Container";
 
 interface BlogProps {
   className?: string;
@@ -15,7 +16,7 @@ interface BlogProps {
 const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
   return (
     <Section variant={variant} id="blog">
-      <div className="flex flex-col w-full gap-10 items-center justify-center">
+      <Container>
         <Heading variant={variant} heading={blog.heading} />
         <div className="">
           <div className=" grid grid-cols-2 gap-8 lg:grid-cols-1">
@@ -71,7 +72,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </Section>
   );
 };

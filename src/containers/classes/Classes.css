@@ -70,3 +70,31 @@
     }
   }
 }
+
+@media (max-width: 639px) {
+  .classes_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .skin1 {
+    width: 100%;
+  }
+  .skin2 {
+  }
+
+  .skin3 {
+  }
+
+  .skin4 {
+  }
+
+  .skin5 {
+  }
+
+  .skin6 {
+  }
+
+  .skin7 {
+  }
+}

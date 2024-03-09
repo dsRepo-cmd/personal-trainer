@@ -47,7 +47,7 @@ export const trainingSchedule: TrainingSchedule = {
       timeSlots: [
         { id: 1, time: "10:00 - 13:00", oddWeek: false, evenWeek: false },
         { id: 2, time: "14:00", oddWeek: false, evenWeek: true },
-        { id: 3, time: "15:00 - 18:00", oddWeek: false, evenWeek: true },
+        { id: 3, time: "15:00 - 18:00", oddWeek: true, evenWeek: false },
       ],
     },
     {
@@ -63,7 +63,7 @@ export const trainingSchedule: TrainingSchedule = {
       day: "WEDNESDAY",
       timeSlots: [
         { id: 1, time: "10:00 - 14:00", oddWeek: true, evenWeek: false },
-        { id: 2, time: "15:00", oddWeek: false, evenWeek: false },
+        { id: 2, time: "15:00", oddWeek: false, evenWeek: true },
       ],
     },
     {
@@ -72,14 +72,14 @@ export const trainingSchedule: TrainingSchedule = {
       timeSlots: [
         { id: 1, time: "10:00 - 12:00", oddWeek: false, evenWeek: false },
         { id: 2, time: "14:00 - 16:00", oddWeek: true, evenWeek: false },
-        { id: 3, time: "17:00", oddWeek: true, evenWeek: false },
+        { id: 3, time: "17:00", oddWeek: false, evenWeek: true },
       ],
     },
     {
       id: 5,
       day: "FRIDAY",
       timeSlots: [
-        { id: 1, time: "10:00 - 14:00", oddWeek: false, evenWeek: true },
+        { id: 1, time: "10:00 - 14:00", oddWeek: false, evenWeek: false },
       ],
     },
   ],

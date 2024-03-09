@@ -5,6 +5,8 @@
   width: fit-content;
   height: fit-content;
   overflow: hidden;
+  padding: 2px;
+  border: 1px solid #e4e4e4;
 }
 
 .blog_item_image {

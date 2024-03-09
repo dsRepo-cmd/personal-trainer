@@ -4,6 +4,7 @@ import { classes } from "../../data/classes";
 import "./Classes.css";
 import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
+import Container from "../../components/container/Container";
 const { skins } = classes;
 
 interface ClassesProps {
@@ -14,7 +15,7 @@ interface ClassesProps {
 const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
   return (
     <Section id="classes" variant={variant}>
-      <div className="flex flex-col w-full gap-10 items-center justify-center sm:p-1 ">
+      <Container className="">
         <Heading variant={variant} heading={classes.heading} />
 
         <div className="classes_grid">
@@ -38,7 +39,7 @@ const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
           />
           <SkinItem skin={skins.skin7} className={skins.skin7.className} />
         </div>
-      </div>
+      </Container>
     </Section>
   );
 };

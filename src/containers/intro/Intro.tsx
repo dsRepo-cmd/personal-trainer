@@ -4,6 +4,8 @@ import { FC } from "react";
 import { Variant } from "../../lib/types";
 import { intro } from "../../data/intro";
 import Heading from "../../components/heading/Heading";
+import "./Intro.css";
+import Container from "../../components/container/Container";
 
 interface IntroProps {
   className?: string;
@@ -13,7 +15,7 @@ interface IntroProps {
 const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
   return (
     <Section variant={variant}>
-      <div className="flex flex-col w-full gap-10 items-center justify-center">
+      <Container>
         <Heading variant={variant} heading={intro.heading} />
 
         <div className="flex items-center justify-center gap-4 xl:grid grid-cols-2 sm:grid-cols-1 mt-10 ">
@@ -35,7 +37,7 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </Section>
   );
 };

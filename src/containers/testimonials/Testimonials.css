@@ -2,10 +2,10 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
+  transition: none;
 }
 
 .slick-dots {
-  position: static;
   color: var(--white);
 }
 
@@ -15,4 +15,25 @@
 
 .slick-dots li button:before {
   color: var(--white);
+}
+
+.slick-dots li {
+  height: auto;
+  width: auto;
+  margin: 2px;
+}
+
+.slick-dots li.slick-active .click_dote {
+  opacity: 1;
+}
+
+.click_dote {
+  width: 54px;
+  height: 6px;
+  background-color: var(--white);
+  opacity: 0.7;
+}
+
+.click_dote:hover {
+  opacity: 1;
 }

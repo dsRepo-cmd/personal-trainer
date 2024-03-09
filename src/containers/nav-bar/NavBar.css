@@ -3,7 +3,7 @@
   color: var(--white);
 }
 
-.navbar_button:hover .navbar_button_text {
+.navbar_button:hover .navbar_title {
   color: var(--primary);
   fill: var(--primary);
 }

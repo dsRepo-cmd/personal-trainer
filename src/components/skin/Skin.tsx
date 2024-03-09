@@ -36,15 +36,14 @@ const SkinItem: React.FC<SkinItemProps> = ({
       </div>
       <img className="skin_img" src={skin.img} alt={skin.title} />
 
-      <div className={`skin_paragraph_wrapper ${variant}`}>
+      <div className={`skin_paragraph_wrapper  ${variant} `}>
         {skin.paragraphs.map((paragraph, index) => (
-          <div key={index}>
-            <Text
-              align="text-start"
-              className=" text-[0.8rem] text-white "
-              text={paragraph}
-            />
-          </div>
+          <Text
+            key={index}
+            align="text-start"
+            className=" text-[0.8rem] mb-3 text-white overflow-hidden overflow-ellipsis "
+            text={paragraph}
+          />
         ))}
       </div>
     </div>

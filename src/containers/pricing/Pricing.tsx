@@ -1,21 +1,21 @@
-import { FC } from "react";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
+import Heading from "../../components/heading/Heading";
+import Button from "../../components/button/Button";
+import Container from "../../components/container/Container";
 import { pricing } from "../../data/pricing";
 import { Variant } from "../../lib/types";
-import Heading from "../../components/heading/Heading";
 import "./Pricing.css";
-import Button from "../../components/button/Button";
 
 interface PricingProps {
   className?: string;
   variant?: Variant;
 }
 
-const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
+const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
   return (
     <Section id="pricing">
-      <div className="flex flex-col w-full gap-10 items-center justify-center">
+      <Container>
         <Heading variant={variant} heading={pricing.heading} />
 
         <div className=" grid grid-cols-3 gap-9  w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
@@ -29,6 +29,7 @@ const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
                 color="color_primary"
                 uppercase
                 bold
+                className=" text-[2.8rem]"
                 title={plan.price}
               />
               <Text align="text-start" uppercase bold text={plan.priceInfo} />
@@ -61,7 +62,7 @@ const Pricing: FC<PricingProps> = ({ variant = "dark" }) => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </Section>
   );
 };
