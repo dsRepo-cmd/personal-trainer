@@ -12,6 +12,7 @@ import Contact from "../containers/contact/Contact";
 import FastContact from "../containers/fast-contact/FastContact";
 import GoogleMaps from "../containers/google-maps/GoogleMaps";
 import Footer from "../containers/footer/Footer";
+import ToTop from "../containers/to-top/ToTop";
 
 interface HomeProps {
   className?: string;
@@ -33,6 +34,7 @@ const Home: React.FC<HomeProps> = () => {
       <GoogleMaps />
       <FastContact />
       <Footer variant="white" />
+      <ToTop />
     </>
   );
 };

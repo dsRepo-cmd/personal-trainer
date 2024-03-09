@@ -3,6 +3,8 @@ import Heading from "../../components/heading/Heading";
 import Section from "../../components/section/Section";
 import { contact } from "../../data/contact";
 import { Variant } from "../../lib/types";
+import "./Contact.css";
+
 interface ContactProps {
   className?: string;
   variant?: Variant;

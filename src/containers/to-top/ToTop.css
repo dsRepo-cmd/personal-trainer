@@ -1,0 +1,30 @@
+.to-top {
+  position: fixed;
+  bottom: -36px;
+  right: 34px;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 29px;
+  width: 29px;
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+  line-height: 28px !important;
+  border-radius: 2px;
+  color: var(--white);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+}
+
+#to-top:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--primary);
+}
+
+.to_top-active {
+  bottom: 17px;
+}
