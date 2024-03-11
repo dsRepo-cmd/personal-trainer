@@ -37,7 +37,7 @@ export const trainingSchedule: TrainingSchedule = {
 
   info: [
     { id: 1, text: "Odd Week ", asterisks: "* " },
-    { id: 1, text: "Even Week ", asterisks: "** " },
+    { id: 2, text: "Even Week ", asterisks: "** " },
   ],
 
   schedule: [
@@ -54,32 +54,32 @@ export const trainingSchedule: TrainingSchedule = {
       id: 2,
       day: "TUESDAY",
       timeSlots: [
-        { id: 1, time: "10:00 - 12:00", oddWeek: false, evenWeek: true },
-        { id: 2, time: "15:00 - 16:00", oddWeek: true, evenWeek: false },
+        { id: 4, time: "10:00 - 12:00", oddWeek: false, evenWeek: true },
+        { id: 5, time: "15:00 - 16:00", oddWeek: true, evenWeek: false },
       ],
     },
     {
       id: 3,
       day: "WEDNESDAY",
       timeSlots: [
-        { id: 1, time: "10:00 - 14:00", oddWeek: true, evenWeek: false },
-        { id: 2, time: "15:00", oddWeek: false, evenWeek: true },
+        { id: 6, time: "10:00 - 14:00", oddWeek: true, evenWeek: false },
+        { id: 7, time: "15:00", oddWeek: false, evenWeek: true },
       ],
     },
     {
       id: 4,
       day: "THURSDAY",
       timeSlots: [
-        { id: 1, time: "10:00 - 12:00", oddWeek: false, evenWeek: false },
-        { id: 2, time: "14:00 - 16:00", oddWeek: true, evenWeek: false },
-        { id: 3, time: "17:00", oddWeek: false, evenWeek: true },
+        { id: 8, time: "10:00 - 12:00", oddWeek: false, evenWeek: false },
+        { id: 9, time: "14:00 - 16:00", oddWeek: true, evenWeek: false },
+        { id: 10, time: "17:00", oddWeek: false, evenWeek: true },
       ],
     },
     {
       id: 5,
       day: "FRIDAY",
       timeSlots: [
-        { id: 1, time: "10:00 - 14:00", oddWeek: false, evenWeek: false },
+        { id: 11, time: "10:00 - 14:00", oddWeek: false, evenWeek: false },
       ],
     },
   ],

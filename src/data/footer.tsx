@@ -29,27 +29,27 @@ export const footer: Footer = {
     {
       id: 1,
       title: "Share on Facebook",
-      icon: <FaFacebookF size={24} className="footer_icon" />,
+      icon: <FaFacebookF size={20} className="footer_icon" />,
     },
     {
       id: 2,
       title: "Share on Twitter",
-      icon: <FaTwitter size={24} className="footer_icon" />,
+      icon: <FaTwitter size={20} className="footer_icon" />,
     },
     {
       id: 3,
       title: "Share on Skype",
-      icon: <FaSkype size={24} className="footer_icon" />,
+      icon: <FaSkype size={20} className="footer_icon" />,
     },
     {
       id: 4,
       title: "Share on Linkedin",
-      icon: <FaLinkedinIn size={24} className="footer_icon" />,
+      icon: <FaLinkedinIn size={20} className="footer_icon" />,
     },
     {
       id: 5,
       title: "Share on Google Plus",
-      icon: <FaGooglePlusG size={24} className="footer_icon" />,
+      icon: <FaGooglePlusG size={20} className="footer_icon" />,
     },
   ],
   copyright: `© 2024 Fitness Trainers.`,

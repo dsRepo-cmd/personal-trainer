@@ -16,8 +16,6 @@ const ToTop: React.FC<ContactProps> = () => {
       const scrollPos = window.scrollY;
       const windowHeight = window.innerHeight / 4;
 
-      console.log(windowHeight, scrollPos);
-
       if (scrollPos >= windowHeight) {
         setActive(true);
       } else {

@@ -18,15 +18,15 @@ const FastContact: FC<FastContactProps> = ({ variant = "dark" }) => {
   return (
     <Section variant={variant} thin>
       <div className="flex  w-full justify-between md:flex-col md:gap-3 md:items-start ">
-        <div className=" flex items-center justify-center gap-4">
+        <div className=" fc_item ">
           <MdLocalPhone className="fc_icon" size={30} />
           <Text text={fastContact.phone} />
         </div>
-        <div className=" flex items-center justify-center gap-4">
+        <div className=" fc_item ">
           <IoIosMail className="fc_icon" size={30} />
           <Text text={fastContact.email} />
         </div>
-        <div className=" flex items-center justify-center gap-4">
+        <div className=" fc_item ">
           <SiGooglemaps className="fc_icon" size={30} />
           <Text text={fastContact.adress} />
         </div>

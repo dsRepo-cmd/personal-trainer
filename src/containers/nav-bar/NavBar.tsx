@@ -52,6 +52,8 @@ function NavBar() {
 
   const scrollToAnchor = (anchor: string) => {
     const element = document.getElementById(anchor);
+    const navElement = document.querySelector(".nav-app");
+    console.log(navElement);
 
     if (element) {
       const navbarHeight = 82;
@@ -121,7 +123,7 @@ function NavBar() {
           ))}
         </div>
       </nav>
-      {isFixed && <div className=" mb-[82px] "> </div>}
+      {isFixed && <div className="nav-back pb-[82px]"></div>}
     </>
   );
 }

@@ -21,45 +21,48 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
 
         <div className=" flex flex-col w-[70%] gap-4   justify-center lg:w-full">
           <table>
-            {trainingSchedule.schedule.map((line) => (
-              <tr key={line.id}>
-                <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
-                  <Text
-                    className="ts_day"
-                    uppercase
-                    align="text-start"
-                    text={line.day}
-                  />
-                </th>
-                {line.timeSlots.map((timeShot) => (
-                  <td className="p-5 lg:p-3 sm:p-1" key={timeShot.id}>
-                    <div className="flex">
-                      <Text
-                        className="ts_time sm:text-[0.7rem]"
-                        text={timeShot.time}
-                      />
-                      {timeShot.oddWeek && (
+            <tbody>
+              {trainingSchedule.schedule.map((line) => (
+                <tr key={line.id}>
+                  <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
+                    <Text
+                      className="ts_day"
+                      uppercase
+                      align="text-start"
+                      text={line.day}
+                    />
+                  </th>
+                  {line.timeSlots.map((timeShot) => (
+                    <td className="p-5 lg:p-3 sm:p-1" key={timeShot.id}>
+                      <div className="flex">
                         <Text
-                          className="ts_time_shot sm:text-[0.7rem]"
-                          text="**"
+                          className="ts_time sm:text-[0.7rem]"
+                          text={timeShot.time}
                         />
-                      )}
-                      {timeShot.evenWeek && (
-                        <Text
-                          className="ts_time_shot sm:text-[0.7rem]"
-                          text="*"
-                        />
-                      )}
-                    </div>
-                  </td>
-                ))}
-              </tr>
-            ))}
+                        {timeShot.oddWeek && (
+                          <Text
+                            className="ts_time_shot sm:text-[0.7rem]"
+                            text="**"
+                          />
+                        )}
+                        {timeShot.evenWeek && (
+                          <Text
+                            className="ts_time_shot sm:text-[0.7rem]"
+                            text="*"
+                          />
+                        )}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
           </table>
 
           <div className=" flex gap-4">
             {trainingSchedule.info?.map((item) => (
               <Text
+                key={item.id}
                 align="text-start"
                 className="ts_time_shot"
                 text={item.asterisks}
