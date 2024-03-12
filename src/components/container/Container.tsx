@@ -7,7 +7,7 @@ interface ContainerProps {
   className?: string;
 }
 
-const Container: FC<ContainerProps> = ({ children, className }) => {
+const Container: FC<ContainerProps> = ({ children, className = "" }) => {
   return <div className={`contain ${className} sm:p-1`}>{children}</div>;
 };
 

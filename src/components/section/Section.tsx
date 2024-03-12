@@ -16,7 +16,7 @@ const Section: FC<SectionProps> = ({
   id,
   variant = "dark",
   doubleLine,
-  className,
+  className = "",
   thin,
 }) => {
   const classMap: { [key in Variant]: string } = {

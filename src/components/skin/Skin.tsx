@@ -12,7 +12,7 @@ interface SkinItemProps {
 
 const SkinItem: React.FC<SkinItemProps> = ({
   skin,
-  className,
+  className = "",
   variant = "skin_primary",
 }) => {
   return (

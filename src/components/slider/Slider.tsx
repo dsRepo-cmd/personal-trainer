@@ -6,7 +6,7 @@ interface SliderProps {
   className?: string;
 }
 
-const Slider: React.FC<SliderProps> = ({ images, className }) => {
+const Slider: React.FC<SliderProps> = ({ images, className = "" }) => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {

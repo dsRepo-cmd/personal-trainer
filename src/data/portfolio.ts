@@ -1,14 +1,20 @@
 import { HeadingI } from "../lib/types";
+type PortfolioItemType =
+  | "all"
+  | "fatLoss"
+  | "training"
+  | "videos"
+  | "nutrition";
 
 interface PortfolioType {
   name: string;
-  slug: string;
+  type: PortfolioItemType;
   id: number;
 }
 
 interface PortfolioItem {
   id: number;
-  type: Array<PortfolioType["slug"]>;
+  types: Array<PortfolioType["type"]>;
   name: string;
   link: string;
   title: string;
@@ -28,68 +34,68 @@ export const portfolio: Portfolio = {
     {
       id: 1,
       name: "All",
-      slug: "all",
+      type: "all",
     },
     {
       id: 2,
       name: "Fat Loss",
-      slug: "fatLoss",
+      type: "fatLoss",
     },
     {
       id: 3,
       name: "Training",
-      slug: "training",
+      type: "training",
     },
     {
       id: 4,
       name: "Videos",
-      slug: "videos",
+      type: "videos",
     },
     {
       id: 5,
       name: "Nutrition",
-      slug: "nutrition",
+      type: "nutrition",
     },
   ],
   portfolioItems: [
     {
       id: 1,
-      type: ["fatLoss"],
+      types: ["fatLoss"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
     },
     {
       id: 2,
-      type: ["training"],
+      types: ["training"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
     },
     {
       id: 3,
-      type: ["videos", "training"],
+      types: ["videos", "training"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
     },
     {
       id: 4,
-      type: ["fatLoss"],
+      types: ["fatLoss"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
     },
     {
       id: 5,
-      type: ["training", "nutrition"],
+      types: ["training", "nutrition"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
     },
     {
       id: 6,
-      type: ["videos"],
+      types: ["videos"],
       title: "Several tea plants that help you lose weight",
       name: "Training Cardio Abs",
       link: "https://picsum.photos/650/400?random=1",
