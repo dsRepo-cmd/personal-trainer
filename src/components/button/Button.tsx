@@ -7,16 +7,26 @@ export type TextAlign = "text-start" | "text-end" | "text-center";
 
 interface TextProps {
   className?: string;
-  vaiant?: Variant;
+  variant?: Variant;
   children?: ReactNode;
+  disabled?: boolean;
 }
 
-const Button: React.FC<TextProps> = ({ children, vaiant, className = "" }) => {
+const Button: React.FC<TextProps> = ({
+  children,
+  variant,
+  className = "",
+  disabled,
+}) => {
   const mods = {};
-  const addClasses = [vaiant, className];
+  const addClasses = [variant, className];
+  console.log(addClasses);
 
   return (
-    <button className={classNames("button", mods, addClasses)}>
+    <button
+      disabled={disabled}
+      className={classNames("button", mods, addClasses)}
+    >
       {children}
     </button>
   );

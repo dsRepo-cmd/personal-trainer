@@ -44,7 +44,8 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
     setIsotope(iso);
 
     return () => {
-      iso.destroy();
+      iso.reloadItems();
+      // iso.destroy();
     };
   }, []);
 

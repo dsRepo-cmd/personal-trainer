@@ -59,7 +59,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                     text={post.text}
                   />
 
-                  <Button vaiant="primary" className=" mt-5 py-2 px-3 ">
+                  <Button variant="primary" className=" mt-5 py-2 px-3 ">
                     <Text
                       className=" text-[0.7rem]"
                       align="text-start"

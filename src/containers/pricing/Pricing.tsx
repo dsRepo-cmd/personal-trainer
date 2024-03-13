@@ -56,7 +56,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
                 </div>
               ))}
 
-              <Button vaiant="secondary" className="mt-5 p-2 px-4  ">
+              <Button variant="secondary" className="mt-5 p-2 px-4  ">
                 <Text
                   className=" text-[0.7rem]"
                   uppercase

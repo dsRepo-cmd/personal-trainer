@@ -2,6 +2,7 @@ import { HeadingI } from "../lib/types";
 
 export interface Contact {
   heading: HeadingI;
+  formspree: string;
 }
 
 export const contact: Contact = {
@@ -14,4 +15,5 @@ export const contact: Contact = {
       },
     ],
   },
+  formspree: "mzbneqzd",
 };
