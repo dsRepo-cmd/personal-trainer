@@ -37,3 +37,6 @@
 .click_dote:hover {
   opacity: 1;
 }
+.slick-track {
+  transition-property: none;
+}

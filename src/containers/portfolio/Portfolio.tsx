@@ -22,7 +22,6 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
   useEffect(() => {
     if (isotope) {
       const filter = activeFilter === "all" ? "*" : `.${activeFilter}`;
-
       isotope.arrange({ filter: filter });
     }
   }, [isotope, activeFilter]);
@@ -39,11 +38,9 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
       },
       fitRows: { gutter: 50 },
       stagger: "0.05s",
-      stamp: "masonry",
       percentPosition: true,
-      transitionDuration: "0.5s",
     });
-    console.log(iso);
+
     setIsotope(iso);
 
     return () => {
@@ -79,15 +76,21 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
           ))}
         </div>
 
-        <div ref={portfolioRef} className="pt_item_wrapper  ">
+        <div ref={portfolioRef} className="pt_item_wrapper">
           {portfolio.portfolioItems.map((item) => (
-            <div className={`${item.types.join(" ")} pt_item `} key={item.id}>
-              <img src={item.link} alt={item.name} className="pt_item_image " />
-              <a href="#" className={"pt_item_link"}>
-                <MdPlayCircle color="#fff" size={50} />
-              </a>
-              <div className="pt_item_title ">
-                <Text text={item.title} className="text-center" />
+            <div className={`${item.types.join(" ")} pt_item`} key={item.id}>
+              <div className="pt_item_inner">
+                <img
+                  src={item.link}
+                  alt={item.name}
+                  className="pt_item_image"
+                />
+                <a href="#" className={"pt_item_link"}>
+                  <MdPlayCircle color="#fff" size={50} />
+                </a>
+                <div className="pt_item_title">
+                  <Text text={item.title} className="text-center" />
+                </div>
               </div>
             </div>
           ))}

@@ -5,6 +5,7 @@ import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
 import { pricing } from "../../data/pricing";
 import { Variant } from "../../lib/types";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import "./Pricing.css";
 
 interface PricingProps {
@@ -42,13 +43,16 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
                 text={plan.type}
               />
 
-              {plan.info.map((item, index) => (
+              {plan.info.map((text, index) => (
                 <div className=" border-b border-[#424242]" key={index}>
-                  <Text
-                    align="text-start"
-                    className=" text-[#e4e4e4] text-[0.8rem] mb-3"
-                    text={item}
-                  />
+                  <div className="flex mb-3 items-center gap-1 ">
+                    <MdKeyboardArrowRight className="pr_chevron_right" />
+                    <Text
+                      align="text-start"
+                      className=" text-[#e4e4e4] text-[0.8rem] "
+                      text={text}
+                    />
+                  </div>
                 </div>
               ))}
 

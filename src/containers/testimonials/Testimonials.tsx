@@ -22,7 +22,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ variant }) => {
           <Slider
             dots
             autoplay
-            autoplaySpeed={3000}
+            autoplaySpeed={2000}
             pauseOnHover
             speed={1000}
             swipeToSlide
