@@ -23,8 +23,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-family: "Josefin Sans", sans-serif;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
