@@ -20,8 +20,10 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
         <Heading variant={variant} heading={pricing.heading} />
 
         <div className=" grid grid-cols-3 gap-9  w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
-          {pricing.plans.map((plan) => (
+          {pricing.plans.map((plan, index) => (
             <div
+              data-aos="zoom-in"
+              data-aos-duration={1000 + index * 500}
               className="flex flex-col gap-2 h-full w-full p-10 bg-[#222222]"
               key={plan.id}
             >
@@ -33,7 +35,9 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
                 className=" text-[2.8rem]"
                 title={plan.price}
               />
+
               <Text align="text-start" uppercase bold text={plan.priceInfo} />
+
               <Text
                 align="text-start"
                 color="color_secondary"

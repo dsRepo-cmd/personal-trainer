@@ -22,6 +22,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
           <div className=" grid grid-cols-2 gap-8 lg:grid-cols-1">
             {blog.posts.map((post) => (
               <article
+                data-aos={post.aosOptions}
                 key={post.id}
                 className="grid grid-cols-2 gap-10 justify-center md:grid-cols-1 "
               >

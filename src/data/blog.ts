@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { AosOptions, HeadingI } from "../lib/types";
 
 export interface Post {
   id: number;
@@ -6,6 +6,7 @@ export interface Post {
   date: string;
   text: string;
   img: string;
+  aosOptions?: AosOptions;
 }
 
 export interface Blog {
@@ -30,6 +31,7 @@ export const blog: Blog = {
       date: "May 13th, 2014",
       text: "Ea per fastidii vivendum. Duo ei case bonorum, ei nam quodsi labores, in justo molestiae adipiscing per. Mei ne honestatis definitionem. Qui accusamus no, ea sea alii tractatos, et pro consul vulputate.",
       img: "https://picsum.photos/650/400?random=1",
+      aosOptions: "slide-right",
     },
     {
       id: 2,
@@ -37,6 +39,7 @@ export const blog: Blog = {
       date: "May 2nd, 2014",
       text: "Pri accusata instructior ne. Per officiis tacimates tincidunt et, est harum nobis iudico ad. Aeterno feugait hendrerit eam in, ius ad natum simul interpretaris. Nam suas definitiones id.",
       img: "https://picsum.photos/650/400?random=1",
+      aosOptions: "slide-left",
     },
     {
       id: 3,
@@ -44,6 +47,7 @@ export const blog: Blog = {
       date: "May 12th, 2014",
       text: "Per probo paulo qualisque an, tempor scripta nonumes pro ut, eam euismod antiopam contentiones at. Mei ne honestatis definitionem. Qui accusamus no, ea sea alii tractatos, et pro consul vulputate.",
       img: "https://picsum.photos/650/400?random=1",
+      aosOptions: "slide-right",
     },
     {
       id: 4,
@@ -51,6 +55,7 @@ export const blog: Blog = {
       date: "May 2nd, 2014",
       text: "Populo postulant theophrastus usu cu, praesent definitiones mea an. No purto molestie qui, mea te alii feugait philosophia. Nec sonet viris decore ex. Mei ne assum dictas, dolor fierent ad mel.",
       img: "https://picsum.photos/650/400?random=1",
+      aosOptions: "slide-left",
     },
   ],
 };

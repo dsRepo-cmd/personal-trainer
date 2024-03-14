@@ -58,7 +58,10 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
       <Container>
         <Heading variant={variant} heading={portfolio.heading} />
 
-        <div className="pt_filter md:flex-wrap sm:w-[370px] ">
+        <div
+          data-aos="fade-right"
+          className="pt_filter md:flex-wrap sm:w-[370px] "
+        >
           {portfolio.portfolioFilters.map((item) => (
             <button
               onClick={() => onChangeFilter(item.type)}

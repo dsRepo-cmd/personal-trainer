@@ -21,6 +21,7 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
         <div className="flex items-center justify-center gap-4 xl:grid grid-cols-2 sm:grid-cols-1 mt-10 ">
           {intro.blocks.map((block) => (
             <div
+              data-aos="zoom-in"
               key={block.id}
               className=" flex flex-col justify-center items-center gap-4 w-[300px]"
             >

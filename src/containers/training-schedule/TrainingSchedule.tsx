@@ -23,7 +23,7 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
           <table>
             <tbody>
               {trainingSchedule.schedule.map((line) => (
-                <tr key={line.id}>
+                <tr data-aos={"fade-up"} key={line.id}>
                   <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
                     <Text
                       className="ts_day"
@@ -59,7 +59,7 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
             </tbody>
           </table>
 
-          <div className=" flex gap-4">
+          <div data-aos={"fade-up"} className=" flex gap-4">
             {trainingSchedule.info?.map((item) => (
               <Text
                 key={item.id}
