@@ -1,1 +1,1 @@
-https://candid-cannoli-f54309.netlify.app/#welcome
+https://candid-cannoli-f54309.netlify.app
