@@ -46,7 +46,7 @@ function Welcome() {
             <HexagoneIcon className="hexagone_icon_right">
               <img
                 className="1234 w-full h-full"
-                src="https://picsum.photos/650/400?random=1"
+                src="https://picsum.photos/650/400?image=1062"
                 alt=""
               />
             </HexagoneIcon>

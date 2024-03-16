@@ -30,7 +30,7 @@ export const blog: Blog = {
       title: "My daily training routine",
       date: "May 13th, 2014",
       text: "Ea per fastidii vivendum. Duo ei case bonorum, ei nam quodsi labores, in justo molestiae adipiscing per. Mei ne honestatis definitionem. Qui accusamus no, ea sea alii tractatos, et pro consul vulputate.",
-      img: "https://picsum.photos/650/400?random=1",
+      img: "https://picsum.photos/650/400?image=366",
       aosOptions: "slide-right",
     },
     {
@@ -38,7 +38,7 @@ export const blog: Blog = {
       title: "Several tea plants that help you lose weight",
       date: "May 2nd, 2014",
       text: "Pri accusata instructior ne. Per officiis tacimates tincidunt et, est harum nobis iudico ad. Aeterno feugait hendrerit eam in, ius ad natum simul interpretaris. Nam suas definitiones id.",
-      img: "https://picsum.photos/650/400?random=1",
+      img: "https://picsum.photos/650/400?image=598",
       aosOptions: "slide-left",
     },
     {
@@ -46,7 +46,7 @@ export const blog: Blog = {
       title: "My natural lemon juice",
       date: "May 12th, 2014",
       text: "Per probo paulo qualisque an, tempor scripta nonumes pro ut, eam euismod antiopam contentiones at. Mei ne honestatis definitionem. Qui accusamus no, ea sea alii tractatos, et pro consul vulputate.",
-      img: "https://picsum.photos/650/400?random=1",
+      img: "https://picsum.photos/650/400?image=429",
       aosOptions: "slide-right",
     },
     {
@@ -54,7 +54,7 @@ export const blog: Blog = {
       title: "Several tea plants that help you lose weight",
       date: "May 2nd, 2014",
       text: "Populo postulant theophrastus usu cu, praesent definitiones mea an. No purto molestie qui, mea te alii feugait philosophia. Nec sonet viris decore ex. Mei ne assum dictas, dolor fierent ad mel.",
-      img: "https://picsum.photos/650/400?random=1",
+      img: "https://picsum.photos/650/400?image=425",
       aosOptions: "slide-left",
     },
   ],

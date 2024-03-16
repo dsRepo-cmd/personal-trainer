@@ -38,7 +38,7 @@ export const classes: Classes = {
   skins: {
     skin1: {
       className: "skin1",
-      img: "https://picsum.photos/530/320?random=1",
+      img: "https://picsum.photos/530/320?image=964",
       title: "Fitness nutrition",
       subtitle: "We’ll gladly take care of your diet",
       paragraphs: [
@@ -51,7 +51,7 @@ export const classes: Classes = {
 
     skin2: {
       className: "skin2",
-      img: "https://picsum.photos/245/410?random=1",
+      img: "https://picsum.photos/245/410?image=977",
       title: "Food discipline",
       subtitle: "Learn how to eat & be disciplined",
       paragraphs: [
@@ -62,7 +62,7 @@ export const classes: Classes = {
 
     skin3: {
       className: "skin3",
-      img: "https://picsum.photos/245/320?random=1",
+      img: "https://picsum.photos/245/320?image=954",
       title: "Personal Training",
       subtitle: "Need a push? We’re at your side!",
       paragraphs: [
@@ -72,7 +72,7 @@ export const classes: Classes = {
     },
     skin4: {
       className: "skin4",
-      img: "https://picsum.photos/245/320?random=1",
+      img: "https://picsum.photos/245/320?image=911",
       title: "Motivation & Support",
       subtitle: "We’re here to help you!",
       paragraphs: [
@@ -82,7 +82,7 @@ export const classes: Classes = {
     },
     skin5: {
       className: "skin5",
-      img: "https://picsum.photos/245/320?random=1",
+      img: "https://picsum.photos/245/320?image=960",
       title: "Training schedule",
       subtitle: "Your time, your terms!",
       paragraphs: [
@@ -92,7 +92,7 @@ export const classes: Classes = {
     },
     skin6: {
       className: "skin6",
-      img: "https://picsum.photos/245/230?random=1",
+      img: "https://picsum.photos/245/230?image=820",
       title: "First time?",
       subtitle: "You’ll get a free session!",
       paragraphs: [
@@ -102,7 +102,7 @@ export const classes: Classes = {
     },
     skin7: {
       className: "skin7",
-      img: "https://picsum.photos/245/320?random=1",
+      img: "https://picsum.photos/245/320?image=607",
       title: "Maximise results",
       subtitle: "Get best results combining sports",
       paragraphs: [
