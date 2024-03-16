@@ -1,5 +1,6 @@
 import { FaAngleDoubleDown } from "react-icons/fa";
 import HexagoneIcon from "../../assets/hexagone.svg";
+import LogoIcon from "../../assets/logo.png";
 import "./Welcome.css";
 
 function Welcome() {
@@ -23,7 +24,12 @@ function Welcome() {
   };
 
   return (
-    <div id="welcome" className="relative w-full h-screen bg-[#191919]">
+    <div
+      id="welcome"
+      className=" flex items-center justify-center relative w-full h-screen bg-[#191919]"
+    >
+      <img src={LogoIcon} alt="Feel Fit | Personal trainers" />
+
       <div className="absolute overflow-hidden w-full h-[620px] top-1/2 -mt-300 transform -translate-y-1/2 z-1">
         <div className="absolute w-[600px] h-[600px] left-1/2 ml-[-693px]  ">
           <div className=" absolute right-0 hover:opacity-50">
