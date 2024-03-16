@@ -14,8 +14,14 @@
   --dark: #1a1a1a;
 }
 
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 .app {
   overflow: hidden;
+  min-height: 100svh;
 }
 
 * {
@@ -38,9 +44,10 @@ html {
   scroll-padding-top: 6rem;
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
   scrollbar-color: white;
 }
+
 ::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
