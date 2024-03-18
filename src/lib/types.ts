@@ -9,6 +9,12 @@ export interface HeadingI {
   title: string;
   paragraphs?: Paragraph[];
 }
+
+export enum Theme {
+  RED_GREEN = "red_green_theme",
+  ORANGE_BLUE = "orange_blue_theme",
+}
+
 // aosOptions =============================================
 type AnimationType =
   // Fade animations

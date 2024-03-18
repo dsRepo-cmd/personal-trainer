@@ -6,10 +6,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark_theme {
+.red_green_theme {
   --bg: #1a2327;
   --secondary: #ff4739;
   --primary: #62dc42;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+}
+
+.orange_blue_theme {
+  --bg: #1a2327;
+  --secondary: rgb(255, 133, 25);
+  --primary: rgb(57, 201, 255);
   --white: #ffffff;
   --dark: #1a1a1a;
 }
