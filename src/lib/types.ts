@@ -12,7 +12,11 @@ export interface HeadingI {
 
 export enum Theme {
   RED_GREEN = "red_green_theme",
-  ORANGE_BLUE = "orange_blue_theme",
+  PURPLE_YELLOW = "purple-yellow_theme",
+  BLUE_ORANGE = "orange_blue_theme",
+  LIGHT_GREEN_PINK = "light-green-pink_theme",
+  TURQUOISE_ORANGE = "turquoise-orange_theme",
+  DARK_BLUE_DARK_RED = "dark-blue-dark-red_theme",
 }
 
 // aosOptions =============================================

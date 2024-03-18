@@ -4,29 +4,15 @@ import { ThemeContext } from "./ThemeContext";
 import { LOCAL_STORAGE_THEME_KEY } from "./localStorage";
 
 interface UseThemeResult {
-  toggleTheme: (saveAction?: (theme: Theme) => void) => void;
+  toggleTheme: (theme: Theme) => void;
   theme: Theme;
 }
 
 const useTheme = (): UseThemeResult => {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const toggleTheme = (saveAction?: (theme: Theme) => void) => {
-    let newTheme: Theme;
-    switch (theme) {
-      case Theme.RED_GREEN:
-        newTheme = Theme.ORANGE_BLUE;
-        break;
-      case Theme.ORANGE_BLUE:
-        newTheme = Theme.RED_GREEN;
-        break;
-
-      default:
-        newTheme = Theme.RED_GREEN;
-    }
+  const toggleTheme = (newTheme: Theme) => {
     setTheme?.(newTheme);
-
-    saveAction?.(newTheme);
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
   };
 

@@ -6,28 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.red_green_theme {
-  --bg: #1a2327;
-  --secondary: #ff4739;
-  --primary: #62dc42;
-  --white: #ffffff;
-  --dark: #1a1a1a;
-}
-
-.orange_blue_theme {
-  --bg: #1a2327;
-  --secondary: rgb(255, 133, 25);
-  --primary: rgb(57, 201, 255);
-  --white: #ffffff;
-  --dark: #1a1a1a;
-}
-
 html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
 }
 
 .app {
+  --bg: #1a2327;
+  --white: #ffffff;
+  --dark: #1a1a1a;
   overflow: hidden;
   min-height: 100svh;
 }
@@ -60,3 +47,32 @@ html {
   background: black;
   border-radius: 10px;
 }
+
+/* Themes  ============================================== */
+.red_green_theme {
+  --secondary: #ff4739;
+  --primary: #62dc42;
+}
+
+.orange_blue_theme {
+  --secondary: #ff8519;
+  --primary: #39c9ff;
+}
+.purple-yellow_theme {
+  --secondary: #ffcc18;
+  --primary: #8238e6;
+}
+.light-green-pink_theme {
+  --secondary: #ff3984;
+  --primary: #a1d909;
+}
+.turquoise-orange_theme {
+  --secondary: #ff6f0f;
+  --primary: #04dc83;
+}
+
+.dark-blue-dark-red_theme {
+  --secondary: #f33346;
+  --primary: #2f96ff;
+}
+/* ============================================================ */
