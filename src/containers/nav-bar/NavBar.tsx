@@ -99,8 +99,8 @@ function NavBar() {
 
         <div
           className={`flex justify-center h-full items-center ${
-            !isOpen ? "md:flex" : "md:right-[0%]"
-          } md:flex-col md:absolute m-auto md:top-[82px] md:right-[-100%] md:h-auto md:w-[100%] md:bg-[#0c0c0c]`}
+            !isOpen ? "md:flex" : "md:left-[0]"
+          } md:flex-col md:absolute m-auto md:top-[82px] md:left-[-100%] md:h-auto md:w-[100%] md:bg-[#0c0c0c]`}
         >
           {nav.map((elem) => (
             <a

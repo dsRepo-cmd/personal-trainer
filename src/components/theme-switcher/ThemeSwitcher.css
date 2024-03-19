@@ -1,6 +1,6 @@
 .theme_switcher {
   position: fixed;
-  top: 100px;
+  top: 90px;
   left: 12px;
   z-index: 10000;
 
@@ -23,7 +23,7 @@
 .options-panel {
   position: relative;
   position: fixed;
-  top: 150px;
+  top: 120px;
   left: -300px;
   z-index: 100;
 
@@ -165,4 +165,8 @@
 }
 .options-panel .color_suggestions li.dark-blue-dark-red span {
   background: #f33346;
+}
+
+.options_panel_divider {
+  border-top: 1px solid #303439;
 }

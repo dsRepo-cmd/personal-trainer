@@ -38,12 +38,13 @@ const ThemeSwitcher = memo(() => {
         <table>
           <tbody>
             <tr>
-              <div className="flex items-center justify-between w-full mb-3">
-                <Text text="Skin color" />
+              <div className="flex items-center justify-between w-full ">
+                <Text size="l" text="Skin Colors" />
                 <button onClick={onCloseSettings}>
                   <MdCancel />
                 </button>
               </div>
+              <hr className="options_panel_divider my-3" />
             </tr>
             <tr>
               <td>

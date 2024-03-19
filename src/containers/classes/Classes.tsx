@@ -15,7 +15,7 @@ interface ClassesProps {
 const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
   return (
     <Section id="classes" variant={variant}>
-      <Container className="">
+      <Container>
         <Heading variant={variant} heading={classes.heading} />
 
         <div className="classes_grid">

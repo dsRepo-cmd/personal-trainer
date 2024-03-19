@@ -16,8 +16,12 @@ const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
       <footer className="footer">
         <Heading variant={variant} heading={footer.heading} />
         <ul className=" flex gap-4">
-          {footer.links.map((link) => (
-            <li key={link.id}>
+          {footer.links.map((link, index) => (
+            <li
+              data-aos={"fade-up"}
+              data-aos-duration={1000 + index * 200}
+              key={link.id}
+            >
               <a href="#" className="footer_link">
                 {link.icon}
               </a>
