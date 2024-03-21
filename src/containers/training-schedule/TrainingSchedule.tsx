@@ -23,7 +23,7 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
           <table>
             <tbody>
               {trainingSchedule.schedule.map((line) => (
-                <tr data-aos={"fade-up"} key={line.id}>
+                <tr className="ts_divider" data-aos={"fade-up"} key={line.id}>
                   <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
                     <Text
                       className="ts_day"

@@ -13,7 +13,7 @@ import FastContact from "../containers/fast-contact/FastContact";
 import GoogleMaps from "../containers/google-maps/GoogleMaps";
 import Footer from "../containers/footer/Footer";
 import ToTop from "../containers/to-top/ToTop";
-import ThemeSwitcher from "../components/theme-switcher/ThemeSwitcher";
+import ThemeSwitcher from "../containers/theme-switcher/ThemeSwitcher";
 
 interface HomeProps {
   className?: string;

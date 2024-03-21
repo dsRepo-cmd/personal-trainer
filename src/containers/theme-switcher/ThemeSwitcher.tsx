@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from "react";
 import useTheme from "../../lib/useTheme";
 import "./ThemeSwitcher.css";
 import { IoMdSettings } from "react-icons/io";
-import Text from "../text/Text";
+import Text from "../../components/text/Text";
 import { MdCancel } from "react-icons/md";
 import { Theme } from "../../lib/types";
 

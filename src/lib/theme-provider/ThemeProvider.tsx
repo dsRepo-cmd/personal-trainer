@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useMemo, useState } from "react";
-import { Theme } from "../../lib/types";
-import { LOCAL_STORAGE_THEME_KEY } from "../../lib/localStorage";
-import { ThemeContext } from "../../lib/ThemeContext";
+import { Theme } from "../types";
+import { LOCAL_STORAGE_THEME_KEY } from "../localStorage";
+import { ThemeContext } from "../ThemeContext";
 
 interface ThemeProviderProps {
   initialTheme?: Theme;
