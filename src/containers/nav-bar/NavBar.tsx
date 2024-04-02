@@ -79,13 +79,13 @@ function NavBar() {
     <>
       <nav
         id="navbar-top"
-        className={`flex items-center flex-col justify-center h-[82px] w-[100%] bg-[#0c0c0c] ${
+        className={`navbar_conatiner   ${
           isFixed ? "fixed top-0 z-50" : "relative"
         } md:items-start`}
       >
         <button
           onClick={() => toggleNav(null)}
-          className="navbar_button group hidden md:flex gap-5 items-center p-3 hover:bg-[#181818] w-full"
+          className="navbar_button group hidden md:flex "
         >
           <HiMenu className="navbar_title  uppercase mb-[2px]" size={25} />
 
@@ -98,7 +98,7 @@ function NavBar() {
         </button>
 
         <div
-          className={`flex justify-center h-full items-center ${
+          className={`flex justify-center h-full items-center navbar_item ${
             !isOpen ? "md:flex" : "md:left-[0]"
           } md:flex-col md:absolute m-auto md:top-[82px] md:left-[-100%] md:h-auto md:w-[100%] md:bg-[#0c0c0c]`}
         >
@@ -123,7 +123,7 @@ function NavBar() {
           ))}
         </div>
       </nav>
-      {isFixed && <div className="nav-back pb-[82px]"></div>}
+      {isFixed && <div className="nav-back"></div>}
     </>
   );
 }

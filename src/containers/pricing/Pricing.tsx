@@ -19,7 +19,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
       <Container>
         <Heading variant={variant} heading={pricing.heading} />
 
-        <div className=" grid grid-cols-3 gap-9  w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
+        <div className="pr_wrapper  md:flex-col lg:grid-cols-2 sm:grid-cols-1">
           {pricing.plans.map((plan, index) => (
             <div
               data-aos="zoom-in"
@@ -48,7 +48,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
               />
 
               {plan.info.map((text, index) => (
-                <div className=" border-b border-[#424242]" key={index}>
+                <div className="pr_divider" key={index}>
                   <div className="flex mb-3 items-center gap-1 ">
                     <MdKeyboardArrowRight className="pr_chevron_right" />
                     <Text
