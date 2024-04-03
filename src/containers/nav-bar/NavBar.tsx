@@ -114,7 +114,7 @@ function NavBar() {
               <Text
                 uppercase
                 bold
-                className={` navbar_link_text text-[15px]  group-hover:text-[#62dc42]  xl:text-[12px] ${
+                className={` navbar_link_text xl:text-[12px] ${
                   elem.name === activeIndex && "navbar_link_text-active "
                 } `}
                 text={elem.name}

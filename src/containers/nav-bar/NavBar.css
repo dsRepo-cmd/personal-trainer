@@ -43,6 +43,11 @@
 .navbar_link_text-active {
   color: var(--primary);
 }
+
+.navbar_link_text:hover {
+  color: var(--primary);
+}
+
 .nav-back {
   display: flex;
   align-items: center;
