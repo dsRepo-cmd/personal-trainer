@@ -31,11 +31,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                     src={post.img}
                     alt={post.title}
                   />
-                  <button
-                    id="playBtn"
-                    title={post.title}
-                    className={"blog_item_button "}
-                  >
+                  <button title={post.title} className={"blog_item_button "}>
                     <TfiAngleDoubleRight color={variant} size={18} />
                   </button>
                   <span className="blog-overlay " />

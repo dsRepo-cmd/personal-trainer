@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import LoaderIcon from "./assets/ajax-document-loader.gif";
+import LoaderIcon from "./assets/loader.svg";
 
 const Home = lazy(() => import("./page/Home"));
 
@@ -8,7 +8,7 @@ function App() {
     <Suspense
       fallback={
         <div className="h-screen w-full flex items-center justify-center ">
-          <img src={LoaderIcon} alt="Loading..." />
+          <LoaderIcon className=" w-[400px] h-[400px] animate-bounce" />
         </div>
       }
     >
