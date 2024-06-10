@@ -20,7 +20,6 @@ const Button: React.FC<TextProps> = ({
 }) => {
   const mods = {};
   const addClasses = [variant, className];
-  console.log(addClasses);
 
   return (
     <button

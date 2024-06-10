@@ -33,7 +33,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                   />
                   <button
                     id="playBtn"
-                    title="play-button"
+                    title={post.title}
                     className={"blog_item_button "}
                   >
                     <TfiAngleDoubleRight color={variant} size={18} />

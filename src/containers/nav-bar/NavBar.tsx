@@ -52,8 +52,6 @@ function NavBar() {
 
   const scrollToAnchor = (anchor: string) => {
     const element = document.getElementById(anchor);
-    const navElement = document.querySelector(".nav-app");
-    console.log(navElement);
 
     if (element) {
       const navbarHeight = 82;

@@ -28,7 +28,9 @@ const ThemeSwitcher = memo(() => {
   return (
     <div className="theme_switcher">
       <button
-        className="text-[#ffffff] w-full h-full flex items-center justify-center "
+        id="theme menu"
+        title="theme menu"
+        className="text-[#ffffff] w-full h-full flex items-center justify-center"
         onClick={onOpenSettings}
       >
         <IoMdSettings />
@@ -38,13 +40,15 @@ const ThemeSwitcher = memo(() => {
         <table>
           <tbody>
             <tr>
-              <div className="flex items-center justify-between w-full ">
-                <Text size="l" text="Skin Colors" />
-                <button onClick={onCloseSettings}>
-                  <MdCancel />
-                </button>
-              </div>
-              <hr className="options_panel_divider my-3" />
+              <td colSpan={2}>
+                <div className="flex items-center justify-between w-full">
+                  <Text size="l" text="Skin Colors" />
+                  <button title="close panel" onClick={onCloseSettings}>
+                    <MdCancel />
+                  </button>
+                </div>
+                <hr className="options_panel_divider my-3" />
+              </td>
             </tr>
             <tr>
               <td>
@@ -86,7 +90,6 @@ const ThemeSwitcher = memo(() => {
                     <span></span>
                   </li>
                 </ul>
-                <div className="clear"></div>
               </td>
             </tr>
           </tbody>
