@@ -5,9 +5,9 @@ import LogoIcon from "../../assets/logo.png";
 import "./Top.css";
 
 const images = [
-  "https://picsum.photos/1920/640?image=960",
-  "https://picsum.photos/1920/640?image=961",
-  "https://picsum.photos/1920/640?image=962",
+  "https://picsum.photos/1920/1080?image=960",
+  "https://picsum.photos/1920/1080?image=961",
+  "https://picsum.photos/1920/1080?image=962",
 ];
 function Top() {
   const scrollToAnchor = (anchor: string) => {
@@ -30,8 +30,11 @@ function Top() {
   };
 
   return (
-    <div id="welcome" className=" relative">
-      <ImagesSlider className="h-[40rem]" images={images}>
+    <div
+      id="welcome"
+      className=" relative flex h-screen items-center justify-center bg-black"
+    >
+      <ImagesSlider className="h-screen" images={images}>
         <motion.div
           initial={{
             opacity: 0,
