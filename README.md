@@ -1,1 +1,1 @@
-https://candid-cannoli-f54309.netlify.app
+https://personal-trainers.netlify.app/
