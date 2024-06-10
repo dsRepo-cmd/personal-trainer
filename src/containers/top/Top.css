@@ -31,27 +31,3 @@
 .wellcome_down_button:hover .wellcome_down_icon {
   fill: var(--primary);
 }
-
-.hexagone_icon_left {
-  fill: var(--primary);
-  color: var(--primary);
-  overflow: hidden;
-}
-
-.hexagone_icon_right {
-  fill: var(--secondary);
-  color: var(--secondary);
-  overflow: hidden;
-}
-
-.hexagon-overlay {
-  opacity: 0;
-}
-.hexagon-overlay:hover {
-  opacity: 0.7;
-  /* fill: var(--primary); */
-}
-
-.hexagon-image {
-  opacity: 1;
-}
