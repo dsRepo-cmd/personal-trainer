@@ -30,7 +30,7 @@ function Top() {
   };
 
   return (
-    <div id="welcome">
+    <div id="welcome" className=" relative">
       <ImagesSlider className="h-[40rem]" images={images}>
         <motion.div
           initial={{
@@ -49,17 +49,17 @@ function Top() {
           <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50  to-black py-4">
             <img src={LogoIcon} alt="Feel Fit | Personal trainers" />
           </motion.p>
-          <div className=" flex items-center">
-            <a
-              className=" wellcome_down_button"
-              onClick={() => handleNavClick("navbar-top")}
-              href="#navbar-top"
-            >
-              <FaAngleDoubleDown className="wellcome_down_icon" size={24} />
-            </a>
-          </div>
         </motion.div>
       </ImagesSlider>
+      <div className=" flex items-center">
+        <a
+          className=" wellcome_down_button z-50"
+          onClick={() => handleNavClick("navbar-top")}
+          href="#navbar-top"
+        >
+          <FaAngleDoubleDown className="wellcome_down_icon" size={24} />
+        </a>
+      </div>
     </div>
   );
 }
