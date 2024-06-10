@@ -8,7 +8,6 @@ const images = [
   "https://picsum.photos/1920/640?image=960",
   "https://picsum.photos/1920/640?image=961",
   "https://picsum.photos/1920/640?image=962",
-  "https://picsum.photos/1920/640?image=963",
 ];
 function Top() {
   const scrollToAnchor = (anchor: string) => {
