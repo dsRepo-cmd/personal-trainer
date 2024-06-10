@@ -39,6 +39,8 @@ const ToTop: React.FC<ContactProps> = () => {
 
   return (
     <a
+      aria-label="to-top"
+      title="to top"
       id="to-top"
       className={`to-top ${isActive ? "to_top-active" : ""}`}
       href="#"

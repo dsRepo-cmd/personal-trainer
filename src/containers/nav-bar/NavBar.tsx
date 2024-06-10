@@ -106,6 +106,7 @@ function NavBar() {
             <a
               onClick={() => handleNavClick(elem.name)}
               key={elem.id}
+              aria-label={elem.name}
               className={` navbar_link group  md:p-6 px-10 hover:bg-[#181818] md:border md:border-[#2a2a2a] md:border-solid ${
                 elem.name === activeIndex && "bg-[#181818]"
               }`}

@@ -89,7 +89,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
                   alt={item.name}
                   className="pt_item_image"
                 />
-                <a href="#" className={"pt_item_link"}>
+                <a aria-label={item.title} href="#" className={"pt_item_link"}>
                   <MdPlayCircle color="#fff" size={50} />
                 </a>
                 <div className="pt_item_title">

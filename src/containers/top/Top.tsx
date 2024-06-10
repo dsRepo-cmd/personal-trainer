@@ -56,6 +56,7 @@ function Top() {
       </ImagesSlider>
       <div className=" flex items-center">
         <a
+          aria-label="to navbar"
           className=" wellcome_down_button z-50"
           onClick={() => handleNavClick("navbar-top")}
           href="#navbar-top"

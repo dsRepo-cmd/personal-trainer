@@ -22,7 +22,12 @@ const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
               data-aos-duration={1000 + index * 200}
               key={link.id}
             >
-              <a href="#" className="footer_link">
+              <a
+                aria-label={link.title}
+                title={link.title}
+                href="#"
+                className="footer_link"
+              >
                 {link.icon}
               </a>
             </li>
