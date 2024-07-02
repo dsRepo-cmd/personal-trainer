@@ -5,9 +5,10 @@ import LogoIcon from "../../assets/logo.png";
 import "./Top.css";
 
 const images = [
-  "https://picsum.photos/1920/1080?image=960",
-  "https://picsum.photos/1920/1080?image=961",
-  "https://picsum.photos/1920/1080?image=962",
+  "https://picsum.photos/1920/1080?image=389",
+  "https://picsum.photos/1920/1080?image=390",
+  "https://picsum.photos/1920/1080?image=770",
+  "https://picsum.photos/1920/1080?image=817",
 ];
 function Top() {
   const scrollToAnchor = (anchor: string) => {
