@@ -1,7 +1,12 @@
+/* ============================================ */
+
+/* pt_item_==================================== */
+
 .pt_item {
   cursor: pointer;
   border: 2px double #adadad;
   padding: 3px;
   overflow: hidden;
+  transition: background 0.4s, box-shadow 0.4s;
   margin: 20px;
 }

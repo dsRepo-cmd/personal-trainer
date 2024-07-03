@@ -83,10 +83,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
         >
           {portfolio.portfolioItems.map((item) => (
             <div
-              className={cn(
-                " pt_item  cursor-pointer border-double border-2 p-[3px] overflow-hidden m-5",
-                item.types.join(" ")
-              )}
+              className={cn(" pt_item ", item.types.join(" "))}
               key={item.id}
             >
               <div className=" group flex flex-col items-center text-center h-[190px]">
@@ -104,7 +101,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
                 >
                   <MdPlayCircle color="#fff" size={50} />
                 </a>
-                <div className=" absolute left-1/2 translate-x-[-50%] opacity-0 group-hover:bottom-[20%] group-hover:opacity-100 ">
+                <div className=" absolute left-1/2 bottom-0 translate-x-[-50%] opacity-0 group-hover:bottom-[20%] group-hover:opacity-100 ">
                   <Text text={item.title} className="text-center text-sm" />
                 </div>
               </div>
