@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { Variant } from "../../lib/types";
-import "./ToTop.css";
+import { cn } from "../../lib/cn";
 
 interface ContactProps {
   className?: string;
@@ -42,7 +42,10 @@ const ToTop: React.FC<ContactProps> = () => {
       aria-label="to-top"
       title="to top"
       id="to-top"
-      className={`to-top ${isActive ? "to_top-active" : ""}`}
+      className={cn(
+        " fixed bottom-[-36px] right-[36px] z-50 flex items-center justify-center h-[29px] w-[29px] cursor-pointer duration-300 rounded-sm text-white  bg-dark hover:opacity-70 ",
+        isActive ? " bottom-4" : ""
+      )}
       href="#"
       onClick={scrollToTop}
     >
