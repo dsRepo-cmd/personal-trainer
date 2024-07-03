@@ -67,26 +67,22 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
             <button
               onClick={() => onChangeFilter(item.type)}
               className={cn(
-                " w-40 px-5 py-6 md:w-[120px] bg-[#252525] hover:opacity-70 hover:text-primary",
+                "text-nowrap text-sm  w-40 px-5 py-6 md:w-[120px] bg-[#252525] hover:opacity-70 hover:text-primary",
                 activeFilter === item.type ? " bg-[#2c2c2c] text-primary" : ""
               )}
               key={item.id}
             >
-              <Text
-                text={item.name}
-                className={` text-nowrap  text-primary hover:text-primary ${
-                  activeFilter === item.type
-                    ? " bg-[#2c2c2c] text-primary"
-                    : " text-white"
-                } `}
-              />
+              {item.name}
             </button>
           ))}
         </div>
 
-        <div ref={portfolioRef} className="pt_item_wrapper">
+        <div
+          ref={portfolioRef}
+          className=" flex flex-wrap justify-center w-full"
+        >
           {portfolio.portfolioItems.map((item) => (
-            <div className={`${item.types.join(" ")} pt_item`} key={item.id}>
+            <div className={cn(" pt_item", item.types.join(" "))} key={item.id}>
               <div className="pt_item_inner">
                 <img
                   src={item.link}

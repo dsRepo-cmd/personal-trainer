@@ -1,12 +1,7 @@
 /* ============================================ */
 
 /* pt_item_==================================== */
-.pt_item_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
+
 .pt_item {
   cursor: pointer;
   border: 2px double #adadad;

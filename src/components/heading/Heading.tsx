@@ -18,7 +18,10 @@ const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
         />
       </div>
 
-      <div data-aos="fade-up" className="flex flex-col gap-2 items-center ">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col gap-2 items-center text-center "
+      >
         {heading.paragraphs &&
           heading.paragraphs.map((paragraph) => (
             <div key={paragraph.id}>

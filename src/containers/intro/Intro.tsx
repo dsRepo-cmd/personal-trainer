@@ -27,11 +27,14 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
               {block.icon}
               <Text
                 variant={variant}
-                size="m"
                 text={block.title}
                 className=" text-primary font-bold uppercase"
               />
-              <Text size="s" variant={variant} text={block.text} />
+              <Text
+                className=" text-sm text-center"
+                variant={variant}
+                text={block.text}
+              />
             </div>
           ))}
         </div>

@@ -25,7 +25,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                 key={post.id}
                 className="grid grid-cols-2 gap-10 justify-center md:grid-cols-1 "
               >
-                <div className="blog_item ">
+                <div className=" blog_item ">
                   <img
                     className="blog_item_image skin-border   w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:w-[647px] md:h-[267px]  "
                     src={post.img}
