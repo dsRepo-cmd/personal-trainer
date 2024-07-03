@@ -40,9 +40,8 @@ function NavBar() {
     };
   }, [isFixed]);
 
-  const toggleNav = (name: string | null) => {
+  const toggleNav = () => {
     setIsOpen(!isOpen);
-    setActiveIndex(name === activeIndex ? null : name);
   };
 
   const scrollToAnchor = (anchor: string) => {
@@ -57,14 +56,15 @@ function NavBar() {
   };
 
   const handleNavClick = (name: string) => {
+    setActiveIndex(name);
     if (name) {
-      toggleNav(name);
+      setIsOpen(false);
       setTimeout(() => {
         scrollToAnchor(name);
       }, 0);
     }
   };
-  console.log(activeIndex);
+
   return (
     <>
       <nav
@@ -76,7 +76,7 @@ function NavBar() {
         )}
       >
         <button
-          onClick={() => toggleNav(null)}
+          onClick={toggleNav}
           className={cn(
             " hidden items-center text-white w-full h-full gap-5 font-primary text-[18px] uppercase",
             " hover:bg-[#181818] hover:text-primary",
