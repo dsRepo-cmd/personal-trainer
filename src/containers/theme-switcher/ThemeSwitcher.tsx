@@ -42,7 +42,7 @@ const ThemeSwitcher = memo(() => {
             <tr>
               <td colSpan={2}>
                 <div className="flex items-center justify-between w-full">
-                  <Text size="l" text="Skin Colors" />
+                  <Text className=" text-xl" text="Skin Colors" />
                   <button title="close panel" onClick={onCloseSettings}>
                     <MdCancel />
                   </button>

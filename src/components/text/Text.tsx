@@ -15,7 +15,7 @@ const variantClasses: { [key in Variant]: string } = {
   dark: " text-white ",
   white: "text-dark ",
   primary: "",
-  secondary: "",
+  secondary: "text-white",
 };
 
 const Text: React.FC<TextProps> = ({

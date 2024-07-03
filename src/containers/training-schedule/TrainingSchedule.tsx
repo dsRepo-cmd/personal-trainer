@@ -22,7 +22,11 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
           <table>
             <tbody>
               {trainingSchedule.schedule.map((line) => (
-                <tr className=" w-full h-full " key={line.id}>
+                <tr
+                  data-aos="fade-up"
+                  className=" w-full h-full "
+                  key={line.id}
+                >
                   <th>
                     <div className="text-[#a6a6a6] bg-[#222222]  font-normal m-[1px]  text-sm p-5 lg:p-3 sm:p-1 sm:text-[0.7rem] uppercase">
                       {line.day}

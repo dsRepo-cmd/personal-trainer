@@ -18,7 +18,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ variant }) => {
     <Section variant={variant} id="testimonials">
       <Container className=" relative">
         <Heading variant={variant} heading={testimonials.heading} />
-        <div className="image-slider-container ">
+        <div className=" relative m-auto w-full  ">
           <Slider
             dots
             autoplay
@@ -39,8 +39,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({ variant }) => {
                 className=" cursor-grab active:cursor-grabbing"
                 key={item.id}
               >
-                <Text className=" mb-6 mx-5" size="m" text={item.text} />
-                <Text className=" mb-6" size="m" text={item.textBy} />
+                <Text className=" mb-6 mx-5" text={item.text} />
+                <Text className=" mb-6" text={item.textBy} />
               </div>
             ))}
           </Slider>
