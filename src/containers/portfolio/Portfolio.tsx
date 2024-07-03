@@ -79,20 +79,32 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
         <div
           ref={portfolioRef}
-          className=" flex flex-wrap justify-center w-full"
+          className="  flex flex-wrap justify-center w-full"
         >
           {portfolio.portfolioItems.map((item) => (
-            <div className={cn(" pt_item", item.types.join(" "))} key={item.id}>
-              <div className=" flex flex-col items-center text-center h-[190px]">
+            <div
+              className={cn(
+                " pt_item  cursor-pointer border-double border-2 p-[3px] overflow-hidden m-5",
+                item.types.join(" ")
+              )}
+              key={item.id}
+            >
+              <div className=" group flex flex-col items-center text-center h-[190px]">
                 <img
                   src={item.link}
                   alt={item.name}
-                  className="pt_item_image"
+                  className=" w-[310px] object-cover "
                 />
-                <a aria-label={item.title} href="#" className={"pt_item_link"}>
+                <a
+                  aria-label={item.title}
+                  href="#"
+                  className={
+                    " absolute top-0 left-1/2 translate-x-[-50%] opacity-0 group-hover:top-[20%] group-hover:opacity-100"
+                  }
+                >
                   <MdPlayCircle color="#fff" size={50} />
                 </a>
-                <div className="pt_item_title">
+                <div className=" absolute left-1/2 translate-x-[-50%] opacity-0 group-hover:bottom-[20%] group-hover:opacity-100 ">
                   <Text text={item.title} className="text-center text-sm" />
                 </div>
               </div>

@@ -1,50 +1,7 @@
-/* ============================================ */
-
-/* pt_item_==================================== */
-
 .pt_item {
   cursor: pointer;
   border: 2px double #adadad;
   padding: 3px;
   overflow: hidden;
-  transition: background 0.4s, box-shadow 0.4s;
   margin: 20px;
-}
-
-.pt_item_image {
-  width: 310px;
-
-  object-fit: cover;
-}
-
-.pt_item_link {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  opacity: 0;
-}
-
-.pt_item_title {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  opacity: 0;
-}
-
-.pt_item:hover .pt_item_image {
-  filter: brightness(0.4);
-}
-
-.pt_item:hover .pt_item_link {
-  top: 20%;
-  opacity: 1;
-}
-
-.pt_item:hover .pt_item_title {
-  bottom: 20%;
-  opacity: 1;
 }
