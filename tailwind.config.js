@@ -32,6 +32,9 @@ export default {
     },
 
     extend: {
+      fontSize: {
+        sm: "13px",
+      },
       fontFamily: {
         primary: ["var(--font-primary)"],
         secondary: ["var(--font-secondary)"],
