@@ -6,7 +6,6 @@ import { contact } from "../../data/contact";
 import { Variant } from "../../lib/types";
 import Button from "../../components/button/Button";
 import Text from "../../components/text/Text";
-import "./Contact.css";
 
 interface ContactProps {
   className?: string;
@@ -20,11 +19,14 @@ const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
       <Container>
         <Heading variant={variant} heading={contact.heading} />
 
-        <form className="form  md:w-[100%] mx-auto" onSubmit={handleSubmit}>
-          <div className="form_wrapper sm:flex-col">
-            <div className="form_input_wrapper">
+        <form
+          className=" flex flex-col justify-center items-center gap-5 w-full  md:w-[100%] mx-auto"
+          onSubmit={handleSubmit}
+        >
+          <div className=" flex gap-5 w-full sm:flex-col">
+            <div className=" flex flex-col w-full gap-8 text-sm">
               <input
-                className="form_input"
+                className=" px-3 py-[10px] w-full h-full text-[0.8rem] border-2 border-[#e4e4e4]"
                 type="text"
                 placeholder="YOUR NAME"
                 name="name"
@@ -36,7 +38,7 @@ const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
               />
 
               <input
-                className="form_input"
+                className=" px-3 py-[10px] w-full h-full text-[0.8rem] border-2 border-[#e4e4e4]"
                 type="email"
                 placeholder="YOUR EMAIL"
                 name="email"
@@ -48,7 +50,7 @@ const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
               />
 
               <input
-                className="form_input"
+                className=" px-3 py-[10px] w-full h-full text-[0.8rem] border-2 border-[#e4e4e4]"
                 type="phone"
                 placeholder="YOUR PHONE"
                 name="phone"
@@ -59,9 +61,9 @@ const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
                 errors={state.errors}
               />
             </div>
-            <div className="form_input_wrapper">
+            <div className="flex flex-col w-full gap-8 text-sm">
               <textarea
-                className="form_input"
+                className=" px-3 py-[10px] w-full h-full text-[0.8rem] border-2 border-[#e4e4e4]"
                 rows={5}
                 cols={50}
                 placeholder="YOUR MASSAGE"
@@ -76,14 +78,18 @@ const Contact: React.FC<ContactProps> = ({ variant = "dark" }) => {
             </div>
           </div>
           <Button
-            className=" contact_submit_button"
+            className=" w-full h-full p-[18px] bg-secondary"
             disabled={state.submitting}
             variant="secondary"
           >
-            <Text className=" text-[0.8rem]" uppercase text={"Send message"} />
+            <Text className=" text-[0.8rem] uppercase" text={"Send message"} />
           </Button>
           {state.succeeded && (
-            <Text variant={variant} uppercase text={"Thanks for joining!"} />
+            <Text
+              variant={variant}
+              className=" uppercase"
+              text={"Thanks for joining!"}
+            />
           )}
         </form>
       </Container>

@@ -1,9 +1,0 @@
-.contain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-
-  width: 100%;
-}

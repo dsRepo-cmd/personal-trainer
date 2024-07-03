@@ -8,6 +8,7 @@ import { MdPlayCircle } from "react-icons/md";
 import { Variant } from "../../lib/types";
 import Isotope from "isotope-layout";
 import "./Portfolio.css";
+import { cn } from "../../lib/cn";
 
 interface IntroProps {
   className?: string;
@@ -60,40 +61,48 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
         <div
           data-aos="fade-right"
-          className="pt_filter md:flex-wrap sm:w-[370px] "
+          className="flex items-center justify-center w-[600px] gap-[2px] md:flex-wrap sm:w-[370px] "
         >
           {portfolio.portfolioFilters.map((item) => (
             <button
               onClick={() => onChangeFilter(item.type)}
-              className={`pt_filter_button md:w-[120px] ${
-                activeFilter === item.type ? " pt_filter_button-active" : ""
-              }`}
+              className={cn(
+                "text-nowrap text-sm  w-40 px-5 py-6 md:w-[120px] bg-[#252525] hover:opacity-70 hover:text-primary",
+                activeFilter === item.type ? " bg-[#2c2c2c] text-primary" : ""
+              )}
               key={item.id}
             >
-              <Text
-                text={item.name}
-                className={` text-nowrap pt_filter_button-text ${
-                  activeFilter === item.type ? " pt_filter_button-active" : ""
-                } `}
-              />
+              {item.name}
             </button>
           ))}
         </div>
 
-        <div ref={portfolioRef} className="pt_item_wrapper">
+        <div
+          ref={portfolioRef}
+          className="  flex flex-wrap justify-center w-full"
+        >
           {portfolio.portfolioItems.map((item) => (
-            <div className={`${item.types.join(" ")} pt_item`} key={item.id}>
-              <div className="pt_item_inner">
+            <div
+              className={cn(" pt_item ", item.types.join(" "))}
+              key={item.id}
+            >
+              <div className=" group flex flex-col items-center text-center h-[190px]">
                 <img
                   src={item.link}
                   alt={item.name}
-                  className="pt_item_image"
+                  className=" w-[310px] object-cover "
                 />
-                <a aria-label={item.title} href="#" className={"pt_item_link"}>
+                <a
+                  aria-label={item.title}
+                  href="#"
+                  className={
+                    " absolute top-0 left-1/2 translate-x-[-50%] opacity-0 group-hover:top-[20%] group-hover:opacity-100"
+                  }
+                >
                   <MdPlayCircle color="#fff" size={50} />
                 </a>
-                <div className="pt_item_title">
-                  <Text text={item.title} className="text-center" />
+                <div className=" absolute left-1/2 bottom-0 translate-x-[-50%] opacity-0 group-hover:bottom-[20%] group-hover:opacity-100 ">
+                  <Text text={item.title} className="text-center text-sm" />
                 </div>
               </div>
             </div>

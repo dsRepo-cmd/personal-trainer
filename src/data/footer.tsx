@@ -29,27 +29,52 @@ export const footer: Footer = {
     {
       id: 1,
       title: "Share on Facebook",
-      icon: <FaFacebookF size={20} className="footer_icon" />,
+      icon: (
+        <FaFacebookF
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
+      ),
     },
     {
       id: 2,
       title: "Share on Twitter",
-      icon: <FaTwitter size={20} className="footer_icon" />,
+      icon: (
+        <FaTwitter
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
+      ),
     },
     {
       id: 3,
       title: "Share on Skype",
-      icon: <FaSkype size={20} className="footer_icon" />,
+      icon: (
+        <FaSkype
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
+      ),
     },
     {
       id: 4,
       title: "Share on Linkedin",
-      icon: <FaLinkedinIn size={20} className="footer_icon" />,
+      icon: (
+        <FaLinkedinIn
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
+      ),
     },
     {
       id: 5,
       title: "Share on Google Plus",
-      icon: <FaGooglePlusG size={20} className="footer_icon" />,
+      icon: (
+        <FaGooglePlusG
+          size={20}
+          className=" fill-primary  group-hover:fill-secondary"
+        />
+      ),
     },
   ],
   copyright: `© 2024 Fitness Trainers.`,

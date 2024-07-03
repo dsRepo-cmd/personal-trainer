@@ -4,7 +4,6 @@ import { FC } from "react";
 import { Variant } from "../../lib/types";
 import { intro } from "../../data/intro";
 import Heading from "../../components/heading/Heading";
-import "./Intro.css";
 import Container from "../../components/container/Container";
 
 interface IntroProps {
@@ -23,18 +22,19 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
             <div
               data-aos="zoom-in"
               key={block.id}
-              className=" flex flex-col justify-center items-center gap-4 w-[300px]"
+              className=" flex flex-col justify-center items-center gap-4 w-[300px] md:w-full"
             >
               {block.icon}
               <Text
                 variant={variant}
-                size="m"
-                bold
-                uppercase
                 text={block.title}
-                color="color_primary"
+                className=" text-primary font-bold uppercase"
               />
-              <Text variant={variant} text={block.text} />
+              <Text
+                className=" text-sm text-center"
+                variant={variant}
+                text={block.text}
+              />
             </div>
           ))}
         </div>

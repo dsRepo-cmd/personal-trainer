@@ -3,7 +3,6 @@ import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import { footer } from "../../data/footer";
 import { Variant } from "../../lib/types";
-import "./Footer.css";
 
 interface FooterProps {
   className?: string;
@@ -13,7 +12,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
   return (
     <Section id="footer" variant={variant}>
-      <footer className="footer">
+      <footer className=" flex flex-col justify-center items-center gap-10 w-full">
         <Heading variant={variant} heading={footer.heading} />
         <ul className=" flex gap-4">
           {footer.links.map((link, index) => (
@@ -26,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
                 aria-label={link.title}
                 title={link.title}
                 href="#"
-                className="footer_link"
+                className=" group flex rounded-[50%] p-4 bg-[#f4f4f4] cursor-pointer hover:fill-secondary "
               >
                 {link.icon}
               </a>
@@ -34,7 +33,11 @@ const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
           ))}
         </ul>
         <div>
-          <Text variant={variant} text={footer.copyright} />
+          <Text
+            variant={variant}
+            className=" text-sm"
+            text={footer.copyright}
+          />
         </div>
       </footer>
     </Section>

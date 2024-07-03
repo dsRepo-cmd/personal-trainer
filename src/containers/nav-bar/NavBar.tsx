@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { nav } from "../../data/navigation";
-import Text from "../../components/text/Text";
-import "./NavBar.css";
+import { cn } from "../../lib/cn";
 
 function NavBar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -77,52 +76,50 @@ function NavBar() {
     <>
       <nav
         id="navbar-top"
-        className={`navbar_conatiner   ${
+        className={cn(
+          "flex flex-col items-center justify-center w-full h-[82px] bg-[#0c0c0c] ",
+          "md:items-start",
           isFixed ? "fixed top-0 z-50" : "relative"
-        } md:items-start`}
+        )}
       >
         <button
           onClick={() => toggleNav(null)}
-          className="navbar_button group hidden md:flex "
+          className={cn(
+            " hidden items-center  text-white w-full h-full gap-5  font-primary text-[18px] uppercase ",
+            "hover:bg-[#181818] hover:text-primary",
+            "md:flex "
+          )}
         >
-          <HiMenu className="navbar_title  uppercase mb-[2px]" size={25} />
-
-          <Text
-            uppercase
-            fontFamily="Montserrat"
-            className="navbar_title text-[18px] "
-            text="Personal trainer"
-          />
+          <HiMenu className=" mb-[2px]" size={25} />
+          Personal trainer
         </button>
 
         <div
-          className={`flex justify-center h-full items-center navbar_item ${
+          className={cn(
+            "flex justify-center h-full items-center z-50",
+            " md:flex-col md:absolute m-auto md:top-[82px] md:left-[-100%] md:h-auto md:w-[100%] md:bg-[#0c0c0c]",
             !isOpen ? "md:flex" : "md:left-[0]"
-          } md:flex-col md:absolute m-auto md:top-[82px] md:left-[-100%] md:h-auto md:w-[100%] md:bg-[#0c0c0c]`}
+          )}
         >
           {nav.map((elem) => (
             <a
               onClick={() => handleNavClick(elem.name)}
               key={elem.id}
               aria-label={elem.name}
-              className={` navbar_link group  md:p-6 px-10 hover:bg-[#181818] md:border md:border-[#2a2a2a] md:border-solid ${
-                elem.name === activeIndex && "bg-[#181818]"
-              }`}
+              className={cn(
+                "flex items-center justify-center w-full h-full  px-10 uppercase font-bold text-white text-sm duration-300 ",
+                "hover:text-primary hover:bg-[#181818]",
+                "xl:text-[12px] md:p-6 md:border md:border-[#2a2a2a] md:border-solid",
+                elem.name === activeIndex && "bg-[#181818] text-primary"
+              )}
               href={`#${elem.path}`}
             >
-              <Text
-                uppercase
-                bold
-                className={` navbar_link_text xl:text-[12px] ${
-                  elem.name === activeIndex && "navbar_link_text-active "
-                } `}
-                text={elem.name}
-              />
+              {elem.name}
             </a>
           ))}
         </div>
       </nav>
-      {isFixed && <div className="nav-back"></div>}
+      {isFixed && <div className="  pb-[82px] "></div>}
     </>
   );
 }

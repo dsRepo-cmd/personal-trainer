@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import "./Container.css";
+import { cn } from "../../lib/cn";
 
 interface ContainerProps {
   children: ReactNode;
@@ -8,7 +8,16 @@ interface ContainerProps {
 }
 
 const Container: FC<ContainerProps> = ({ children, className = "" }) => {
-  return <div className={`contain ${className} sm:p-1`}>{children}</div>;
+  return (
+    <div
+      className={cn(
+        "flex flex-col justify-center items-center gap-10 w-full  sm:p-1",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Container;

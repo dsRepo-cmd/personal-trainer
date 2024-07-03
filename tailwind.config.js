@@ -32,7 +32,20 @@ export default {
     },
 
     extend: {
-      colors: {},
+      fontSize: {
+        sm: "13px",
+      },
+      fontFamily: {
+        primary: ["var(--font-primary)"],
+        secondary: ["var(--font-secondary)"],
+        default: ["var(--font-primary)"],
+      },
+      colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        bg: "var(--bg)",
+        dark: "var(--dark)",
+      },
 
       backgroundImage: {},
       keyframes: {
