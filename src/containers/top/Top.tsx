@@ -67,7 +67,7 @@ function Top() {
           href="#navbar-top"
         >
           <FaAngleDoubleDown
-            className=" fill-secondary  group-hover:fill-primary"
+            className=" duration-0 fill-secondary  group-hover:fill-primary"
             size={24}
           />
         </a>

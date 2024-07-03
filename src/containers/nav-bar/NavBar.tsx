@@ -78,12 +78,12 @@ function NavBar() {
         <button
           onClick={toggleNav}
           className={cn(
-            " hidden items-center text-white w-full h-full gap-5 font-primary text-[18px] uppercase",
+            " duration-150 hidden items-center text-white w-full h-full gap-5 font-primary text-[18px] uppercase",
             " hover:bg-[#181818] hover:text-primary",
             " md:flex"
           )}
         >
-          <HiMenu className="mb-[2px]" size={25} />
+          <HiMenu className=" duration-0 mb-[2px]" size={25} />
           Personal trainer
         </button>
 
