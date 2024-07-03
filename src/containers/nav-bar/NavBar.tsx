@@ -3,6 +3,7 @@ import { HiMenu } from "react-icons/hi";
 import { nav } from "../../data/navigation";
 import Text from "../../components/text/Text";
 import "./NavBar.css";
+import { cn } from "../../lib/cn";
 
 function NavBar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -77,20 +78,19 @@ function NavBar() {
     <>
       <nav
         id="navbar-top"
-        className={`navbar_conatiner   ${
+        className={cn(
+          "navbar_conatiner md:items-start",
           isFixed ? "fixed top-0 z-50" : "relative"
-        } md:items-start`}
+        )}
       >
         <button
           onClick={() => toggleNav(null)}
-          className="navbar_button group hidden md:flex "
+          className="duration-200 hidden  text-white w-full gap-5 navbar_button group  md:flex "
         >
           <HiMenu className="navbar_title  uppercase mb-[2px]" size={25} />
 
           <Text
-            uppercase
-            fontFamily="font-primary"
-            className="navbar_title text-[18px] "
+            className="navbar_title uppercase font-primary text-white text-[18px] "
             text="Personal trainer"
           />
         </button>
@@ -111,9 +111,7 @@ function NavBar() {
               href={`#${elem.path}`}
             >
               <Text
-                uppercase
-                bold
-                className={` navbar_link_text xl:text-[12px] ${
+                className={` navbar_link_text uppercase font-bold xl:text-[12px] ${
                   elem.name === activeIndex && "navbar_link_text-active "
                 } `}
                 text={elem.name}

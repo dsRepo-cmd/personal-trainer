@@ -39,33 +39,23 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
 
                 <div className=" flex flex-col gap-6">
                   <Text
-                    uppercase
-                    align="text-start"
+                    className=" uppercase text-xl font-bold font-primary"
                     variant={variant}
-                    size="l"
                     title={post.title}
                   />
                   <Text
-                    className=" text-[#9c9c9c]"
-                    align="text-start"
+                    className=" text-sm text-[#9c9c9c]"
                     variant={variant}
-                    size="s"
                     text={post.date}
                   />
                   <Text
-                    align="text-start"
                     variant={variant}
-                    size="s"
+                    className=" text-sm"
                     text={post.text}
                   />
 
                   <Button variant="primary" className=" mt-5 py-2 px-3 ">
-                    <Text
-                      className=" text-[0.7rem]"
-                      align="text-start"
-                      size="s"
-                      text={"Read more"}
-                    />
+                    <Text className=" text-[0.7rem]" text={"Read more"} />
                   </Button>
                 </div>
               </article>

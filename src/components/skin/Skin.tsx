@@ -20,18 +20,12 @@ const SkinItem: React.FC<SkinItemProps> = ({
     <div data-aos="zoom-in" className={cn("skin", className)}>
       <div className="skin_title_wrapper">
         <Text
-          align="text-start"
-          fontFamily="font-primary"
-          size="m"
-          uppercase
-          bold
-          className="skin_title"
+          className="skin_title text-start font-primary uppercase font-bold"
           text={skin.title}
         />
 
         <Text
-          align="text-start"
-          className={`text-[0.8rem]  text-white p-3 ${variant}`}
+          className={`text-[0.8rem] text-start  text-white p-3 ${variant}`}
           text={skin.subtitle}
         />
       </div>
@@ -41,8 +35,7 @@ const SkinItem: React.FC<SkinItemProps> = ({
         {skin.paragraphs.map((paragraph, index) => (
           <Text
             key={index}
-            align="text-start"
-            className=" text-[0.8rem] mb-3 text-white overflow-hidden overflow-ellipsis "
+            className=" text-[0.8rem] mb-3 text-start text-white overflow-hidden overflow-ellipsis "
             text={paragraph}
           />
         ))}

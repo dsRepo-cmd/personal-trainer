@@ -1,29 +1,37 @@
 import { ReactNode } from "react";
 import { Variant } from "../../lib/types";
-import "./Button.css";
 import { cn } from "../../lib/cn";
 
 export type TextAlign = "text-start" | "text-end" | "text-center";
 
 interface TextProps {
+  children: ReactNode;
   className?: string;
   variant?: Variant;
-  children?: ReactNode;
   disabled?: boolean;
 }
 
+const variantClasses: { [key in Variant]: string } = {
+  primary: " bg-primary hover:bg-secondary ",
+  secondary: " bg-secondary hover:bg-primary ",
+  dark: "",
+  white: "",
+};
+
 const Button: React.FC<TextProps> = ({
   children,
-  variant,
+  variant = "dark",
   className = "",
   disabled,
 }) => {
-  const addClasses = [variant, className];
-
   return (
     <button
       disabled={disabled}
-      className={cn(" self-start rounded-sm", addClasses)}
+      className={cn(
+        " self-start rounded-sm",
+        variantClasses[variant],
+        className
+      )}
     >
       {children}
     </button>

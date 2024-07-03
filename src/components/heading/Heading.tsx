@@ -13,11 +13,8 @@ const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
       <div data-aos="fade-up">
         <Text
           variant={variant}
-          className=" uppercase"
-          fontFamily="font-primary"
+          className=" uppercase font-primary font-bold text-4xl"
           title={heading.title}
-          size="xl"
-          bold
         />
       </div>
 
@@ -25,7 +22,7 @@ const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
         {heading.paragraphs &&
           heading.paragraphs.map((paragraph) => (
             <div key={paragraph.id}>
-              <Text size="m" variant={variant} text={paragraph.text} />
+              <Text variant={variant} text={paragraph.text} />
             </div>
           ))}
       </div>

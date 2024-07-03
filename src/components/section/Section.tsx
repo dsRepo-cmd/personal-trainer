@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
-import "./Section.css";
 import { Variant } from "../../lib/types";
+import { cn } from "../../lib/cn";
 
 interface SectionProps {
   children: ReactNode;
@@ -10,6 +10,12 @@ interface SectionProps {
   className?: string;
   thin?: boolean;
 }
+const classMap: { [key in Variant]: string } = {
+  dark: "bg-dark  text-white",
+  white: "bg-white text-dark",
+  primary: "bg-primary ",
+  secondary: "bg-secondary selection:text-primary ",
+};
 
 const Section: FC<SectionProps> = ({
   children,
@@ -19,29 +25,25 @@ const Section: FC<SectionProps> = ({
   className = "",
   thin,
 }) => {
-  const classMap: { [key in Variant]: string } = {
-    dark: "bg-dark  text-white",
-    white: "bg-white text-dark",
-    primary: "bg-primary ",
-    secondary: "bg-secondary selection:text-primary ",
-  };
-
-  const mod = classMap[variant];
-
   return (
     <section
       id={id}
-      className={` selection:text-white selection:bg-secondary flex flex-col  items-center justify-center  w-[100%]  ${mod}`}
+      className={cn(
+        "selection:text-white selection:bg-secondary flex flex-col  items-center justify-center  w-[100%] ",
+        classMap[variant]
+      )}
     >
       {doubleLine && (
-        <div className=" double_line_start">
-          <span className="double_line_end "></span>
+        <div className=" relative w-full bg-secondary h-1">
+          <span className=" absolute w-1/2 h-full bg-primary "></span>
         </div>
       )}
       <div
-        className={`container flex items-center justify-center ${
-          thin ? "my-[20px]" : "my-[74px]"
-        } mx-20 md:my[36px] ${className}`}
+        className={cn(
+          "container flex items-center justify-center mx-20 md:my[36px]",
+          thin ? "my-[20px]" : "my-[74px]",
+          className
+        )}
       >
         {children}
       </div>
