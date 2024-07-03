@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
-import { classNames } from "../../lib/classNames";
 import { Variant } from "../../lib/types";
 import "./Text.css";
+import { cn } from "../../lib/cn";
 
 export type TextAlign = "text-start" | "text-end" | "text-center";
 export type TextSize = "s" | "m" | "l" | "xl";
-export type FontFamily = "Montserrat" | "OpenSans";
+export type FontFamily = "font-primary" | "font-secondary";
 export type TextColor =
-  | "color_primary"
-  | "color_secondary"
-  | "color_dark"
-  | "color_white";
+  | "text-primary"
+  | "text-secondary"
+  | "text-white"
+  | "text-dark";
 
 interface TextProps {
   text?: string;
@@ -35,30 +35,45 @@ const Text: React.FC<TextProps> = ({
   className = "",
   align = "text-center",
   variant = "dark",
-  color,
+  color = "text-white",
   size,
   bold,
   uppercase,
   fontFamily,
 }) => {
   const mods = { ["uppercase"]: uppercase, ["bold"]: bold };
-  const addClasses = [variant, size, align, className, fontFamily, color];
 
+  const classMap: { [key in Variant]: string } = {
+    dark: " text-white",
+    white: "text-dark",
+    primary: "",
+    secondary: "",
+  };
+
+  const mod = classMap[variant];
+  const addClasses = [size, align, fontFamily, color, mod, className];
   return (
     <>
       {title && (
-        <h2 className={classNames(" title Montserrat", mods, addClasses)}>
+        <h2
+          className={cn(
+            "   title Montserrat",
+            mods,
+
+            addClasses
+          )}
+        >
           {title} {children}
         </h2>
       )}
       {span && (
-        <span className={classNames("span", mods, addClasses)}>
+        <span className={cn("span", mods, addClasses)}>
           {span}
           {children}
         </span>
       )}
       {text && (
-        <p className={classNames("text", mods, addClasses)}>
+        <p className={cn("text", mods, addClasses)}>
           {text}
           {children}
         </p>

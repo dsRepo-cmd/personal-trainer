@@ -8,6 +8,7 @@ import { MdPlayCircle } from "react-icons/md";
 import { Variant } from "../../lib/types";
 import Isotope from "isotope-layout";
 import "./Portfolio.css";
+import { cn } from "../../lib/cn";
 
 interface IntroProps {
   className?: string;
@@ -60,20 +61,23 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
         <div
           data-aos="fade-right"
-          className="pt_filter md:flex-wrap sm:w-[370px] "
+          className="flex items-center justify-center w-[600px] gap-[2px] md:flex-wrap sm:w-[370px] "
         >
           {portfolio.portfolioFilters.map((item) => (
             <button
               onClick={() => onChangeFilter(item.type)}
-              className={`pt_filter_button md:w-[120px] ${
-                activeFilter === item.type ? " pt_filter_button-active" : ""
-              }`}
+              className={cn(
+                " w-40 px-5 py-6 md:w-[120px] bg-[#252525] hover:opacity-70 hover:text-primary",
+                activeFilter === item.type ? " bg-[#2c2c2c] text-primary" : ""
+              )}
               key={item.id}
             >
               <Text
                 text={item.name}
-                className={` text-nowrap pt_filter_button-text ${
-                  activeFilter === item.type ? " pt_filter_button-active" : ""
+                className={` text-nowrap  text-primary hover:text-primary ${
+                  activeFilter === item.type
+                    ? " bg-[#2c2c2c] text-primary"
+                    : " text-white"
                 } `}
               />
             </button>

@@ -89,7 +89,7 @@ function NavBar() {
 
           <Text
             uppercase
-            fontFamily="Montserrat"
+            fontFamily="font-primary"
             className="navbar_title text-[18px] "
             text="Personal trainer"
           />

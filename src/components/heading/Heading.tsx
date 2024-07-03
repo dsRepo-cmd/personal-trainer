@@ -14,7 +14,7 @@ const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
         <Text
           variant={variant}
           className=" uppercase"
-          fontFamily="Montserrat"
+          fontFamily="font-primary"
           title={heading.title}
           size="xl"
           bold

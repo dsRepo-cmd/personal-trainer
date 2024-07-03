@@ -29,7 +29,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
             >
               <Text
                 align="text-start"
-                color="color_primary"
+                color="text-primary"
                 uppercase
                 bold
                 className=" text-[2.8rem]"
@@ -40,7 +40,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
 
               <Text
                 align="text-start"
-                color="color_secondary"
+                color="text-primary"
                 uppercase
                 bold
                 className="text-xl my-2"

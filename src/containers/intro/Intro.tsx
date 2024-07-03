@@ -4,7 +4,6 @@ import { FC } from "react";
 import { Variant } from "../../lib/types";
 import { intro } from "../../data/intro";
 import Heading from "../../components/heading/Heading";
-import "./Intro.css";
 import Container from "../../components/container/Container";
 
 interface IntroProps {
@@ -32,7 +31,7 @@ const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
                 bold
                 uppercase
                 text={block.title}
-                color="color_primary"
+                color="text-primary"
               />
               <Text variant={variant} text={block.text} />
             </div>

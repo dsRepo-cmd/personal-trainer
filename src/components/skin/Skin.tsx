@@ -1,4 +1,5 @@
 import { Skin } from "../../data/classes";
+import { cn } from "../../lib/cn";
 import Text from "../text/Text";
 import "./Skin.css";
 
@@ -16,11 +17,11 @@ const SkinItem: React.FC<SkinItemProps> = ({
   variant = "skin_primary",
 }) => {
   return (
-    <div data-aos="zoom-in" className={`${className}  skin`}>
+    <div data-aos="zoom-in" className={cn("skin", className)}>
       <div className="skin_title_wrapper">
         <Text
           align="text-start"
-          fontFamily="Montserrat"
+          fontFamily="font-primary"
           size="m"
           uppercase
           bold

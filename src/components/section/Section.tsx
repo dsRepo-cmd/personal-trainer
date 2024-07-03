@@ -20,10 +20,10 @@ const Section: FC<SectionProps> = ({
   thin,
 }) => {
   const classMap: { [key in Variant]: string } = {
-    dark: "container-dark",
-    white: "container-white",
-    primary: "container-primary ",
-    secondary: "container-secondary ",
+    dark: "bg-dark  text-white",
+    white: "bg-white text-dark",
+    primary: "bg-primary ",
+    secondary: "bg-secondary selection:text-primary ",
   };
 
   const mod = classMap[variant];
@@ -31,7 +31,7 @@ const Section: FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`sel flex flex-col  items-center justify-center  w-[100%]  ${mod}`}
+      className={` selection:text-white selection:bg-secondary flex flex-col  items-center justify-center  w-[100%]  ${mod}`}
     >
       {doubleLine && (
         <div className=" double_line_start">

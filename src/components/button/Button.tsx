@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { classNames } from "../../lib/classNames";
 import { Variant } from "../../lib/types";
 import "./Button.css";
+import { cn } from "../../lib/cn";
 
 export type TextAlign = "text-start" | "text-end" | "text-center";
 
@@ -18,13 +18,12 @@ const Button: React.FC<TextProps> = ({
   className = "",
   disabled,
 }) => {
-  const mods = {};
   const addClasses = [variant, className];
 
   return (
     <button
       disabled={disabled}
-      className={classNames("button", mods, addClasses)}
+      className={cn(" self-start rounded-sm", addClasses)}
     >
       {children}
     </button>
