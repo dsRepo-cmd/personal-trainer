@@ -17,3 +17,4 @@ AOS.init({
   offset: 20,
   duration: 1000,
 });
+AOS.refreshHard();
