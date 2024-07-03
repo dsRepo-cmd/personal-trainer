@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ImagesSlider } from "../../components/imageSlider/imageSlider";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import LogoIcon from "../../assets/logo.png";
-import "./Top.css";
+import { cn } from "../../lib/cn";
 
 const images = [
   "https://picsum.photos/1920/1080?image=389",
@@ -58,11 +58,18 @@ function Top() {
       <div className=" flex items-center">
         <a
           aria-label="to navbar"
-          className=" wellcome_down_button z-50"
+          className={cn(
+            " group flex justify-center items-center w-16 h-16 border-2 border-secondary rounded-full ",
+            " absolute bottom-[10%] left-1/2 translate-x-[-50%] z-50",
+            " hover:border-primary"
+          )}
           onClick={() => handleNavClick("navbar-top")}
           href="#navbar-top"
         >
-          <FaAngleDoubleDown className="wellcome_down_icon" size={24} />
+          <FaAngleDoubleDown
+            className=" fill-secondary hover:fill-primary "
+            size={24}
+          />
         </a>
       </div>
     </div>
