@@ -11,8 +11,9 @@ html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
 
+  font: var(--font-secondary);
   font-optical-sizing: auto;
-  font-weight: 400, 700;
+  font-weight: 400;
   font-style: normal;
 }
 

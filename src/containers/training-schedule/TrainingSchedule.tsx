@@ -22,33 +22,24 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
           <table>
             <tbody>
               {trainingSchedule.schedule.map((line) => (
-                <tr
-                  className=" w-full h-full border-b  border-[#303439]"
-                  data-aos={"fade-up"}
-                  key={line.id}
-                >
-                  <th className="p-5 lg:p-3 sm:p-1 sm:text-[0.7rem]">
-                    <Text className="ts_day uppercase" text={line.day} />
+                <tr className=" w-full h-full " key={line.id}>
+                  <th>
+                    <div className="text-[#a6a6a6] bg-[#222222]  font-normal m-[1px]  text-sm p-5 lg:p-3 sm:p-1 sm:text-[0.7rem] uppercase">
+                      {line.day}
+                    </div>
                   </th>
                   {line.timeSlots.map((timeShot) => (
-                    <td className="p-5 lg:p-3 sm:p-1" key={timeShot.id}>
-                      <div className="flex">
+                    <td key={timeShot.id}>
+                      <div className="flex p-5 bg-[#222222] lg:p-3 sm:p-1">
                         <Text
-                          className=" text-primary sm:text-[0.7rem]"
+                          className=" text-sm  text-primary sm:text-[0.7rem]"
                           text={timeShot.time}
                         />
-                        {timeShot.oddWeek && (
-                          <Text
-                            className=" text-secondary sm:text-[0.7rem]"
-                            text="**"
-                          />
-                        )}
-                        {timeShot.evenWeek && (
-                          <Text
-                            className="text-secondary sm:text-[0.7rem]"
-                            text="*"
-                          />
-                        )}
+
+                        <Text
+                          className="text-sm text-secondary sm:text-[0.7rem]"
+                          text={timeShot.oddWeek ? "**" : "*"}
+                        />
                       </div>
                     </td>
                   ))}
@@ -61,9 +52,15 @@ const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
             {trainingSchedule.info?.map((item) => (
               <Text
                 key={item.id}
-                className=" text-primary"
+                className=" text-sm text-secondary"
                 text={item.asterisks}
-                children={<Text variant={variant} span={item.text} />}
+                children={
+                  <Text
+                    className=" text-sm"
+                    variant={variant}
+                    span={item.text}
+                  />
+                }
               />
             ))}
           </div>
