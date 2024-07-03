@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ variant = "dark" }) => {
                 aria-label={link.title}
                 title={link.title}
                 href="#"
-                className=" flex rounded-[50%] p-4 bg-[#f4f4f4] cursor-pointer hover:fill-secondary "
+                className=" group flex rounded-[50%] p-4 bg-[#f4f4f4] cursor-pointer hover:fill-secondary "
               >
                 {link.icon}
               </a>

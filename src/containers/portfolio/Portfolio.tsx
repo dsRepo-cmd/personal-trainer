@@ -83,7 +83,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
         >
           {portfolio.portfolioItems.map((item) => (
             <div className={cn(" pt_item", item.types.join(" "))} key={item.id}>
-              <div className="pt_item_inner">
+              <div className=" flex flex-col items-center text-center h-[190px]">
                 <img
                   src={item.link}
                   alt={item.name}
@@ -93,7 +93,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
                   <MdPlayCircle color="#fff" size={50} />
                 </a>
                 <div className="pt_item_title">
-                  <Text text={item.title} className="text-center" />
+                  <Text text={item.title} className="text-center text-sm" />
                 </div>
               </div>
             </div>

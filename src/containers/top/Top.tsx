@@ -61,13 +61,13 @@ function Top() {
           className={cn(
             " group flex justify-center items-center w-16 h-16 border-2 border-secondary rounded-full ",
             " absolute bottom-[10%] left-1/2 translate-x-[-50%] z-50",
-            " hover:border-primary"
+            " hover:border-primary "
           )}
           onClick={() => handleNavClick("navbar-top")}
           href="#navbar-top"
         >
           <FaAngleDoubleDown
-            className=" fill-secondary hover:fill-primary "
+            className=" fill-secondary  group-hover:fill-primary"
             size={24}
           />
         </a>

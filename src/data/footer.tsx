@@ -30,21 +30,30 @@ export const footer: Footer = {
       id: 1,
       title: "Share on Facebook",
       icon: (
-        <FaFacebookF size={20} className=" fill-primary hover:fill-secondary" />
+        <FaFacebookF
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
       ),
     },
     {
       id: 2,
       title: "Share on Twitter",
       icon: (
-        <FaTwitter size={20} className=" fill-primary hover:fill-secondary" />
+        <FaTwitter
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
       ),
     },
     {
       id: 3,
       title: "Share on Skype",
       icon: (
-        <FaSkype size={20} className=" fill-primary hover:fill-secondary" />
+        <FaSkype
+          size={20}
+          className=" fill-primary group-hover:fill-secondary"
+        />
       ),
     },
     {
@@ -53,7 +62,7 @@ export const footer: Footer = {
       icon: (
         <FaLinkedinIn
           size={20}
-          className=" fill-primary hover:fill-secondary"
+          className=" fill-primary group-hover:fill-secondary"
         />
       ),
     },
@@ -63,7 +72,7 @@ export const footer: Footer = {
       icon: (
         <FaGooglePlusG
           size={20}
-          className=" fill-primary hover:fill-secondary"
+          className=" fill-primary  group-hover:fill-secondary"
         />
       ),
     },

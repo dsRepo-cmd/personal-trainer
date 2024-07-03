@@ -17,7 +17,7 @@ const SkinItem: React.FC<SkinItemProps> = ({
   variant = "skin_primary",
 }) => {
   return (
-    <div data-aos="zoom-in" className={cn("skin", className)}>
+    <div data-aos="zoom-in" className={cn("skin ", className)}>
       <div className="skin_title_wrapper">
         <Text
           className="skin_title text-start font-primary uppercase font-bold"
