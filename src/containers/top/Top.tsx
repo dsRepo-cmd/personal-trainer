@@ -4,12 +4,7 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import LogoIcon from "../../assets/logo.png";
 import { cn } from "../../lib/cn";
 
-const images = [
-  "https://picsum.photos/1920/1080?image=389",
-  "https://picsum.photos/1920/1080?image=390",
-  "https://picsum.photos/1920/1080?image=770",
-  "https://picsum.photos/1920/1080?image=817",
-];
+const images = ["/top-pool.webp", "/top-stairs.webp", "/top-view.webp"];
 function Top() {
   const scrollToAnchor = (anchor: string) => {
     const element = document.getElementById(anchor);

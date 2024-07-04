@@ -26,7 +26,7 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
               >
                 <div className=" group relative cursor-pointer w-fit h-fit overflow-hidden p-[2px] border border-[#e4e4e4]">
                   <img
-                    className=" object-cover  w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:w-[320x] md:h-[267px]  "
+                    className=" object-cover  w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:max-w-[620px] md:h-[267px]  "
                     src={post.img}
                     alt={post.title}
                   />
