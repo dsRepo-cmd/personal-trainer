@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 export interface TestimonialsList {
   id: number;
@@ -7,7 +7,7 @@ export interface TestimonialsList {
 }
 
 export interface Testimonials {
-  heading: HeadingI;
+  heading: IHeading;
   list: TestimonialsList[];
 }
 

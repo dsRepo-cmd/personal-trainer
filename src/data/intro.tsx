@@ -2,7 +2,7 @@ import { FaBed } from "react-icons/fa";
 import { TbToolsKitchen2 } from "react-icons/tb";
 import { IoScaleSharp } from "react-icons/io5";
 import { CgGym } from "react-icons/cg";
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 interface IntroBlock {
   id: number;
@@ -12,7 +12,7 @@ interface IntroBlock {
 }
 
 interface Intro {
-  heading: HeadingI;
+  heading: IHeading;
   blocks: IntroBlock[];
 }
 

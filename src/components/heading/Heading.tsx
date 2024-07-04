@@ -1,10 +1,10 @@
-import { HeadingI, Variant } from "../../lib/types";
+import { IHeading, Variant } from "../../lib/types";
 import Text from "../text/Text";
 
 interface HeadingProps {
   className?: string;
   variant?: Variant;
-  heading: HeadingI;
+  heading: IHeading;
 }
 
 const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {

@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 export interface Skin {
   img: string;
@@ -9,7 +9,7 @@ export interface Skin {
 }
 
 export interface Classes {
-  heading: HeadingI;
+  heading: IHeading;
   skins: {
     skin1: Skin;
     skin2: Skin;

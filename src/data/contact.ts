@@ -1,7 +1,7 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 export interface Contact {
-  heading: HeadingI;
+  heading: IHeading;
   formspree: string;
 }
 

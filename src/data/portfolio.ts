@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 type PortfolioItemType =
   | "all"
   | "fatLoss"
@@ -21,7 +21,7 @@ interface PortfolioItem {
 }
 
 export interface Portfolio {
-  heading: HeadingI;
+  heading: IHeading;
   portfolioItems: PortfolioItem[];
   portfolioFilters: PortfolioType[];
 }

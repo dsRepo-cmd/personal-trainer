@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 import {
   FaFacebookF,
@@ -15,7 +15,7 @@ export interface Links {
 }
 
 export interface Footer {
-  heading: HeadingI;
+  heading: IHeading;
   links: Links[];
   copyright: string;
 }
