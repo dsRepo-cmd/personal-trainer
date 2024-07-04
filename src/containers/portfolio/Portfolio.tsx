@@ -46,7 +46,6 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
     return () => {
       iso.reloadItems();
-      // iso.destroy();
     };
   }, []);
 
@@ -79,18 +78,18 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
         <div
           ref={portfolioRef}
-          className="  flex flex-wrap justify-center w-full"
+          className="   flex flex-wrap justify-center w-full"
         >
           {portfolio.portfolioItems.map((item) => (
             <div
-              className={cn(" pt_item ", item.types.join(" "))}
+              className={cn(" pt_item  ", item.types.join(" "))}
               key={item.id}
             >
-              <div className=" group flex flex-col items-center text-center h-[190px]">
+              <div className=" group aspect-[6.5/4] flex flex-col items-center text-center ">
                 <img
                   src={item.link}
                   alt={item.name}
-                  className=" w-[310px] object-cover "
+                  className="  object-cover "
                 />
                 <a
                   aria-label={item.title}
