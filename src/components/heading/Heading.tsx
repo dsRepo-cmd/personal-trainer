@@ -13,7 +13,7 @@ const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
       <div data-aos="fade-up">
         <Text
           variant={variant}
-          className=" uppercase font-primary font-bold text-4xl"
+          className=" uppercase font-primary font-bold text-[32px]"
           title={heading.title}
         />
       </div>

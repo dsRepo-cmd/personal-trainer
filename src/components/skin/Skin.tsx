@@ -1,3 +1,4 @@
+import { type CSSProperties } from "react";
 import { Skin } from "../../data/classes";
 import { cn } from "../../lib/cn";
 import Text from "../text/Text";
@@ -8,13 +9,18 @@ interface SkinItemProps {
   skin: Skin;
   className?: string;
   variant?: SkinVariant;
+  aspectRatio?: string;
 }
 
 const SkinItem: React.FC<SkinItemProps> = ({
   skin,
   className = "",
   variant = "bg-primary ",
+  aspectRatio = "245/320",
 }) => {
+  const styles: CSSProperties = {
+    aspectRatio,
+  };
   return (
     <div
       data-aos="zoom-in"
@@ -32,9 +38,10 @@ const SkinItem: React.FC<SkinItemProps> = ({
         />
       </div>
       <img
-        className=" w-full h-full object-cover"
+        className=" w-full h-full object-cover aspect-[920/300] "
         src={skin.img}
         alt={skin.title}
+        style={styles}
       />
 
       <div
