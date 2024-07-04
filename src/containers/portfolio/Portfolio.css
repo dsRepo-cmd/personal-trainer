@@ -4,6 +4,6 @@
   padding: 3px;
   overflow: hidden;
   transition: background 0.4s, box-shadow 0.4s;
-  margin: 20px;
   width: 310px;
+  margin-top: 20px;
 }

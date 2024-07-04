@@ -37,7 +37,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
         height: "100%",
         position: "relative",
       },
-      fitRows: { gutter: 50 },
+      fitRows: { gutter: 20 },
       stagger: "0.05s",
       percentPosition: true,
     });
@@ -78,7 +78,7 @@ const Portfolio: React.FC<IntroProps> = ({ variant = "dark" }) => {
 
         <div
           ref={portfolioRef}
-          className="   flex flex-wrap justify-center w-full"
+          className=" m-auto w-[1040px] lg:w-[700px]  md:w-[320px] "
         >
           {portfolio.portfolioItems.map((item) => (
             <div

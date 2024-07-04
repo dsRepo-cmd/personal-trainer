@@ -40,7 +40,7 @@ const Section: FC<SectionProps> = ({
       )}
       <div
         className={cn(
-          "container flex items-center justify-center mx-20 md:my[36px]",
+          "container flex items-center justify-center  m-auto md:my[36px]",
           thin ? "my-[20px]" : "my-[74px]",
           className
         )}
