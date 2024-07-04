@@ -14,7 +14,7 @@ interface PricingProps {
 
 const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
   return (
-    <Section id="pricing">
+    <Section doubleLine id="pricing">
       <Container>
         <Heading variant={variant} heading={pricing.heading} />
 
