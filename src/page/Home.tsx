@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../containers/nav-bar/NavBar";
 import Portfolio from "../containers/portfolio/Portfolio";
 import Intro from "../containers/intro/Intro";
