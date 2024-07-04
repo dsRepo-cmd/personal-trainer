@@ -1,18 +1,17 @@
-import { MdLocalPhone } from "react-icons/md";
-import Section from "../../components/section/Section";
-import { fastContact } from "../../data/fastContact";
-import Text from "../../components/text/Text";
 import { IoIosMail } from "react-icons/io";
-import { Variant } from "../../lib/types";
-import { FC } from "react";
+import { MdLocalPhone } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
+import Section from "../../components/section/Section";
+import Text from "../../components/text/Text";
+import { fastContact } from "../../data/fastContact";
+import type { Variant } from "../../lib/types";
 
 interface FastContactProps {
   className?: string;
   variant?: Variant;
 }
 
-const FastContact: FC<FastContactProps> = ({ variant = "dark" }) => {
+const FastContact = ({ variant = "dark" }: FastContactProps) => {
   return (
     <Section variant={variant} thin>
       <div className="flex  w-full justify-between md:flex-col md:gap-3 md:items-start ">

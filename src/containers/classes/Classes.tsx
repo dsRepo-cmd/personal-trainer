@@ -1,9 +1,10 @@
 import Section from "../../components/section/Section";
 import SkinItem from "../../components/skin/Skin";
-import { classes } from "../../data/classes";
-import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
 import Container from "../../components/container/Container";
+import { classes } from "../../data/classes";
+import type { Variant } from "../../lib/types";
+
 const { skins } = classes;
 
 interface ClassesProps {

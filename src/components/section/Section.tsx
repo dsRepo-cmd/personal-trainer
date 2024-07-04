@@ -1,9 +1,8 @@
-import { FC, ReactNode } from "react";
-import { Variant } from "../../lib/types";
 import { cn } from "../../lib/cn";
+import type { Variant } from "../../lib/types";
 
 interface SectionProps {
-  children: ReactNode;
+  children: React.ReactNode;
   id?: string;
   variant?: Variant;
   doubleLine?: boolean;
@@ -17,14 +16,14 @@ const classMap: { [key in Variant]: string } = {
   secondary: "bg-secondary selection:text-primary ",
 };
 
-const Section: FC<SectionProps> = ({
+const Section = ({
   children,
   id,
   variant = "dark",
   doubleLine,
   className = "",
   thin,
-}) => {
+}: SectionProps) => {
   return (
     <section
       id={id}

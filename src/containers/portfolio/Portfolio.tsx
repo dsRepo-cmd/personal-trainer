@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import Isotope from "isotope-layout";
+import { MdPlayCircle } from "react-icons/md";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import Heading from "../../components/heading/Heading";
 import Container from "../../components/container/Container";
 import { portfolio } from "../../data/portfolio";
-import { MdPlayCircle } from "react-icons/md";
-import { Variant } from "../../lib/types";
-import Isotope from "isotope-layout";
-import "./Portfolio.css";
 import { cn } from "../../lib/cn";
+import type { Variant } from "../../lib/types";
+import "./Portfolio.css";
 
 interface IntroProps {
   className?: string;

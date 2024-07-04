@@ -1,11 +1,11 @@
+import { MdKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import Heading from "../../components/heading/Heading";
 import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
 import { pricing } from "../../data/pricing";
-import { Variant } from "../../lib/types";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import type { Variant } from "../../lib/types";
 
 interface PricingProps {
   className?: string;

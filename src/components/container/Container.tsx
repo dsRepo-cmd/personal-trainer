@@ -1,13 +1,11 @@
-import { FC, ReactNode } from "react";
 import { cn } from "../../lib/cn";
 
 interface ContainerProps {
-  children: ReactNode;
-  id?: string;
+  children: React.ReactNode;
   className?: string;
 }
 
-const Container: FC<ContainerProps> = ({ children, className = "" }) => {
+const Container = ({ children, className = "" }: ContainerProps) => {
   return (
     <div
       className={cn(

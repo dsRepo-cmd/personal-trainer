@@ -1,10 +1,11 @@
 import { memo, useCallback, useState } from "react";
-import useTheme from "../../lib/useTheme";
-import "./ThemeSwitcher.css";
-import { IoMdSettings } from "react-icons/io";
-import Text from "../../components/text/Text";
 import { MdCancel } from "react-icons/md";
+import { IoMdSettings } from "react-icons/io";
+import useTheme from "../../lib/useTheme";
+import Text from "../../components/text/Text";
 import { Theme } from "../../lib/types";
+import { cn } from "../../lib/cn";
+import "./ThemeSwitcher.css";
 
 const ThemeSwitcher = memo(() => {
   const [isOpen, setOpen] = useState(false);
@@ -36,7 +37,7 @@ const ThemeSwitcher = memo(() => {
         <IoMdSettings />
       </button>
 
-      <div className={`options-panel ${isOpen && "options-panel-active"}`}>
+      <div className={cn("options-panel", isOpen && "options-panel-active")}>
         <table>
           <tbody>
             <tr>

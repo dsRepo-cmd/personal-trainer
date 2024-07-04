@@ -15,11 +15,7 @@ import ToTop from "../containers/to-top/ToTop";
 import ThemeSwitcher from "../containers/theme-switcher/ThemeSwitcher";
 import Top from "../containers/top/Top";
 
-interface HomeProps {
-  className?: string;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
   return (
     <>
       <Top />

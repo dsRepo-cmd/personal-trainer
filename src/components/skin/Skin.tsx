@@ -1,7 +1,7 @@
 import { type CSSProperties } from "react";
 import { Skin } from "../../data/classes";
-import { cn } from "../../lib/cn";
 import Text from "../text/Text";
+import { cn } from "../../lib/cn";
 
 type SkinVariant = "bg-secondary" | "bg-primary ";
 

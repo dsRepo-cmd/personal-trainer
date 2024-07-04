@@ -1,8 +1,8 @@
 import Heading from "../../components/heading/Heading";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
-import { Variant } from "../../lib/types";
 import { testimonials } from "../../data/testimonials";
+import type { Variant } from "../../lib/types";
 import "./Testimonials.css";
 
 import Slider from "react-slick";

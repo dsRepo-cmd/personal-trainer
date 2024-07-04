@@ -1,11 +1,11 @@
+import { TfiAngleDoubleRight } from "react-icons/tfi";
 import Section from "../../components/section/Section";
-import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
 import { blog } from "../../data/blog";
 import Text from "../../components/text/Text";
-import { TfiAngleDoubleRight } from "react-icons/tfi";
 import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
+import type { Variant } from "../../lib/types";
 
 interface BlogProps {
   className?: string;

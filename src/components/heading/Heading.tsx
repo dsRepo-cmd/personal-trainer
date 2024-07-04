@@ -1,4 +1,4 @@
-import { IHeading, Variant } from "../../lib/types";
+import type { IHeading, Variant } from "../../lib/types";
 import Text from "../text/Text";
 
 interface HeadingProps {
@@ -7,7 +7,7 @@ interface HeadingProps {
   heading: IHeading;
 }
 
-const Heading: React.FC<HeadingProps> = ({ variant = "dark", heading }) => {
+const Heading = ({ variant = "dark", heading }: HeadingProps) => {
   return (
     <>
       <div data-aos="fade-up">
