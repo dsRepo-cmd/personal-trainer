@@ -83,7 +83,13 @@ const Portfolio = ({ variant = "dark" }: IntroProps) => {
           {portfolio.portfolioItems.map((item) => (
             <div className={cn("pt_item", item.types.join(" "))} key={item.id}>
               <div className="group aspect-[6.5/4] flex flex-col items-center text-center">
-                <img src={item.link} alt={item.name} className="object-cover" />
+                <img
+                  width={650}
+                  height={400}
+                  src={item.link}
+                  alt={item.name}
+                  className="object-cover"
+                />
                 <a
                   aria-label={item.title}
                   href="#"
