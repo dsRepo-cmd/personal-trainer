@@ -31,6 +31,8 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                 >
                   <img
                     className=" object-cover  w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:w-[620px] md:h-[267px]  "
+                    width={600}
+                    height={370}
                     src={post.img}
                     alt={post.title}
                   />

@@ -122,6 +122,8 @@ export const ImagesSlider = ({
             src={loadedImages[currentIndex]}
             alt={`top-image-${currentIndex + 1}`}
             initial="initial"
+            width={1920}
+            height={1080}
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}

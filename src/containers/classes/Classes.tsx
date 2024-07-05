@@ -21,39 +21,53 @@ const Classes: React.FC<ClassesProps> = ({ variant = "dark" }) => {
         <div className="grid grid-cols-12 gap-8 lg:grid-cols-6 lg:grid-rows-16 sm:flex sm:flex-wrap sm:justify-center">
           <SkinItem
             aspectRatio="530/320"
+            width={530}
+            height={320}
             skin={skins.skin1}
             className="col-span-6 row-span-4 lg:col-span-6 lg:row-span-4 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/410"
+            width={245}
+            height={410}
             variant="bg-secondary"
             skin={skins.skin2}
             className="col-span-3 row-span-5 lg:col-span-3 lg:row-span-5 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/320"
+            width={245}
+            height={320}
             skin={skins.skin3}
             className="col-span-3 row-span-4 lg:col-span-3 lg:row-span-4 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/320"
+            width={245}
+            height={320}
             skin={skins.skin4}
             className="col-span-3 row-span-4 lg:col-span-3 lg:row-span-4 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/320"
+            width={245}
+            height={320}
             variant="bg-secondary"
             skin={skins.skin5}
             className="col-span-3 row-span-4 lg:col-span-3 lg:row-span-4 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/230"
+            width={245}
+            height={230}
             variant="bg-secondary"
             skin={skins.skin6}
             className="col-span-3 row-span-4 lg:col-span-3 lg:row-span-4 sm:w-full"
           />
           <SkinItem
             aspectRatio="245/320"
+            width={245}
+            height={320}
             skin={skins.skin7}
             className="col-span-3 row-span-3 lg:col-span-3 lg:row-span-3 sm:w-full"
           />
