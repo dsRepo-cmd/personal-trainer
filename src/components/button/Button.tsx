@@ -17,12 +17,12 @@ const variantClasses: { [key in Variant]: string } = {
   white: "",
 };
 
-const Button: React.FC<TextProps> = ({
+const Button = ({
   children,
   variant = "dark",
   className = "",
   disabled,
-}) => {
+}: TextProps) => {
   return (
     <button
       disabled={disabled}

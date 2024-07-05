@@ -12,13 +12,13 @@ interface PricingProps {
   variant?: Variant;
 }
 
-const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
+const Pricing = ({ variant = "dark" }: PricingProps) => {
   return (
     <Section doubleLine id="pricing">
       <Container>
         <Heading variant={variant} heading={pricing.heading} />
 
-        <div className=" grid grid-cols-3 gap-9 w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-3 gap-9 w-full md:flex-col lg:grid-cols-2 sm:grid-cols-1">
           {pricing.plans.map((plan, index) => (
             <div
               data-aos="zoom-in"
@@ -32,7 +32,7 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
               />
 
               <Text
-                className=" uppercase font-bold text-sm"
+                className="uppercase font-bold text-sm"
                 text={plan.priceInfo}
               />
 
@@ -42,11 +42,11 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
               />
 
               {plan.info.map((text, index) => (
-                <div className=" border-b border-[#424242]" key={index}>
-                  <div className="flex mb-3 items-center gap-1 ">
-                    <MdKeyboardArrowRight className=" text-white" />
+                <div className="border-b border-[#424242]" key={index}>
+                  <div className="flex mb-3 items-center gap-1">
+                    <MdKeyboardArrowRight className="text-white" />
                     <Text
-                      className=" text-[#e4e4e4] text-[0.8rem] "
+                      className="text-[#e4e4e4] text-[0.8rem]"
                       text={text}
                     />
                   </div>
@@ -55,7 +55,8 @@ const Pricing: React.FC<PricingProps> = ({ variant = "dark" }) => {
 
               <Button
                 variant="secondary"
-                className="mt-5 p-2 px-4 text-[0.7rem] uppercase "
+                className="mt-5 p-2 px-4 text-[0.7rem] uppercase"
+                aria-label={`Button for ${plan.type} plan`}
               >
                 {plan.buttonText}
               </Button>
