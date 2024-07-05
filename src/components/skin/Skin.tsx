@@ -10,6 +10,8 @@ interface SkinItemProps {
   className?: string;
   variant?: SkinVariant;
   aspectRatio?: string;
+  width?: number;
+  height?: number;
 }
 
 const SkinItem = ({
@@ -17,6 +19,8 @@ const SkinItem = ({
   className = "",
   variant = "bg-primary ",
   aspectRatio = "245/320",
+  width,
+  height,
 }: SkinItemProps) => {
   const styles: CSSProperties = {
     aspectRatio,
@@ -38,10 +42,12 @@ const SkinItem = ({
         />
       </div>
       <img
-        className=" w-full h-full object-cover aspect-[920/300] "
+        className=" w-full h-full object-cover  "
         src={skin.img}
         alt={skin.title}
         style={styles}
+        width={width}
+        height={height}
       />
 
       <div
