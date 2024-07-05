@@ -10,9 +10,7 @@ interface TrainingScheduleProps {
   variant?: Variant;
 }
 
-const TrainingSchedule: React.FC<TrainingScheduleProps> = ({
-  variant = "dark",
-}) => {
+const TrainingSchedule = ({ variant = "dark" }: TrainingScheduleProps) => {
   return (
     <Section id="training-schedule">
       <Container>

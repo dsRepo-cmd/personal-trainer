@@ -12,12 +12,12 @@ interface SkinItemProps {
   aspectRatio?: string;
 }
 
-const SkinItem: React.FC<SkinItemProps> = ({
+const SkinItem = ({
   skin,
   className = "",
   variant = "bg-primary ",
   aspectRatio = "245/320",
-}) => {
+}: SkinItemProps) => {
   const styles: CSSProperties = {
     aspectRatio,
   };

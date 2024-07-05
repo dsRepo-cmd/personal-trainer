@@ -13,7 +13,7 @@ interface TestimonialsProps {
   variant?: Variant;
 }
 
-const Testimonials: React.FC<TestimonialsProps> = ({ variant }) => {
+const Testimonials = ({ variant }: TestimonialsProps) => {
   return (
     <Section variant={variant} id="testimonials">
       <Container className=" relative">

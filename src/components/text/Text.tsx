@@ -17,14 +17,14 @@ const variantClasses: { [key in Variant]: string } = {
   secondary: "text-white",
 };
 
-const Text: React.FC<TextProps> = ({
+const Text = ({
   children,
   text,
   title,
   span,
   className = "",
   variant = "dark",
-}) => {
+}: TextProps) => {
   const addClasses = [variantClasses[variant], className];
   return (
     <>
