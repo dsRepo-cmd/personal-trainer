@@ -2,7 +2,7 @@ import Heading from "../../components/heading/Heading";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import { footer } from "../../data/footer";
-import { Variant } from "../../lib/types";
+import type { Variant } from "../../lib/types";
 
 interface FooterProps {
   className?: string;

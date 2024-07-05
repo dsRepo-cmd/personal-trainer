@@ -12,7 +12,7 @@ export default {
         xl: "1279px",
         lg: "1023px",
         sm: "639px",
-        md: "767px",
+        md: "836px",
       },
       maxWidth: "100%",
     },

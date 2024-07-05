@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { Variant } from "../../lib/types";
+import type { Variant } from "../../lib/types";
 import { cn } from "../../lib/cn";
 
 interface TextProps {
@@ -8,7 +7,7 @@ interface TextProps {
   span?: string;
   className?: string;
   variant?: Variant;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
 const variantClasses: { [key in Variant]: string } = {

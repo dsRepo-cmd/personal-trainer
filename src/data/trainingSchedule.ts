@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 interface TrainingScheduleTimeSlot {
   id: number;
@@ -19,7 +19,7 @@ interface TrainingScheduleInfo {
 }
 
 export interface TrainingSchedule {
-  heading: HeadingI;
+  heading: IHeading;
   schedule: TrainingSchedulePlan[];
   info?: TrainingScheduleInfo[];
 }

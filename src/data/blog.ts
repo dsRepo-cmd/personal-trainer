@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 export interface Post {
   id: number;
@@ -9,7 +9,7 @@ export interface Post {
 }
 
 export interface Blog {
-  heading: HeadingI;
+  heading: IHeading;
   posts: Post[];
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
-import { Variant } from "../../lib/types";
+import type { Variant } from "../../lib/types";
 import { cn } from "../../lib/cn";
 
 interface ContactProps {

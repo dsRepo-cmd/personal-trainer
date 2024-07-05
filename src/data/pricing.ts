@@ -1,4 +1,4 @@
-import { HeadingI } from "../lib/types";
+import { IHeading } from "../lib/types";
 
 interface PricingPlan {
   id: number;
@@ -10,7 +10,7 @@ interface PricingPlan {
 }
 
 export interface Pricing {
-  heading: HeadingI;
+  heading: IHeading;
   plans: PricingPlan[];
 }
 

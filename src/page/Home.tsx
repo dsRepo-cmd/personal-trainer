@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../containers/nav-bar/NavBar";
 import Portfolio from "../containers/portfolio/Portfolio";
 import Intro from "../containers/intro/Intro";
@@ -15,11 +14,7 @@ import ToTop from "../containers/to-top/ToTop";
 import ThemeSwitcher from "../containers/theme-switcher/ThemeSwitcher";
 import Top from "../containers/top/Top";
 
-interface HomeProps {
-  className?: string;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
   return (
     <>
       <Top />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ImagesSlider } from "../../components/imageSlider/imageSlider";
 import { FaAngleDoubleDown } from "react-icons/fa";
+import { ImagesSlider } from "../../components/imageSlider/imageSlider";
 import LogoIcon from "../../assets/logo.png";
 import { cn } from "../../lib/cn";
 

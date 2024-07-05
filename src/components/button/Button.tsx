@@ -1,11 +1,10 @@
-import { ReactNode } from "react";
-import { Variant } from "../../lib/types";
 import { cn } from "../../lib/cn";
+import type { Variant } from "../../lib/types";
 
 export type TextAlign = "text-start" | "text-end" | "text-center";
 
 interface TextProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
   variant?: Variant;
   disabled?: boolean;

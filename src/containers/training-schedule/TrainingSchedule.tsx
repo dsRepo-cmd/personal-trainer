@@ -2,8 +2,8 @@ import Section from "../../components/section/Section";
 import Container from "../../components/container/Container";
 import Text from "../../components/text/Text";
 import Heading from "../../components/heading/Heading";
-import { Variant } from "../../lib/types";
 import { trainingSchedule } from "../../data/trainingSchedule";
+import type { Variant } from "../../lib/types";
 
 interface TrainingScheduleProps {
   className?: string;

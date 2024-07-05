@@ -1,17 +1,16 @@
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
-import { FC } from "react";
-import { Variant } from "../../lib/types";
-import { intro } from "../../data/intro";
 import Heading from "../../components/heading/Heading";
 import Container from "../../components/container/Container";
+import { intro } from "../../data/intro";
+import type { Variant } from "../../lib/types";
 
 interface IntroProps {
   className?: string;
   variant?: Variant;
 }
 
-const Intro: FC<IntroProps> = ({ variant = "dark" }) => {
+const Intro = ({ variant = "dark" }: IntroProps) => {
   return (
     <Section variant={variant}>
       <Container>

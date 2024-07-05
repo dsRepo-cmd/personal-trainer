@@ -102,7 +102,7 @@ function NavBar() {
               className={cn(
                 " flex items-center justify-center w-full h-full px-10 uppercase font-bold text-white text-sm duration-300",
                 " hover:text-primary hover:bg-[#181818]",
-                " xl:text-[12px] md:p-6 md:border md:border-[#2a2a2a] md:border-solid",
+                " xl:text-sm md:p-6 md:border md:border-[#2a2a2a] md:border-solid",
                 elem.name === activeIndex && "bg-[#181818] text-primary"
               )}
               href={`#${elem.path}`}

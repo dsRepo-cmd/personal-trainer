@@ -2,10 +2,10 @@ import { ValidationError, useForm } from "@formspree/react";
 import Container from "../../components/container/Container";
 import Heading from "../../components/heading/Heading";
 import Section from "../../components/section/Section";
-import { contact } from "../../data/contact";
-import { Variant } from "../../lib/types";
 import Button from "../../components/button/Button";
 import Text from "../../components/text/Text";
+import { contact } from "../../data/contact";
+import type { Variant } from "../../lib/types";
 
 interface ContactProps {
   className?: string;

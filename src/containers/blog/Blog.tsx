@@ -1,11 +1,11 @@
+import { TfiAngleDoubleRight } from "react-icons/tfi";
 import Section from "../../components/section/Section";
-import { Variant } from "../../lib/types";
 import Heading from "../../components/heading/Heading";
 import { blog } from "../../data/blog";
 import Text from "../../components/text/Text";
-import { TfiAngleDoubleRight } from "react-icons/tfi";
 import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
+import type { Variant } from "../../lib/types";
 
 interface BlogProps {
   className?: string;
@@ -21,12 +21,16 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
           <div className=" grid grid-cols-2 gap-8 lg:grid-cols-1">
             {blog.posts.map((post) => (
               <article
+                data-aos="zoom-in"
                 key={post.id}
                 className="grid grid-cols-2 gap-10 justify-center md:grid-cols-1 "
               >
-                <div className=" group relative cursor-pointer w-fit h-fit overflow-hidden p-[2px] border border-[#e4e4e4]">
+                <div
+                  data-aos="zoom-in"
+                  className=" group relative cursor-pointer w-fit h-fit overflow-hidden p-[2px] border border-[#e4e4e4]"
+                >
                   <img
-                    className=" object-cover  w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:max-w-[620px] md:h-[267px]  "
+                    className=" object-cover  w-[244px] h-[324px] lg:w-[326px] lg:h-[256px] md:w-[620px] md:h-[267px]  "
                     src={post.img}
                     alt={post.title}
                   />
