@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Theme } from "./types";
+import { Theme } from "./enums";
 
 export interface ThemeContextProps {
   theme?: Theme;

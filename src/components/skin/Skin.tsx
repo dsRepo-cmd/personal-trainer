@@ -48,6 +48,7 @@ const SkinItem = ({
         style={styles}
         width={width}
         height={height}
+        loading="lazy"
       />
 
       <div

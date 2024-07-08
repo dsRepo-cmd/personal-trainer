@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { FaAngleDoubleDown } from "react-icons/fa";
 import { ImagesSlider } from "../../components/imageSlider/imageSlider";
 import LogoIcon from "/logo.webp";
 import { cn } from "../../lib/cn";
+import AngleDoubleDownIcon from "../../assets/double-down-angle.svg";
 
 const images = ["/top-pool.webp", "/top-stairs.webp", "/top-view.webp"];
 function Top() {
@@ -51,6 +51,7 @@ function Top() {
               height={77}
               src={LogoIcon}
               alt="Feel Fit | Personal trainers"
+              loading="eager"
             />
           </motion.p>
         </motion.div>
@@ -66,9 +67,10 @@ function Top() {
           onClick={() => handleNavClick("navbar-top")}
           href="#navbar-top"
         >
-          <FaAngleDoubleDown
+          <AngleDoubleDownIcon
             className=" duration-0 fill-secondary  group-hover:fill-primary"
-            size={24}
+            width={24}
+            height={24}
           />
         </a>
       </div>

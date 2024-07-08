@@ -1,4 +1,3 @@
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import Heading from "../../components/heading/Heading";
@@ -6,6 +5,7 @@ import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
 import { pricing } from "../../data/pricing";
 import type { Variant } from "../../lib/types";
+import ArrowRightIcon from "../../assets/arrow-right.svg";
 
 interface PricingProps {
   className?: string;
@@ -44,7 +44,8 @@ const Pricing = ({ variant = "dark" }: PricingProps) => {
               {plan.info.map((text, index) => (
                 <div className="border-b border-[#424242]" key={index}>
                   <div className="flex mb-3 items-center gap-1">
-                    <MdKeyboardArrowRight className="text-white" />
+                    <ArrowRightIcon className="text-white" />
+
                     <Text
                       className="text-[#e4e4e4] text-[0.8rem]"
                       text={text}

@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import Isotope from "isotope-layout";
-import { MdPlayCircle } from "react-icons/md";
 import Section from "../../components/section/Section";
 import Text from "../../components/text/Text";
 import Heading from "../../components/heading/Heading";
@@ -8,6 +7,7 @@ import Container from "../../components/container/Container";
 import { portfolio } from "../../data/portfolio";
 import { cn } from "../../lib/cn";
 import type { Variant } from "../../lib/types";
+import PlayCircleIcon from "../../assets/play-filled.svg";
 import "./Portfolio.css";
 
 interface IntroProps {
@@ -89,13 +89,14 @@ const Portfolio = ({ variant = "dark" }: IntroProps) => {
                   src={item.link}
                   alt={item.name}
                   className="object-cover"
+                  loading="lazy"
                 />
                 <a
                   aria-label={item.title}
                   href="#"
                   className="absolute top-0 left-1/2 translate-x-[-50%] opacity-0 group-hover:top-[20%] group-hover:opacity-100"
                 >
-                  <MdPlayCircle color="#fff" size={50} />
+                  <PlayCircleIcon color="#fff" width={50} height={50} />
                 </a>
                 <div className="absolute left-1/2 bottom-0 translate-x-[-50%] opacity-0 group-hover:bottom-[20%] group-hover:opacity-100">
                   <Text text={item.title} className="text-center text-sm" />

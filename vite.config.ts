@@ -6,26 +6,14 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   plugins: [
     svgr({
-      // svgr options: https://react-svgr.com/docs/options/
-      svgrOptions: {
-        // ...
-      },
+      svgrOptions: {},
 
-      // esbuild options, to transform jsx to js
-      esbuildOptions: {
-        // ...
-      },
+      esbuildOptions: {},
 
-      // A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should include.
       include: "**/*.svg",
 
-      //  A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no files are ignored.
       exclude: "",
     }),
     react(),
   ],
-  // server: {
-  //   host: "192.168.1.151",
-  //   port: 3000,
-  // },
 });

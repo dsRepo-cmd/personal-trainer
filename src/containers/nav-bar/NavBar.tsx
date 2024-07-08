@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { HiMenu } from "react-icons/hi";
 import { nav } from "../../data/navigation";
 import { cn } from "../../lib/cn";
+import HiMenu from "../../assets/hi-menu.svg";
 
 function NavBar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -83,7 +83,7 @@ function NavBar() {
             " md:flex"
           )}
         >
-          <HiMenu className=" duration-0 mb-[2px]" size={25} />
+          <HiMenu className=" duration-0 mb-[2px]" width={25} height={25} />
           Personal trainer
         </button>
 
