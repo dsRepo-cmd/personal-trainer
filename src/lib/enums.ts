@@ -6,27 +6,3 @@ export enum Theme {
   TURQUOISE_ORANGE = "turquoise-orange_theme",
   DARK_BLUE_DARK_RED = "dark-blue-dark-red_theme",
 }
-
-export enum IconId {
-  ArrowRight = "#arrow-right",
-  ArrowUp = "#arrow-up",
-  Bed = "#bed",
-  Cancel = "#cancel",
-  DoubleDownAngle = "#double-down-angle",
-  Exercise = "#exercise",
-  Facebook = "#facebook",
-  Google = "#google",
-  HiMenu = "#hi-menu",
-  KitchenTools = "#kitchen-tools",
-  Linkedin = "#linkedin",
-  Loader = "#loader",
-  Mail = "#mail",
-  MapPoint = "#map-point",
-  Phone = "#phone",
-  PlayFilled = "#play-filled",
-  Play = "#play",
-  Scale = "#scale",
-  Settings = "#settings",
-  Skype = "#skype",
-  Twitter = "#twitter",
-}
