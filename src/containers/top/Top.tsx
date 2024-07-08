@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { ImagesSlider } from "../../components/imageSlider/imageSlider";
-import LogoIcon from "../../assets/logo.webp";
+import LogoIcon from "/logo.webp";
 import { cn } from "../../lib/cn";
 
 const images = ["/top-pool.webp", "/top-stairs.webp", "/top-view.webp"];
