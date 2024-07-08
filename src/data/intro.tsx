@@ -1,8 +1,8 @@
-import { FaBed } from "react-icons/fa";
-import { TbToolsKitchen2 } from "react-icons/tb";
-import { IoScaleSharp } from "react-icons/io5";
-import { CgGym } from "react-icons/cg";
 import { IHeading } from "../lib/types";
+import BedIcon from "../assets/bed.svg";
+import ToolsKitchenIcon from "../assets/kitchen-tools.svg";
+import ScaleIcon from "../assets/scale.svg";
+import CgGym from "../assets/exercise.svg";
 
 interface IntroBlock {
   id: number;
@@ -31,25 +31,25 @@ export const intro: Intro = {
       id: 1,
       text: "Homero nominati democritum sit adongue consectetuer no sed. Unum habemus ex alterum impedit.",
       title: "EAT BETTER",
-      icon: <TbToolsKitchen2 size={50} />,
+      icon: <ToolsKitchenIcon width={50} height={50} />,
     },
     {
       id: 2,
       text: "No stet imperdiet expetendis vix, postulant constituam dissentiunt vis ad ex mel exerci delicata..",
       title: "SLEEP TIGHT",
-      icon: <FaBed size={50} />,
+      icon: <BedIcon width={50} height={50} />,
     },
     {
       id: 3,
       text: "Eu erat nonumy petentium ha fierent eleifend expetenda sea antiopam voluptatum apeirian scribentur.",
       title: "EXERCISE",
-      icon: <CgGym size={50} />,
+      icon: <CgGym width={50} height={50} />,
     },
     {
       id: 4,
       text: "Est ad soleat omnesque vulputate. Vivendo nostrum urbanitas vis et, verear aperiam in sea, euismod corrumpit.",
       title: "LOSE WEIGHT",
-      icon: <IoScaleSharp size={50} />,
+      icon: <ScaleIcon width={50} height={50} className=" text-dark" />,
     },
   ],
 };

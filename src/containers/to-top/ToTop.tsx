@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
-import { IoIosArrowUp } from "react-icons/io";
 import { cn } from "../../lib/cn";
-
+import ArrowUp from "../../assets/arrow-up.svg";
 const ToTop = () => {
   const [isActive, setActive] = useState(false);
 
@@ -34,7 +33,7 @@ const ToTop = () => {
       )}
       onClick={scrollToTop}
     >
-      <IoIosArrowUp size={13} />
+      <ArrowUp width={13} height={13} className=" text-white" />
     </button>
   );
 };

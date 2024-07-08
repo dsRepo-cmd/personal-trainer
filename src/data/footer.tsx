@@ -1,12 +1,9 @@
 import { IHeading } from "../lib/types";
-
-import {
-  FaFacebookF,
-  FaGooglePlusG,
-  FaLinkedinIn,
-  FaSkype,
-  FaTwitter,
-} from "react-icons/fa";
+import FacebookIcon from "../assets/facebook.svg";
+import GoogleIcon from "../assets/google.svg";
+import LinkedinIcon from "../assets/linkedin.svg";
+import TwitterIcon from "../assets/twitter.svg";
+import SkypeIcon from "../assets/skype.svg";
 
 export interface Links {
   id: number;
@@ -30,8 +27,9 @@ export const footer: Footer = {
       id: 1,
       title: "Share on Facebook",
       icon: (
-        <FaFacebookF
-          size={20}
+        <FacebookIcon
+          width={20}
+          height={20}
           className=" fill-primary group-hover:fill-secondary"
         />
       ),
@@ -40,8 +38,9 @@ export const footer: Footer = {
       id: 2,
       title: "Share on Twitter",
       icon: (
-        <FaTwitter
-          size={20}
+        <TwitterIcon
+          width={20}
+          height={20}
           className=" fill-primary group-hover:fill-secondary"
         />
       ),
@@ -50,8 +49,9 @@ export const footer: Footer = {
       id: 3,
       title: "Share on Skype",
       icon: (
-        <FaSkype
-          size={20}
+        <SkypeIcon
+          width={20}
+          height={20}
           className=" fill-primary group-hover:fill-secondary"
         />
       ),
@@ -60,8 +60,9 @@ export const footer: Footer = {
       id: 4,
       title: "Share on Linkedin",
       icon: (
-        <FaLinkedinIn
-          size={20}
+        <LinkedinIcon
+          width={20}
+          height={20}
           className=" fill-primary group-hover:fill-secondary"
         />
       ),
@@ -70,8 +71,9 @@ export const footer: Footer = {
       id: 5,
       title: "Share on Google Plus",
       icon: (
-        <FaGooglePlusG
-          size={20}
+        <GoogleIcon
+          width={20}
+          height={20}
           className=" fill-primary  group-hover:fill-secondary"
         />
       ),

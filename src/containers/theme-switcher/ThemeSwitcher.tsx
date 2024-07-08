@@ -1,11 +1,12 @@
 import { memo, useCallback, useState } from "react";
-import { MdCancel } from "react-icons/md";
-import { IoMdSettings } from "react-icons/io";
 import useTheme from "../../lib/useTheme";
 import Text from "../../components/text/Text";
-import { Theme } from "../../lib/types";
 import { cn } from "../../lib/cn";
 import "./ThemeSwitcher.css";
+
+import CancelIcon from "../../assets/cancel.svg";
+import SettingsIcon from "../../assets/settings.svg";
+import { Theme } from "../../lib/enums";
 
 const ThemeSwitcher = memo(() => {
   const [isOpen, setOpen] = useState(false);
@@ -34,7 +35,7 @@ const ThemeSwitcher = memo(() => {
         className="text-[#ffffff] w-full h-full flex items-center justify-center"
         onClick={onOpenSettings}
       >
-        <IoMdSettings />
+        <SettingsIcon width={"1rem"} height={"1rem"} />
       </button>
 
       <div className={cn("options-panel", isOpen && "options-panel-active")}>
@@ -45,7 +46,7 @@ const ThemeSwitcher = memo(() => {
                 <div className="flex items-center justify-between w-full">
                   <Text className=" text-xl" text="Skin Colors" />
                   <button title="close panel" onClick={onCloseSettings}>
-                    <MdCancel />
+                    <CancelIcon width={"1rem"} height={"1rem"} />
                   </button>
                 </div>
                 <hr className="options_panel_divider my-3" />

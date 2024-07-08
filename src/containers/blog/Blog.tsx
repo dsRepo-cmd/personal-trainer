@@ -1,4 +1,3 @@
-import { TfiAngleDoubleRight } from "react-icons/tfi";
 import Section from "../../components/section/Section";
 import Heading from "../../components/heading/Heading";
 import { blog } from "../../data/blog";
@@ -6,6 +5,7 @@ import Text from "../../components/text/Text";
 import Button from "../../components/button/Button";
 import Container from "../../components/container/Container";
 import type { Variant } from "../../lib/types";
+import PlayIcon from "../../assets/play.svg";
 
 interface BlogProps {
   className?: string;
@@ -35,14 +35,15 @@ const Blog: React.FC<BlogProps> = ({ variant = "dark" }) => {
                     height={370}
                     src={post.img}
                     alt={post.title}
+                    loading="lazy"
                   />
                   <button
                     title={post.title}
                     className={
-                      "  duration-300 absolute top-[-100%] left-1/2 translate-x-[-50%] translate-y-[-50%] border-2 border-white rounded-full p-[18px] opacity-0 z-50 group-hover:top-1/2 group-hover:opacity-100"
+                      "  duration-300 absolute top-[-100%] left-1/2 translate-x-[-50%] translate-y-[-50%] border-2 border-white rounded-full p-[18px] opacity-0 z-20 group-hover:top-1/2 group-hover:opacity-100"
                     }
                   >
-                    <TfiAngleDoubleRight color={variant} size={18} />
+                    <PlayIcon color={variant} width={18} height={18} />
                   </button>
                   <span className=" absolute top-0 right-0 w-full h-full bg-primary opacity-0 z-10 group-hover:opacity-80 " />
                 </div>
