@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from "react";
+import { memo, useRef, useState } from "react";
 import useTheme from "../../lib/useTheme";
 import Text from "../../components/text/Text";
 import { cn } from "../../lib/cn";
@@ -7,25 +7,19 @@ import "./ThemeSwitcher.css";
 import CancelIcon from "../../assets/cancel.svg";
 import SettingsIcon from "../../assets/settings.svg";
 import { Theme } from "../../lib/enums";
+import { useOutsideClick } from "../../lib/useOutsideClick";
 
 const ThemeSwitcher = memo(() => {
   const [isOpen, setOpen] = useState(false);
   const { toggleTheme } = useTheme();
+  const panelRef = useRef<HTMLDivElement>(null);
 
-  const onOpenSettings = useCallback(() => {
-    setOpen((prevOpen) => !prevOpen);
-  }, []);
+  const onOpenSettings = () => setOpen((prevOpen) => !prevOpen);
+  const onCloseSettings = () => setOpen(false);
 
-  const onCloseSettings = useCallback(() => {
-    setOpen(false);
-  }, []);
+  const onChangeTheme = (theme: Theme) => toggleTheme(theme);
 
-  const onChangeTheme = useCallback(
-    (theme: Theme) => {
-      toggleTheme(theme);
-    },
-    [toggleTheme]
-  );
+  useOutsideClick(panelRef, onCloseSettings);
 
   return (
     <div className="theme_switcher">
@@ -38,7 +32,10 @@ const ThemeSwitcher = memo(() => {
         <SettingsIcon width={"1rem"} height={"1rem"} />
       </button>
 
-      <div className={cn("options-panel", isOpen && "options-panel-active")}>
+      <div
+        className={cn("options-panel", isOpen && "options-panel-active")}
+        ref={panelRef}
+      >
         <table>
           <tbody>
             <tr>
