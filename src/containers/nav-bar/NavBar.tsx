@@ -72,7 +72,7 @@ function NavBar() {
         className={cn(
           " flex flex-col items-center justify-center w-full h-[82px] bg-[#0c0c0c]",
           " md:items-start",
-          isFixed ? "fixed top-0 z-50" : "relative"
+          isFixed ? "fixed top-0 z-40" : "relative"
         )}
       >
         <button

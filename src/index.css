@@ -8,7 +8,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
@@ -16,7 +15,6 @@ html {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: var(--font-secondary);
   transition: all 0.2s ease;
 }
@@ -25,7 +23,7 @@ html {
   --bg: #1a2327;
   --white: #ffffff;
   --dark: #1a1a1a;
-  overflow: hidden;
+
   min-height: 100svh;
 }
 
@@ -49,14 +47,17 @@ html {
   --secondary: #ff8519;
   --primary: #39c9ff;
 }
+
 .purple-yellow_theme {
   --secondary: #ffcc18;
   --primary: #8238e6;
 }
+
 .light-green-pink_theme {
   --secondary: #ff3984;
   --primary: #a1d909;
 }
+
 .turquoise-orange_theme {
   --secondary: #ff6f0f;
   --primary: #04dc83;
